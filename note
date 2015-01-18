@@ -45,12 +45,12 @@ xml:lang="en">
 
         h1, h2, h3, h4, h5, h6 { text-align: left }
 
-        h1, h2, h3, h4 { color: #005A9C; background: white }
+        h1, h2, h3, h4, h5 { color: #005A9C; background: white }
         h1 { font: 170% sans-serif }
         h2 { font: 140% sans-serif }
         h3 { font: 120% sans-serif }
         h4 { font: 110% sans-serif }
-        h5 { font: italic 100% sans-serif }
+        h5 { font: italic 95% sans-serif ; margin-left:15px;}
         h6 { font: small-caps 100% sans-serif }
 
         .ReqsTable { border-left:  1px solid #CFE1FF; border-right:  1px solid #CFE1FF;width:80%; border-bottom:  1px solid #CFE1FF;
@@ -599,7 +599,21 @@ p.caption {
     border: solid 1px black;
     width: 40%;
 }
-     
+.mmimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    width: 50%;
+}
+   
+.mmi-state{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px black;
+    width: 80%;
+}  
         
     </style>
 
@@ -623,6 +637,10 @@ div.exampleInner1 {background-color: #d5dee3;
                    padding: 4px; margin: 0em }
 .subline{
 	margin-left:15px;}
+	.sub-subline{
+	margin-left:35px;}
+	.subm-subline{
+	margin-left:70px;}
 </style>
 </head>
 
@@ -757,18 +775,46 @@ class="secno">4.4</span> Requirements Addressed</a></li>
  
 
 <!-- PROTOCOL CHAPTER -->
-
+<br/>
 <li class="tocline"><a href="#pull" class="tocxref"><span
 class="secno">5.</span>  A bidirectional flow of messages</a></li>
-	<li class="tocline">5<a href="#pullRA" class="tocxref"><span class="secno">.1 </span> Requirements Addressed</a>
+	<li class="subline">5<a href="#pullRA" class="tocxref"><span class="secno">.1 </span> Requirements Addressed</a>
 	</li>
 
+ <br/>
 <li class="tocline"><a href="#events" class="tocxref"><span
-class="secno">6.</span>  Two events for system updates</a></li>
-<li class="tocline">6<a href="#check" class="tocxref"><span class="secno">.1 </span>CheckUpdate Event</a>
-</li>
-<li class="tocline">6<a href="#upnot" class="tocxref"><span class="secno">.2 </span>Update Notification</a></li>
-<li class="tocline">6<a href="#req6" class="tocxref"><span class="secno">.3 </span> Requirements Addressed</a></li>
+class="secno">6.</span> Two events for system updates</a></li>
+
+<li class="subline"><a href="#EV_time" class="tocxref"><span class="secno">6.1</span>The timeout attribute for state handling and registration renewal</a>
+<li class="subline"><a href="#check" class="tocxref"><span class="secno">6.2</span> CheckUpdate Event</a>
+
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.2.1</span> UpdateType</a>
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2</span> State</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.1</span> Alive</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.2</span> Loading</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.3</span> Registering</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.4</span> Available</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.5</span> Idle</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.6</span> Busy Waiting</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.7</span> Processing</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.8</span> Unregistered</a>
+<li class="subm-subline"><a href="#check" class="tocxref"><span class="secno">6.2.2.9</span> Unavailable</a><br/>
+
+
+
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.2.3</span> AutomaticUpdate</a>
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.2.4</span> Metadata</a>
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.2.5</span> Timeout</a>
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.2.6</span> Example</a><br/><br/>
+
+<li class="subline"><a href="#upnot" class="tocxref"><span class="secno">6.3</span> Update Notification</a>
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.3.1</span> UpdateType</a>
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.3.2</span> State</a>
+<li class="sub-subline"><a href="#check" class="tocxref"><span class="secno">6.3.3</span> Example</a><br/><br/>
+<li class="subline"><a href="#req6" class="tocxref"><span class="secno">6.4</span> Requirements Addressed</a><br/><br/>
+ 
+ 
+ <!-- OPE ISSUES -->
 <li class="tocline">7<a href="#open" class="tocxref"><span class="secno"> </span> Open Issues</a></li>
 </ul>
 
@@ -1158,58 +1204,82 @@ window.open('http://upload.wikimedia.org/wikipedia/commons/0/01/Pull_high.png','
 <h2 id="events">&nbsp;</h2>
 <h2><span class="secno">6.</span> Two events for system updates</h2> 
 
-<p>With the pull mechanism a Modality Component can register its services for a specific period of time. This is the basis for the handling of the Modality Component's state. Every Modality Component can have a life-time, that initiates at discovery and ends in a date provided at registration. If the Modality Component does not re-register the service before this lifetime expires, the Modality Component's index is purged out. This depends on the parameters given by the Application logic, the distribution of the Modality Components or the context of interaction.</p>
+<p>With these both mechanism of communication a Modality Component can register its services for a specific period of time. This is the basis for the handling of the Modality Component's state. Every Modality Component can have a life-time, that initiates at discovery and ends in a date provided at registration. If the Modality Component does not re-register the service before its lifetime expires, the Modality Component's index is purged out. This depends on the parameters given by the Application logic, the distribution of the Modality Components or the context of interaction.</p>
 <p>When the lifetime has no end, the Modality Component is part of the multimodal system indefinitely. In contrast, in more dynamic environments, a limited life-time can be associated to the Modality Component, and if it is not renewed before expiration, the Modality Component will be assumed no longer been part of the multimodal system. 
 Then, by the use of this kind of registering, the multimodal system can implement a procedure to confirm its global state and update the «inventory» of the components that could eventually participate into the interaction cycle. Therefore,  registering involves some Modality Components timeout information, which can be always exchanged between components and, in the case of a dynamic environment, can be updated from time to time.</p>
-<p>For this reason, a registration renewal mechanism is needed. We propose a renewal mechanism with the use of two new events: the checkUpdate Event and theUpdate Notification, used in conjunction with an automatic update process that ensures periodical requests. </p>
-<p>The checkUpdate Event is provided to verify if there are any changes in the system side, to recover the eventual message (under the form of a MMI event) and to adapt the request timeout if needed, and to trigger automatic notifications about the state of the Modality Component if the automaticUpdate field in the response is true. </p>
-<p>The Update Notification is proposed to periodically inform about the state of the Modality Component, to help in the decision making process used by the state handler (in the server side, for example).</p>
-<p>We proposed a dedicated data structure for registration: the timeout attribute. A timeut is an ordered list of three elements:</p>
-<img class="mmcode" src="http://upload.wikimedia.org/wikipedia/commons/7/7e/MMI_Timeout.png" alt="The timeout tuple " onclick="
-window.open('http://upload.wikimedia.org/wikipedia/commons/7/7e/MMI_Timeout.png','Timeout');" />
+<p>For this reason, a registration renewal mechanism is needed. We propose a renewal mechanism based on the use of the timeout attribute and two new events: the checkUpdate Event and theUpdate Notification, used in conjunction with an automatic  process that ensures periodical requests. </p>
+The checkUpdate Event is provided :<br/><ul>
+   <li>to verify if there are any changes in the system side, </li>
+ 	<li>to recover the eventual message (under the form of a <a href="http://www.w3.org/TR/mmi-arch/#LifeCycleEvents">MMI event</a>)</li>
+    	<li>to adapt the request <em>timeout  </em> if needed, </li>
+<li>and to trigger automatic notifications about the state of the Modality Component, if the automaticUpdate field in the response is true. </li>
+
+<p>On the other hand, the Update Notification is proposed:, .</p>
+<ul>
+  <li>to periodically inform about the state of the Modality Component</li>
+
+  <li>and to help in the decision making process used by the state handler (in the server side, for example).<br/>
+</li>
+</ul>
+<br/><br/>
+<h4 id="EV_time"><span class="secno">6.1</span> The timeout attribute for state handling and registration renewal</h4>
+<p>We propose a dedicated data structure for registration: the timeout attribute. A timeout is an ordered list of three elements:<br/>
+  <br/><img class="mmimage" src="http://upload.wikimedia.org/wikipedia/commons/7/7e/MMI_Timeout.png" alt="The timeout tuple "  onclick="
+window.open('http://upload.wikimedia.org/wikipedia/commons/7/7e/MMI_Timeout.png','Timeout');" /></p>
 <p class="caption">Definition 1: The timeout tuple </p>
 <p>Each Modality Component can sleep for some time, and then wake up and check to see if there are changes planned on the systems side (by requesting the component responsible of the management of the system states). During sleeping, the client turns off checkUpdate requests, and sets a timer to awake itself later.</p>
 <p>The sleep value is calculated by the Resources Manager (on the server side, for example) based on the context-awareness level of the multimodal system. It can be static and defined with a set of basic rules or more dynamic, linked to the semantic analysis of the environment.</p>
-<p>The second element of the timeout tuple is the communication life-time. A Modality Component leaves the multimodal system when its life-time is exceeded and needs to restart its registering mechanism to obtain a new Modality Component ID and timeout. This allows to periodically update the metadata about the Modality Component and verify its validity (e.g. authorization).</p>
+<p>The second element of the timeout tuple is the communication life-time. A Modality Component leaves the multimodal system when its life-time is exceeded and needs to restart its registering mechanism to obtain a new Modality Component ID and timeout pace. This allows to periodically update the metadata about the Modality Component and verify its validity (e.g. authorization).</p>
 <img class="mmImage" src="http://upload.wikimedia.org/wikipedia/commons/e/e0/Sleep_high_resolution.png" alt="Example of the timeout use" onclick="
 window.open('http://upload.wikimedia.org/wikipedia/commons/b/b4/Sleep_high.png','Sleep');" />
-<p class="caption">Figure 7: Example of the timeout use to manage availability </p>
+<p class="caption">Figure 6: Example of the timeout use to manage availability </p>
 <p>The third element is the communication interval, which is modulated according to the multimodal system and system's needs by a set of static rules or by a prediction mechanism used in the state handler Component.  This element informs before-hand the Modality Component about the frequency of requests that can be allowed by the recipient component (a State Manager in a server, for example) in the current conditions. This value is exchanged on each request, which means that it can be changed at any moment in the multimodal session. </p>
 <p> With our proposal, the pull interval will equals to the publish interval because the Modality Component knows the exact publish interval before hand  according to a time pattern. In this way, data coherence is ensured and network performance maintained. Since the Resources Manager has access to all the state data, it can for example, use a prediction algorithm implemented in the Data Component,  to foresee a time when the data is going to change. The Resources Manager then attaches this time value in the timeout triplet to the outgoing data. </p>
 <p>Finally, if the Resources Manager prediction is wrong and still a change  occurs in data, if the Resources Manager knows the address of the Modality Component it can push the change to it, using the original push technique proposed here. In this case the push command is handled as an interruption of the default pull update mechanism. In this way, the system maintains its reliability.</p>
-<p>&nbsp;</p>
-<h3 id="check">6.1 CheckUpdateRequest and CheckUpdateResponse</h3>
+
+<br/>
+<h4 id="check"><span class="secno">6.2</span> CheckUpdateRequest and CheckUpdateResponse</h4>
 <p>This section is Normative.</p>
-<p>The CheckUpdate events are the request/response pair, CheckUpdateRequest and CheckUpdateResponse. CheckUpdateRequest and CheckUpdateResponse are used to check to see if there are any changes in the system. They share the </A><a href="http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>, <a href="http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>, <a href="http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>, <a href=""http:="http:"//www.w3.org/tr/mmi-arch/#requestidfield">RequestID </a>and <a href="http://www.w3.org/TR/mmi-arch/#DataField">Data</a> fields with MMI Life Cycle Events. A CheckUpdate event MUST include Source, Target, and RequestID. It MAY include a Data field. It MAY also include a Context field, if the event pertains to a specific context. </p>
+<p>The CheckUpdate events are the request/response pair, CheckUpdateRequest and CheckUpdateResponse. CheckUpdateRequest and CheckUpdateResponse are used to check to see if there are any changes in the system. They share the 
+<a href="http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>,
+ <a href="http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>,
+  <a href="http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>,
+   <a href="http://www.w3.org/tr/mmi-arch/#requestidfield">RequestID </a>
+   and 
+   <a href="http://www.w3.org/TR/mmi-arch/#DataField">Data</a> 
+   
+fields with MMI Life Cycle Events. A CheckUpdate event MUST include Source, Target, and RequestID. It MAY include a Data field. It MAY also include a Context field, if the event pertains to a specific context. </p>
 <p>In addition, both CheckUpdate events MUST include the additional fields UpdateType, State, and Timeout. The CheckUpdateResponse MUST also include the field &quot;AutomaticUpdate&quot;. The CheckUpdate events can be sent from either the Modality Component to the Resources Manager or from the Resources Manager to the Modality Components. </p>
-<h4>6.1.1 UpdateType</h4>
+<h4>6.2.1 UpdateType</h4>
 <p>An atribute that MUST indicate  the type of check to be performed. Some values can be: Handshake, Monitoring,  Reporting,  DataCheck, Resuming, Leaving.</p>
-<h4>6.1.2 State</h4>
-<p>An atribute that MUST indicate  the state of the requesting component and its value. Some values can be: Alive, Loading,   Registering, Available, Idle, Busy Waiting, Processing,  Unavailable, Unregistered. (Figure 8)</p>
-
-<h5>- Alive</h5>
-<p> A Modality Component MUST be in Alive state when it is already started and ready to be identified and registered on the multimodal system.</p>
-<h5>- Loading</h5>
-<p>A Modality Component MAY be in Loading state if it is currently loading ressources that it will need to function.</p>
-<h5>- Registering</h5>
-<p>A Modality Component MAY be in Registering state when it has already requested a registration id in the multimodal system through the Resources Manager.</p>
-<h5>- Available</h5>
-<p>A Modality Component MUST be in Available state when it is already registered, ready to functionning and not busy.</p>
-<h5>- Idle</h5>
-<p>A Modality Component MAY be in Idle state when it is already registered, functionning and waiting for a user input.</p>
-<h5>- Busy Waiting</h5>
-<p>A Modality Component MAY be in  Busy Waiting state when it is already registered, functionning and waiting for a system's event or a system's response.</p>
-<h5>- Processing</h5>
-<p>A Modality Component MUST be in Processing state when it is already registered and processing some task. The process could be any multimodal or unimodal task like transfering, searching, recognizing or any other kind  of process.</p>
-<h5>- Unregistered</h5>
-<p>A Modality Component MUST be in Unregistered state if the system's rules commands the unregistration and the Modality Component is no longer authorized to interact with the system (for example if it has to update its access credentials).</p>
-<h5>- Unavailable</h5>
-<p>A Modality Component MUST be in  Unavailable state when it has a failure, or when it is unregistered and it does not update its registration, or when it lacks of resources or must reload them. In short, whent the Modality Component is no more able to correctly ensure its task.</p>
+<h4>6.2.2 State</h4>
+<p>An atribute that MUST indicate  the state of the requesting component and its value. Some values can be: Alive, Loading,   Registering, Available, Idle, Busy Waiting, Processing,  Unavailable, Unregistered. (SeeFigure 8)</p>
 
 
-<img class="mmImage" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Mmi_states.png" alt="States for a Modality Component" onclick="
+<img class="mmi-state" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Mmi_states.png" alt="States for a Modality Component" onclick="
 window.open('https://upload.wikimedia.org/wikipedia/commons/b/b1/Mmi_states.png','States');" />
 <p class="caption">Figure 8: Discovery and Registation states for a Modality Component </p>
+
+
+
+<h5>6.2.2.1 ALIVE</h5>
+<p> A Modality Component MUST be in Alive state when it is already started and ready to be identified and registered on the multimodal system.</p>
+<h5>6.2.2.2 LOADING</h5>
+<p>A Modality Component MAY be in Loading state if it is currently loading ressources that it will need to function.</p>
+<h5>6.2.2.3 REGISTERING</h5>
+<p>A Modality Component MAY be in Registering state when it has already requested a registration id in the multimodal system through the Resources Manager.</p>
+<h5>6.2.2.4 AVAILABLE</h5>
+<p>A Modality Component MUST be in Available state when it is already registered, ready to functionning and not busy.</p>
+<h5>6.2.2.5 IDLE</h5>
+<p>A Modality Component MAY be in Idle state when it is already registered, functionning and waiting for a user input.</p>
+<h5>6.2.2.6 BUSY WAITING</h5>
+<p>A Modality Component MAY be in  Busy Waiting state when it is already registered, functionning and waiting for a system's event or a system's response.</p>
+<h5>6.2.2.7 PROCESSING</h5>
+<p>A Modality Component MUST be in Processing state when it is already registered and processing some task. The process could be any multimodal or unimodal task like transfering, searching, recognizing or any other kind  of process.</p>
+<h5>6.2.2.8 UNREGISTERED</h5>
+<p>A Modality Component MUST be in Unregistered state if the system's rules commands the unregistration and the Modality Component is no longer authorized to interact with the system (for example if it has to update its access credentials).</p>
+<h5>6.2.2.9 UNAVAILABLE</h5>
+<p>A Modality Component MUST be in  Unavailable state when it has a failure, or when it is unregistered and it does not update its registration, or when it lacks of resources or must reload them. In short, whent the Modality Component is no more able to correctly ensure its task.</p>
 
 
 <p>The following list shows the flow between these states:<style>
@@ -1493,21 +1563,21 @@ Some examples of this flow between the states are:
  
 
 <h4>&nbsp;</h4>
-<h4>6.1.3 AutomaticUpdate</h4>
+<h4>6.2.3 AutomaticUpdate</h4>
 <p>A boolean-valued attribute indicating whether the state of the Modality Component will be automatically updated by UpdateNotification events or whether the Modality Component will keep sending UpdateNotification events in the future without waiting for another CheckUpdateRequest event.</p>
 
 <h4>&nbsp;</h4>
-<h4>6.1.4 Metadata</h4>
+<h4>6.2.4 Metadata</h4>
 <p>An element with an attribute to link with external complementary metatada and an info atribute for inline data.</p>
 
 
-<h4>6.1.4 Timeout</h4>
+<h4>6.2.5 Timeout</h4>
 <p>An element used to temporize the exchanges between components. This element MUST include three attributes. It MUST include a <strong>sleep</strong> attribute  to define the &quot;communication sleep period&quot;, a <strong>validity</strong> attribute to represent the &quot;communication validity period&quot; in milliseconds  and an <strong>interval</strong> attribute to express the &quot;communication interval&quot; in milliseconds. Exemple: </p>
 <div class="exampleInner">
   <pre>
 &lt;mmi:Timeout sleep=&quot;1000&quot; validity=&quot;5000&quot; interval=&quot;500&quot;/&gt;</pre>
 </div>
-<h4>6.1.5 Example</h4>
+<h4>6.2.6 Example</h4>
 <h4>CheckUpdateRequest (from MC to RM)</h4>
 <div class="exampleInner">
   <pre>
@@ -1542,15 +1612,18 @@ Some examples of this flow between the states are:
   </pre>
 </div>
 <h3>&nbsp;</h3>
-<h3 id="upnot">6.2 UpdateNotification</h3>
+
+<br/>
+<h4 id="check"><span class="secno">6.3</span> UpdateNotification</h4>
 <p>This section is Normative.</p>
+ 
 <p>The  Update Notification  informs (periodically or not) about the changes on the state of a Component.  If automatic updates are enabled, the Component may send multiple Update Notification messages after a single CheckUpdateRequest message. It shares the </A><a href="http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>, <a href="http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>, <a href="http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>, <a href=""http:="http:"//www.w3.org/tr/mmi-arch/#requestidfield">RequestID </a>and <a href="http://www.w3.org/TR/mmi-arch/#DataField">Data</a> fields with MMI Life Cycle Events. An Update Notification event MUST include Source, Target, and RequestID. It MAY include a Data field. It MAY also include a Context field, if the notification pertains to a specific context. </p>
 <p>In addition, an Update Notification MUST include the additional fields UpdateType, State, and Timeout. The Update Notification event can be sent from either the Modality Component to the Resources Manager or from the Resources Manager to the Modality Components. </p>
-<h4>6.2.1 UpdateType</h4>
+<h4>6.3.1 UpdateType</h4>
 <p>An atribute that MUST indicate  the type of check to be performed. Some values can be: Monitoring,  Reporting,  DataCheck, DataUpdate, InterfaceUpdate</p>
-<h4>6.2.2 State</h4>
+<h4>6.3.2 State</h4>
 <p>An atribute that MUST indicate  the state of the requesting component and its value. Some values can be: Alive, Loading,   Registering, Available, Idle, Busy Waiting, Processing,  Unavailable, Unregistered.</p>
-<h4>6.2.3 Example</h4>
+<h4>6.3.3 Example</h4>
 <h4>UpdateNotification (from MC to RM)</h4>
 <div class="exampleInner1">
   <pre>
@@ -1566,7 +1639,7 @@ Some examples of this flow between the states are:
 </div>
 <h4>&nbsp; </h4>
 <p>&nbsp;</p>
-<h4 id="req6"><span class="secno">6.3</span> Requirements Addressed </h4> 
+<h4 id="req6"><span class="secno">6.4</span> Requirements Addressed </h4> 
 
 
 <table class='ReqsTable' >
