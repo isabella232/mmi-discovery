@@ -816,6 +816,9 @@ class="secno">6.</span> Two events for system updates</a></li>
  
  <!-- OPE ISSUES -->
 <li class="tocline">7<a href="#open" class="tocxref"><span class="secno"> </span> Open Issues</a></li>
+
+<li class="tocline"><a href="#references" class="tocxref"><span
+class="secno">A.</span>References</a></li>
 </ul>
 
 <h2 id="introduction"><span class="secno">1.</span> Introduction</h2>
@@ -1620,10 +1623,12 @@ Some examples of this flow between the states are:
 <p>The  Update Notification  informs (periodically or not) about the changes on the state of a Component.  If automatic updates are enabled, the Component may send multiple Update Notification messages after a single CheckUpdateRequest message. It shares the </A><a href="http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>, <a href="http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>, <a href="http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>, <a href=""http:="http:"//www.w3.org/tr/mmi-arch/#requestidfield">RequestID </a>and <a href="http://www.w3.org/TR/mmi-arch/#DataField">Data</a> fields with MMI Life Cycle Events. An Update Notification event MUST include Source, Target, and RequestID. It MAY include a Data field. It MAY also include a Context field, if the notification pertains to a specific context. </p>
 <p>In addition, an Update Notification MUST include the additional fields UpdateType, State, and Timeout. The Update Notification event can be sent from either the Modality Component to the Resources Manager or from the Resources Manager to the Modality Components. </p>
 <h4>6.3.1 UpdateType</h4>
-<p>An atribute that MUST indicate  the type of check to be performed. Some values can be: Monitoring,  Reporting,  DataCheck, DataUpdate, InterfaceUpdate</p>
+<p>An atribute that MUST indicate  the type of check to be performed. Some values can be: <em>Reporting</em>, in the case of an important change on the Modality Component need to be reported to the Resources Manager, like a noise situation in some audio capture, for example.  An update notification can also be triggered when the Modality Component uses or produces new data: in this case the UpdateType can be <em>DataUpdate</em>. Finally a Modality Component can need to inform some user interface changes, for example when the load of some data is finished and this affects the user interface display... in this case the UpdateType will be an<em> InterfaceUpdate</em></p>
 <h4>6.3.2 State</h4>
-<p>An atribute that MUST indicate  the state of the requesting component and its value. Some values can be: Alive, Loading,   Registering, Available, Idle, Busy Waiting, Processing,  Unavailable, Unregistered.</p>
-<h4>6.3.3 Example</h4>
+<p>An atribute that MUST indicate  the state of the requesting component and its value. These values correspond to the values supported by the checkUpdate event:  Alive, Loading,   Registering, Available, Idle, Busy Waiting, Processing,  Unavailable, Unregistered.</p>
+<h4>6.2.3 Timeout</h4>
+<p>An element used to indicate the pace of the notification process when automatic updates are  enabled. This element MUST include three attributes. It MUST include a <strong>sleep</strong> attribute  to define the &quot;communication sleep period&quot;, a <strong>validity</strong> attribute to represent the &quot;communication validity period&quot; in milliseconds  and an <strong>interval</strong> attribute to express the &quot;communication interval&quot; in milliseconds. </p>
+<h4>6.3.4 Example</h4>
 <h4>UpdateNotification (from MC to RM)</h4>
 <div class="exampleInner1">
   <pre>
@@ -1632,8 +1637,9 @@ Some examples of this flow between the states are:
         mmi:Source=&quot;URIForMC&quot;
         mmi:Target=&quot;URIForRM&quot; 
         mmi:RequestID=&quot;request-1&quot;
-        mmi:UpdateType=&quot;INTERFACEUPDATE&quot;
-        mmi:State=&quot;NAVIGATING&quot;&gt;
+        mmi:UpdateType=&quot;REPORTING&quot;
+        mmi:State=&quot;BUSY WAITING&quot;&gt;
+		&lt;mmi:Timeout sleep=&quot;1000&quot; validity=&quot;360000&quot; interval=&quot;200&quot;/&gt;
     &lt;/mmi:UpdateNotification&gt;
 &lt;/mmi:mmi&gt;</pre>
 </div>
@@ -1686,9 +1692,133 @@ Some examples of this flow between the states are:
 
  <p>Also, this document is focusing on the flow of messages and the building blocks needed to support this flow. The details of the communication between the Interaction Manager and the State Manager, as the interfaces between the Data Component and the State Manager will be described later.
  </p>
-
-
  <p>Finally, another open issue is the management of multiple instances of the Interaction Manager and the flow of messages between them and multiple Modality Components.
  </p>
+ <h2 id="references"><span class="secno">A.</span> References</h2>
+
+<h3 id="key-references"><span class="secno">A.1</span> Key References</h3>
+
+<p></p>
+
+<dl>
+ 
+<dt id="bib-MMI-ARCH">[MMI-ARCH]</dt>
+
+<dd>Jim Barnett (Ed). <a
+href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/"><cite>Multimodal
+Architecture and Interfaces.</cite></a> 12 January 2012. W3C
+Candidate Recommendation. URL: <a
+href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">http://www.w3.org/TR/2012/CR-mmi-arch-20120112/</a></dd>
+
+
+<dt id="bib-DIS_USE">[MMI-REQ]</dt>
+
+<dd>Stéphane H. Maes and Vijay Saraswat (Eds). <a
+href="http://www.w3.org/TR/mmi-reqs/"><cite>Multimodal Interaction Requirements</cite></a> 8 January 2003. W3C
+Working Group Note. URL: <a
+href="http://www.w3.org/TR/mmi-reqs/">http://www.w3.org/TR/mmi-reqs/</a></dd>
+
+ 
+<dt id="bib-DIS_USE">[DIS-USE]</dt>
+
+<dd>B. Helena Rodr&iacute;guez (Ed).<a
+href="http://www.w3.org/TR/mmi-discovery"><cite>Registration & Discovery of Multimodal Modality Components in Multimodal Systems: Use Cases and Requirements</cite></a> 15 July 2012. W3C
+Working Group Note. URL: <a
+href="http://www.w3.org/TR/mmi-discovery">http://www.w3.org/TR/mmi-discovery</a></dd>
+ 
+</dl>
+
+<h3 id="other-references"><span class="secno">A.2</span> Other References</h3>
+
+<dl class="bibliography">
+<dt id="bib-A-INTENT">[A-INTENT]</dt>
+
+<dd>Google. <a
+href="http://developer.android.com/reference/android/content/Intent.html">
+<cite>Android Intent Class Documentation</cite></a> Available at
+URL: <a
+href="http://developer.android.com/reference/android/content/Intent.html">
+http://developer.android.com/reference/android/content/Intent.html</a></dd>
+
+ 
+<dt id="bib-EMOTION-USE">[EMOTION-USE]</dt>
+
+<dd>Marc Schröder, Enrico Zovato, Hannes Pirker,
+Christian Peter, Felix Burkhardt. <a
+href="http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases">
+<cite>Emotion Incubator Group Use Cases</cite></a> Available at
+URL: <a
+href="http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases">
+http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases</a></dd>
+ 
+<dt id="bib-WEB-INTENTS">[WEB-INTENTS]</dt>
+
+<dd>Paul Kinlan. <a href="http://webintents.org/"><cite>Web
+Intents.</cite></a> Available at URL: <a
+href="http://webintents.org/">http://webintents.org/</a></dd>
+
+<dt id="bib-Foley">[FOLEY-1984]</dt>
+
+<dd><cite>Foley,J.D., Wallace,V.L. and Chan, P. “The Human Factors of computer Graphics interaction techniques” In: IEEE computer Graphics and Applications, 1984. Vol. 4. No.11, pp. 13-48.</cite> Available at URL: <a
+href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6429355"> http://ieeexplore.ieee.org </a></dd>
+
+<dt id="bib-Foster">[FOSTER-2002]</dt>
+
+<dd>Foster,I et al.<a href="http://www.ogf.org/documents/GFD.80.pdf"><cite>The Open Grid Services Architecture</cite></a> Available at URL: <a
+href="http://www.ogf.org/documents/GFD.80.pdf"> http://www.ogf.org </a></dd>
+
+<dt id="bib-Buxton">[BUXTON-1986]</dt>
+
+<dd>Buxton, W. <cite>"There's More to Interaction than Meets the Eye: Some Issues in Manual Input" In: User Centered System Design: New Perspectives on Human-Computer Interaction. Norman, D. A. and Draper, S. W. (Ed.).  Lawrence Erlbaum Associates, Hillsdale, New Jersey, 1986.  p.p. 319-337.</cite></dd>
+
+<dt id="bib-Mackinlay">[CARD-1991]</dt>
+
+<dd>Card,S. K.,  Mackinlay,J. D. Et Robertson, G. G.<a href="http://dl.acm.org/citation.cfm?id=128726"><cite>"A morphological analysis of the design space of input devices." ACM Trasactions on Information Systems, 9(2) :99–122, April 1991.</cite></a> Available at URL: <a
+href="http://dl.acm.org/citation.cfm?id=128726">http://dl.acm.org/</a></dd>
+
+<dt id="bib-Jacob">[JACOB-1992]</dt>
+ 
+<dd>Jacob, R. J. K. and Sibert, L. E. <cite>"The perceptual structure of multidimensional input device selection" In: Proceedings of the SIGCHI conference on Human factors in computing systems - CHI92, 1992. ACM, New York, NY, US. </cite>Available at URL: <a
+href="http://doi.acm.org/10.1145/142750.142792">http://doi.acm.org/</a></dd>
+
+<dt id="bib-Arens">[ARENS-1993]</dt>
+
+<dd>Yigal Arens , Eduard Hovy , Mira Vossers, 1993.<cite>On the Knowledge Underlying Multimedia Presentations. In Intelligent Multimedia Interfaces, Mark Maybury (ed). AAAI Press (280–306).</cite></dd>
+
+<dt id="bib-Bernsen">[BERNSEN-1993]</dt>
+
+<dd>BERNSEN, O. <cite>  “Foundations of multimodal representations. A taxonomy of 
+representational modalities”. In: Interacting with Computers, 1993, Vol. 6, No. 4, p. 347-371.
+</cite> Available at URL: <a
+href="http://dx.doi.org/10.1016/0953-5438(94)90008-6">http://dx.doi.org/</a></dd>
+
+<dt id="bib-Bouchet">[BOUCHET-2006]</dt>
+ 
+<dd>Bouchet, J.<cite>Ingénierie de l'interaction multimodale en entrée: approche à composants ICARE. Ph.D. thesis, Université Joseph Fourier, Grenoble 1, 2006.</cite> Available at URL: <a
+href="http://tel.archives-ouvertes.fr/docs/00/15/52/27/PDF/these_Jullien_Bouchet_finale.pdf">http://iihm.imag.fr/publication/B06c/</a></dd>
+
+<dt id="bib-Serrano">[SERRANO-2008]</dt>
+
+<dd>Serrano,M., Nigay,L., Lawson,J-Y. L.,  Ramsay, a., Murray-Smith, R. and Denef, S. <cite>"The openInterface framework: a tool for multimodal interaction" In: CHI '08 extended abstracts on Human factors in computing systems -CHI EA08. ACM, New York, NY, USA. p.p.3501-3506. </cite></a> Available at URL: <a
+href="http://doi.acm.org/10.1145/1358628.1358881">http://doi.acm.org/</a></dd>
+
+<dt id="bib-Burbeck">[BURBECK-1987]</dt>
+
+<dd>Steve Burbeck <cite>Applications Programming in Smalltalk-80(TM):
+How to use Model-View-Controller (MVC) </cite></a> Available at URL: <a
+href="http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html">Applications Programming in Smalltalk-80(TM)</a></dd>
+
+<dt id="bib-Adjie">[ADJIE-1999]</dt>
+
+<dd>Adjie-Winoto, W., Schwartz,E.,  Balakrishnan,H. and Lilley,J. <cite>"The Design and Implementation of an Intentional Naming System". Proc. 17th ACM SOSP, Kiawah Island, SC. Dec. 1999.</cite></a> Available at URL: <a
+href="http://nms.csail.mit.edu/projects/ins/">http://nms.csail.mit.edu/projects/ins/</a></dd>
+
+<dt id="bib-Bozdag">[BOZDAG-2007]</dt>
+
+<dd>Engin Bozdag, Ali Mesbah and Arie van Deursen, 2007<cite>A Comparison of Push and Pull
+Techniques for AJAX. Report TUD-SERG-2007-016a. TU Delf, 2007</cite> Available at URL: <a
+href="http://dx.doi.org/10.1109/WSE.2007.4380239">http://dx.doi.org/</a></dd>
+
+</dl>
 </body>
 </html>
