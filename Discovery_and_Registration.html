@@ -1,3 +1,18 @@
+Skip to content
+ This repository
+Explore
+Gist
+Blog
+Help
+ berthele berthele
+ 
+18  Unwatch 
+  Star 0
+ Fork 0 w3c/mmi-discovery
+ branch: master mmi-discovery/Discovery_and_Registration.html
+dadahldadahl 5 days ago Minor editorial changes
+2 contributors bertheledadahl
+1833 lines (1531 sloc)  104.665 kb RawBlameHistory   
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"
@@ -18,7 +33,6 @@ xml:lang="en">
          * The following software licensing rules apply:
          * http://www.w3.org/Consortium/Legal/copyright-software 
          ****************************************************************************/
-
         body {
           padding: 2em 1em 2em 70px;
           margin: 0;
@@ -33,18 +47,14 @@ xml:lang="en">
         :link { color: #00C; background: transparent }
         :visited { color: #609; background: transparent }
         a:active { color: #C00; background: transparent }
-
         a img { color: white; }        /* trick to hide the border in Netscape 4 */
         @media all {                   /* hide the next rule from Netscape 4 */
           a img { color: inherit; }    /* undo the color change above */
         }
-
         th, td { /* ns 4 */
           font-family: sans-serif;
         }
-
         h1, h2, h3, h4, h5, h6 { text-align: left }
-
         h1, h2, h3, h4, h5 { color: #005A9C; background: white }
         h1 { font: 170% sans-serif }
         h2 { font: 140% sans-serif }
@@ -52,13 +62,11 @@ xml:lang="en">
         h4 { font: 110% sans-serif }
         h5 { font: italic 95% sans-serif ; margin-left:15px;}
         h6 { font: small-caps 100% sans-serif }
-
         .ReqsTable { border-left:  1px solid #CFE1FF; border-right:  1px solid #CFE1FF;width:80%; border-bottom:  1px solid #CFE1FF;
             margin-left:5%; }
         .headReqsTable { font: bold 103% sans-serif; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; width:12%; }
         .subheadReqsTable { font: 100% sans-serif; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; text-align:center;width:44%; }
         .sublineReqsTable { border-bottom:  1px solid #DDD; padding-top:5px;padding-bottom:5px; }
-
         .IntroTable { border-left: 1px solid #CFE1FF; border-right:  1px solid #CFE1FF;width:95%; border-bottom:  1px solid #CFE1FF;
              font-size: 13px; margin-left:1%;}
         .headIntroTable { font: bold 103% sans-serif; text-align:center; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; width:15%; }
@@ -74,30 +82,22 @@ xml:lang="en">
                
         
         .hide { display: none }
-
         div.head { margin-bottom: 1em }
         div.head h1 { margin-top: 2em; clear: both }
         div.head table { margin-left: 2em; margin-top: 2em }
-
         p.copyright { font-size: small }
         p.copyright small { font-size: small }
-
         @media screen {  /* hide from IE3 */
         a[href]:hover { background: #FFBBB2 }
         }
-
         pre { margin-left: 2em }
-
         dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
         dt { font-weight: bold }
-
         pre, code { font-family: monospace } /* navigator 4 requires this */
-
         ul.toc, ol.toc {
           list-style: disc;     /* Mac NS has problem with 'none' */
           list-style: none;
         }
-
         @media aural {  
           h1, h2, h3 { stress: 20; richness: 90 }
           .hide { speak: none }
@@ -105,8 +105,6 @@ xml:lang="en">
           dt { pause-before: 20% }
           pre { speak-punctuation: code } 
         }
-
-
         /* --- INLINES --- */
  
         
@@ -115,37 +113,29 @@ xml:lang="en">
             color:              #0F3E00;
         }
         
-
         h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, a acronym,
         h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
             border: none;
         }
-
         dfn {
             font-weight:    bold;
         }
-
         a.internalDFN {
             color:  inherit;
             border-bottom:  1px solid #CFE1FF;
             text-decoration:    none;
         }
-
         a.externalDFN {
             color:  inherit;
             border-bottom:  1px dotted #ccc;
             text-decoration:    none;
         }
-
         a.bibref {
             text-decoration:    none;
         }
-
         code {
             color:  #ff4500;
         }
-
-
         /* --- WEB IDL --- */
         pre.idl {
             border-top: 1px solid #90b8de;
@@ -153,7 +143,6 @@ xml:lang="en">
             padding:    1em;
             line-height:    120%;
         }
-
         pre.idl::before {
             content:    "WebIDL";
             display:    block;
@@ -165,19 +154,13 @@ xml:lang="en">
             font-weight:    bold;
             margin: -1em 0 1em -1em;
         }
-
         .idlType {
             color:  #ff4500;
             font-weight:    bold;
             text-decoration:    none;
         }
-
         
 /*        .mmImage { border: solid 1px black; width:403px height:268px;} */
-
-
-
-
         /*.idlModule*/
         /*.idlModuleID*/
         /*.idlInterface*/
@@ -185,12 +168,10 @@ xml:lang="en">
             font-weight:    bold;
             color:  #005a9c;
         }
-
         .idlSuperclass {
             font-style: italic;
             color:  #005a9c;
         }
-
         /*.idlAttribute*/
         .idlAttrType, .idlFieldType, .idlMemberType {
             color:  #005a9c;
@@ -203,7 +184,6 @@ xml:lang="en">
             border-bottom:  1px dotted #ff4500;
             text-decoration: none;
         }
-
         /*.idlMethod*/
         .idlMethType {
             color:  #005a9c;
@@ -216,7 +196,6 @@ xml:lang="en">
             border-bottom:  1px dotted #ff4500;
             text-decoration: none;
         }
-
         /*.idlParam*/
         .idlParamType {
             color:  #005a9c;
@@ -224,11 +203,9 @@ xml:lang="en">
         .idlParamName {
             font-style: italic;
         }
-
         .extAttr {
             color:  #666;
         }
-
         /*.idlConst*/
         .idlConstType {
             color:  #005a9c;
@@ -241,59 +218,47 @@ xml:lang="en">
             border-bottom:  1px dotted #ff4500;
             text-decoration: none;
         }
-
         /*.idlException*/
         .idlExceptionID {
             font-weight:    bold;
             color:  #c00;
         }
-
         .idlTypedefID, .idlTypedefType {
             color:  #005a9c;
         }
-
         .idlRaises, .idlRaises a.idlType, .idlRaises a.idlType code, .excName a, .excName a code {
             color:  #c00;
             font-weight:    normal;
         }
-
         .excName a {
             font-family:    monospace;
         }
-
         .idlRaises a.idlType, .excName a.idlType {
             border-bottom:  1px dotted #c00;
         }
-
         .excGetSetTrue, .excGetSetFalse, .prmNullTrue, .prmNullFalse, .prmOptTrue, .prmOptFalse {
             width:  45px;
             text-align: center;
         }
         .excGetSetTrue, .prmNullTrue, .prmOptTrue { color:  #0c0; }
         .excGetSetFalse, .prmNullFalse, .prmOptFalse { color:  #c00; }
-
         .idlImplements a {
             font-weight:    bold;
         }
-
         dl.attributes, dl.methods, dl.constants, dl.fields, dl.dictionary-members {
             margin-left:    2em;
         }
-
         .attributes dt, .methods dt, .constants dt, .fields dt, .dictionary-members dt {
             font-weight:    normal;
         }
-
         .attributes dt code, .methods dt code, .constants dt code, .fields dt code, .dictionary-members dt code {
             font-weight:    bold;
             color:  #000;
             font-family:    monospace;
         }
-
         .attributes dt code, .fields dt code, .dictionary-members dt code {
             background:  #ffffd2;
         }
-
         .attributes dt .idlAttrType code, .fields dt .idlFieldType code, .dictionary-members dt .idlMemberType code {
             color:  #005a9c;
             background:  transparent;
@@ -301,19 +266,15 @@ xml:lang="en">
             font-weight:    normal;
             font-style: italic;
         }
-
         .methods dt code {
             background:  #d9e6f8;
         }
-
         .constants dt code {
             background:  #ddffd2;
         }
-
         .attributes dd, .methods dd, .constants dd, .fields dd, .dictionary-members dd {
             margin-bottom:  1em;
         }
-
         table.parameters, table.exceptions {
             border-spacing: 0;
             border-collapse:    collapse;
@@ -322,7 +283,6 @@ xml:lang="en">
         }
         table.parameters { border-bottom:  1px solid #90b8de; }
         table.exceptions { border-bottom:  1px solid #deb890; }
-
         .parameters th, .exceptions th {
             color:  #fff;
             padding:    3px 5px;
@@ -333,86 +293,69 @@ xml:lang="en">
         }
         .parameters th { background: #90b8de; }
         .exceptions th { background: #deb890; }
-
         .parameters td, .exceptions td {
             padding:    3px 10px;
             border-top: 1px solid #ddd;
             vertical-align: top;
         }
-
         .parameters tr:first-child td, .exceptions tr:first-child td {
             border-top: none;
         }
-
         .parameters td.prmName, .exceptions td.excName, .exceptions td.excCodeName {
             width:  100px;
         }
-
         .parameters td.prmType {
             width:  120px;
         }
-
         table.exceptions table {
             border-spacing: 0;
             border-collapse:    collapse;
             width:  100%;
         }
-
         /* --- TOC --- */
         .toc a {
             text-decoration:    none;
         }
-
         a .secno {
             color:  #000;
         }
-
         /* --- TABLE --- */
         table.simple {
             border-spacing: 0;
             border-collapse:    collapse;
             border-bottom:  3px solid #005a9c;
         }
-
         .simple th {
             background: #005a9c;
             color:  #fff;
             padding:    3px 5px;
             text-align: left;
         }
-
         .simple th[scope="row"] {
             background: inherit;
             color:  inherit;
             border-top: 1px solid #ddd;
         }
-
         .simple td {
             padding:    3px 10px;
             border-top: 1px solid #ddd;
         }
-
         .simple tr:nth-child(even) {
             background: #f0f6ff;
         }
-
         /* --- DL --- */
         .section dd > p:first-child {
             margin-top: 0;
         }
-
         .section dd > p:last-child {
             margin-bottom: 0;
         }
-
         .section dd {
             margin-bottom:  1em;
         }
-
         .section dl.attrs dd, .section dl.eldef dd {
             margin-bottom:  0;
         }
-
         /* --- EXAMPLES --- */
         pre.example {
             border-top: 1px solid #ff4500;
@@ -420,7 +363,6 @@ xml:lang="en">
             padding:    1em;
             margin-top: 1em;
         }
-
         pre.example::before {
             content:    "Example";
             display:    block;
@@ -432,7 +374,6 @@ xml:lang="en">
             font-weight:    bold;
             margin: -1em 0 1em -1em;
         }
-
         /* --- EDITORIAL NOTES --- */
         .issue {
             padding:    1em;
@@ -440,7 +381,6 @@ xml:lang="en">
             border: 1px solid #f00;
             background: #ffc;
         }
-
         .issue::before {
             content:    "Issue";
             display:    block;
@@ -451,14 +391,12 @@ xml:lang="en">
             background: #fff;
             padding:    3px 1em;
         }
-
         .note {
             margin: 1em 0em 0em;
             padding:    1em;
             border: 2px solid #cff6d9;
             background: #e2fff0;
         }
-
         .note::before {
             content:    "Note";
             display:    block;
@@ -469,31 +407,25 @@ xml:lang="en">
             background: #fff;
             padding:    3px 1em;
         }
-
         /* --- Best Practices --- */
         div.practice {
             border: solid #bebebe 1px;
             margin: 2em 1em 1em 2em;
         }
-
         span.practicelab {
             margin: 1.5em 0.5em 1em 1em;
             font-weight: bold;
             font-style: italic;
         }
-
         span.practicelab   { background: #dfffff; }
-
         span.practicelab {
             position: relative;
             padding: 0 0.5em;
             top: -1.5em;
         }
-
         p.practicedesc {
             margin: 1.5em 0.5em 1em 1em;
         }
-
         @media screen {
             p.practicedesc {
                 position: relative;
@@ -502,7 +434,6 @@ xml:lang="en">
                 margin: 1.5em 0.5em -1em 1em;
             }
         }
-
         /* --- SYNTAX HIGHLIGHTING --- */
         pre.sh_sourceCode {
           background-color: white;
@@ -510,7 +441,6 @@ xml:lang="en">
           font-style: normal;
           font-weight: normal;
         }
-
         pre.sh_sourceCode .sh_keyword { color: #005a9c; font-weight: bold; }           /* language keywords */
         pre.sh_sourceCode .sh_type { color: #666; }                            /* basic types */
         pre.sh_sourceCode .sh_usertype { color: teal; }                             /* user defined types */
@@ -524,28 +454,21 @@ xml:lang="en">
         pre.sh_sourceCode .sh_function { color: black; font-weight: bold; }         /* function calls and declarations */
         pre.sh_sourceCode .sh_cbracket { color: red; }                              /* block brackets (e.g., {, }) */
         pre.sh_sourceCode .sh_todo { font-weight: bold; background-color: #00FFFF; }   /* TODO and FIXME */
-
         /* Predefined variables and functions (for instance glsl) */
         pre.sh_sourceCode .sh_predef_var { color: #00008B; }
         pre.sh_sourceCode .sh_predef_func { color: #00008B; font-weight: bold; }
-
         /* for OOP */
         pre.sh_sourceCode .sh_classname { color: teal; }
-
         /* line numbers (not yet implemented) */
         pre.sh_sourceCode .sh_linenum { display: none; }
-
         /* Internet related */
         pre.sh_sourceCode .sh_url { color: blue; text-decoration: underline; font-family: monospace; }
-
         /* for ChangeLog and Log files */
         pre.sh_sourceCode .sh_date { color: blue; font-weight: bold; }
         pre.sh_sourceCode .sh_time, pre.sh_sourceCode .sh_file { color: #00008B; font-weight: bold; }
         pre.sh_sourceCode .sh_ip, pre.sh_sourceCode .sh_name { color: #006400; }
-
         /* for Prolog, Perl... */
         pre.sh_sourceCode .sh_variable { color: #006400; }
-
         /* for LaTeX */
         pre.sh_sourceCode .sh_italics { color: #006400; font-style: italic; }
         pre.sh_sourceCode .sh_bold { color: #006400; font-weight: bold; }
@@ -555,22 +478,18 @@ xml:lang="en">
         pre.sh_sourceCode .sh_optionalargument { color: purple; }
         pre.sh_sourceCode .sh_math { color: orange; }
         pre.sh_sourceCode .sh_bibtex { color: blue; }
-
         /* for diffs */
         pre.sh_sourceCode .sh_oldfile { color: orange; }
         pre.sh_sourceCode .sh_newfile { color: #006400; }
         pre.sh_sourceCode .sh_difflines { color: blue; }
-
         /* for css */
         pre.sh_sourceCode .sh_selector { color: purple; }
         pre.sh_sourceCode .sh_property { color: blue; }
         pre.sh_sourceCode .sh_value { color: #006400; font-style: italic; }
-
         /* other */
         pre.sh_sourceCode .sh_section { color: black; font-weight: bold; }
         pre.sh_sourceCode .sh_paren { color: red; }
         pre.sh_sourceCode .sh_attribute { color: #006400; }
-
 /* Kaz Ashimura - 4 July 2012 - for figures and captions */
 img.mmImage {
   display: block;
@@ -579,7 +498,6 @@ img.mmImage {
   border: solid 1px black;
   width: 50%;
 }
-
 img.mmBigImage {
   display: block;
   margin-left: auto;
@@ -1079,11 +997,11 @@ The Resources Manager proposed in this document allows the management of the sta
 </ul>
    <ul>
      <li><em><strong>The history of the states</strong></em>, represented by a set of data structures and its metadata. The type and values of these structures is implementation-dependent.<br/><br/> 
-     For example, to adapt the context of interaction to the collection of  user preferences and component's states. In this case, the Resources Manager can be implemented as an statistical directory of resources, enhanced with some basic inference techniques. The information can be provided with a numerical score describing the degree of confidence and preference of a particular type of modality. This score can be calculated by the Resources Manager based on the history of the states   of a given Modality Component and its use. The availability list provided is then ponderated according to the history of the stored states and their confidence factor. This implementation of the Resources Manager is oriented to information about the  state of the multimodal system from a statistical point of view. In this case the Resources Manager is a support not only for the present state handling but also for an evaluation of the quality of service(QoS) provided by each Modality Component.</li>
+     For example, to adapt the context of interaction to the collection of  user preferences and component's states. In this case, the Resources Manager can be implemented as an statistical directory of resources, enhanced with some basic inference techniques. The information can be provided with a numerical score describing the degree of confidence and preference of a particular type of modality. This score can be calculated by the Resources Manager based on the history of the states   of a given Modality Component and its use. The availability list provided is then sorted according to the history of the stored states and their confidence factor. This implementation of the Resources Manager is oriented to information about the  state of the multimodal system from a statistical point of view. In this case the Resources Manager is a support not only for the present state handling but also for an evaluation of the quality of service(QoS) provided by each Modality Component.</li>
 </ul>
    <ul>
      <li><em><strong>The expected states</strong></em>, represented by the extrapolation of the current situation in the future.<br/><br/> 
-       For example, to adapt the context of interaction to the expected states of the system. As more sophisticated applications might use past and future, the Resources Manager can be implemented as a support for predictive adaptation of the interaction. For example, a multimodal system can use expected states according to well known environmental information, like a critical peaks of use in emergency cases. In the case of a smart car in an emergency situation, the predictive adaptation of the interaction can infer the resources that are more adapted to the situation in accordance with present and past data. The automatic combination of Modality Components for a given emergency will depend on the environment of the multimodal system and the correct evaluation of the current and past states of the system (i.e. don't use a Modality Component that is not adapted or reliable for a peak use). In this case the Resources Manager is a support for the prediction of future states to reduce or enhance the cognitive load of the user interaction according to the prediction and prevision of external factors.</li>
+       For example, to adapt the context of interaction to the expected states of the system. As more sophisticated applications might use past and future, the Resources Manager can be implemented as a support for predictive adaptation of the interaction. For example, a multimodal system can use expected states according to well known environmental information, like a critical peaks of use in emergency cases. In the case of a smart car in an emergency situation, the predictive adaptation of the interaction can infer the resources that are more adapted to the situation in accordance with present and past data. The automatic combination of Modality Components for a given emergency will depend on the environment of the multimodal system and the correct evaluation of the current and past states of the system (i.e. don't use a Modality Component that is not adapted or reliable for a peak use). In this case the Resources Manager is a support for the prediction of future states to reduce the cognitive load of the user interaction according to the prediction and prevision of external factors.</li>
 </ul>
 <ul>
 </ul>
@@ -1241,7 +1159,7 @@ window.open('http://upload.wikimedia.org/wikipedia/commons/7/7e/MMI_Timeout.png'
 <img class="mmImage" src="http://upload.wikimedia.org/wikipedia/commons/e/e0/Sleep_high_resolution.png" alt="Example of the timeout use" onclick="
 window.open('http://upload.wikimedia.org/wikipedia/commons/b/b4/Sleep_high.png','Sleep');" />
 <p class="caption">Figure 6: Example of the timeout use to manage availability </p>
-<p>The third element is the communication interval, which is modulated according to the multimodal system and system's needs by a set of static rules or by a prediction mechanism used in the state handler Component.  This element informs  the Modality Component before-hand about the frequency of requests that can be allowed by the recipient component (a State Manager in a server, for example) in the current conditions. This value is exchanged on each request, which means that it can be changed at any moment in the multimodal session. </p>
+<p>The third element is the communication interval, which is modulated according to the multimodal system's needs by a set of static rules or by a prediction mechanism used in the state handler Component.  This element informs  the Modality Component before-hand about the frequency of requests that can be allowed by the recipient component (a State Manager in a server, for example) in the current conditions. This value is exchanged on each request, which means that it can be changed at any moment in the multimodal session. </p>
 <p> With our proposal, the pull interval will equal the publish interval because the Modality Component knows the exact publish interval beforehand  according to a time pattern. In this way, data coherence is ensured and network performance maintained. Since the Resources Manager has access to all the state data, it can for example, use a prediction algorithm implemented in the Data Component,  to foresee a time when the data is going to change. The Resources Manager then attaches this time value in the timeout triplet to the outgoing data. </p>
 <p>Finally, if the Resources Manager prediction is wrong and still a change  occurs in data, if the Resources Manager knows the address of the Modality Component it can push the change to it, using the original push technique proposed here. In this case the push command is handled as an interruption of the default pull update mechanism. In this way, the system maintains its reliability.</p>
 
@@ -1291,12 +1209,10 @@ window.open('https://upload.wikimedia.org/wikipedia/commons/b/b1/Mmi_states.png'
 
 
 <p>The following list shows the flow between these states:<style>
-
 .stateTable {
 font-size:12px;
 border:none;
 }
-
 .alive {
 padding-left:4px;
 color: #EEEEEE;
@@ -1337,7 +1253,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .available2 {
 padding-left:4px;
 color: #EEEEEE;
@@ -1348,7 +1263,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .idle {
 padding-left:4px;
 color: #333333;
@@ -1389,7 +1303,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .idle_fin {
 padding-left:5px;
 color: #333333;
@@ -1397,7 +1310,6 @@ font-weight:bold;
 background-color:#cccccc;
 height: 28px;
 }
-
 .busy {
 padding-left:4px;
 padding-right:3px;
@@ -1409,7 +1321,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .busy2{
 padding-left:4px;
 padding-right:3px;
@@ -1421,7 +1332,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .busy3{
 padding-left:4px;
 padding-right:3px;
@@ -1433,7 +1343,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .unavailable {
 padding-left:5px;
 color: #FFFFFF;
@@ -1441,7 +1350,6 @@ font-weight:bold;
 background-color:#00204d;
 height: 28px;
 }
-
 .alive2 {
 padding-left:4px;
 color: #EEEEEE;
@@ -1452,7 +1360,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .alive3 {
 padding-left:4px;
 color: #EEEEEE;
@@ -1463,7 +1370,6 @@ background-repeat:no-repeat;
 background-position:right top;
 height: 28px;
 }
-
 .unregistered {
 padding-left:5px;
 color: #FFFFFF;
@@ -1654,8 +1560,6 @@ Some examples of this flow between the states are:
 <h4>&nbsp; </h4>
 <p>&nbsp;</p>
 <h4 id="req6"><span class="secno">6.4</span> Requirements Addressed </h4> 
-
-
 <table class='ReqsTable' >
 	<tr><td class='headReqsTable'>Requirements</td> 
 		<td class='subheadReqsTable'> </td></tr>
@@ -1694,121 +1598,51 @@ Some examples of this flow between the states are:
 </table> 
  <h2 id="vocablo">&nbsp;</h2>
  <h2 id="open"><span class="secno">7.</span> Open Issues</h2>   
-
  <p>Security techniques are separated from the current communication protocol in the architecture as in this document: we assume that this is a private network. Security issues for this protocol in public networks will be addressed later.
  </p>
-
  <p>Also, this document is focusing on the flow of messages and the building blocks needed to support this flow. The details of the communication between the Interaction Manager and the State Manager, as the interfaces between the Data Component and the State Manager will be described later.
  </p>
- <p>Finally, another open issue is the management of multiple instances of the Interaction Manager and the flow of messages between them and multiple Modality Components.
+ <p>Another open issue is the management of multiple instances of the Interaction Manager and the flow of messages between them, the Resources Manager and multiple Modality Components.
  </p>
+ <p>FInally, a common vocabulary for the description of the Modality Component's attributes in order to Register and Compose them, is an important subject to be treated in order to allow a better interoperability between multimodal systems. Vocabulary and Capabilities will be addressed in a subsequent document.</p>
  <h2 id="references"><span class="secno">A.</span> References</h2>
-
 <h3 id="key-references"><span class="secno">A.1</span> Key References</h3>
-
 <p></p>
-
 <dl>
  
 <dt id="bib-MMI-ARCH">[MMI-ARCH]</dt>
-
 <dd>Jim Barnett (Ed). <a
 href="http://www.w3.org/TR/mmi-arch/"><cite>Multimodal
 Architecture and Interfaces.</cite></a> 25 October 2012 W3C
 Recommendation. URL: <a
 href="http://www.w3.org/TR/mmi-arch/">http://www.w3.org/TR/mmi-arch/.</a></dd>
-
-
 <dt id="bib-DIS_USE">[MMI-REQ]</dt>
-
 <dd>Stéphane H. Maes and Vijay Saraswat (Eds). <a
 href="http://www.w3.org/TR/mmi-reqs/"><cite>Multimodal Interaction Requirements</cite></a> 8 January 2003. W3C
 Working Group Note. URL: <a
 href="http://www.w3.org/TR/mmi-reqs/">http://www.w3.org/TR/mmi-reqs/</a></dd>
-
  
 <dt id="bib-DIS_USE">[DIS-USE]</dt>
-
 <dd>B. Helena Rodr&iacute;guez (Ed).<a
 href="http://www.w3.org/TR/mmi-discovery"><cite>Registration & Discovery of Multimodal Modality Components in Multimodal Systems: Use Cases and Requirements</cite></a> 15 July 2012. W3C
 Working Group Note. URL: <a
 href="http://www.w3.org/TR/mmi-discovery">http://www.w3.org/TR/mmi-discovery</a></dd>
  
 </dl>
-
 <h3 id="other-references"><span class="secno">A.2</span> Other References</h3>
-
 <dl class="bibliography">
-<dt id="bib-A-INTENT">[A-INTENT]</dt>
-
-<dd>Google. <a
-href="http://developer.android.com/reference/android/content/Intent.html">
-<cite>Android Intent Class Documentation</cite></a> Available at
-URL: <a
-href="http://developer.android.com/reference/android/content/Intent.html">
-http://developer.android.com/reference/android/content/Intent.html</a></dd>
-
- 
-<dt id="bib-EMOTION-USE">[EMOTION-USE]</dt>
-
-<dd>Marc Schröder, Enrico Zovato, Hannes Pirker,
-Christian Peter, Felix Burkhardt. <a
-href="http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases">
-<cite>Emotion Incubator Group Use Cases</cite></a> Available at
-URL: <a
-href="http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases">
-http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases</a></dd>
- 
-<dt id="bib-WEB-INTENTS">[WEB-INTENTS]</dt>
-
+<dt id="bib-A-INTENT">[WEB-INTENTS]</dt>
 <dd>Paul Kinlan. <a href="http://webintents.org/"><cite>Web
-Intents.</cite></a> Available at URL: <a
+  Intents.</cite></a> Available at URL: <a
 href="http://webintents.org/">http://webintents.org/</a></dd>
-
 <dt id="bib-Foley">[FOLEY-1984]</dt>
-
 <dd><cite>Foley,J.D., Wallace,V.L. and Chan, P. “The Human Factors of computer Graphics interaction techniques” In: IEEE computer Graphics and Applications, 1984. Vol. 4. No.11, pp. 13-48.</cite> Available at URL: <a
 href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6429355"> http://ieeexplore.ieee.org </a></dd>
-
 <dt id="bib-Foster">[FOSTER-2002]</dt>
-
 <dd>Foster,I et al.<a href="http://www.ogf.org/documents/GFD.80.pdf"><cite>The Open Grid Services Architecture</cite></a> Available at URL: <a
 href="http://www.ogf.org/documents/GFD.80.pdf"> http://www.ogf.org </a></dd>
-
-<dt id="bib-Buxton">[BUXTON-1986]</dt>
-
-<dd>Buxton, W. <cite>"There's More to Interaction than Meets the Eye: Some Issues in Manual Input" In: User Centered System Design: New Perspectives on Human-Computer Interaction. Norman, D. A. and Draper, S. W. (Ed.).  Lawrence Erlbaum Associates, Hillsdale, New Jersey, 1986.  p.p. 319-337.</cite></dd>
-
-<dt id="bib-Mackinlay">[CARD-1991]</dt>
-
-<dd>Card,S. K.,  Mackinlay,J. D. Et Robertson, G. G.<a href="http://dl.acm.org/citation.cfm?id=128726"><cite>"A morphological analysis of the design space of input devices." ACM Trasactions on Information Systems, 9(2) :99–122, April 1991.</cite></a> Available at URL: <a
-href="http://dl.acm.org/citation.cfm?id=128726">http://dl.acm.org/</a></dd>
-
-<dt id="bib-Jacob">[JACOB-1992]</dt>
- 
-<dd>Jacob, R. J. K. and Sibert, L. E. <cite>"The perceptual structure of multidimensional input device selection" In: Proceedings of the SIGCHI conference on Human factors in computing systems - CHI92, 1992. ACM, New York, NY, US. </cite>Available at URL: <a
-href="http://doi.acm.org/10.1145/142750.142792">http://doi.acm.org/</a></dd>
-
-<dt id="bib-Arens">[ARENS-1993]</dt>
-
-<dd>Yigal Arens , Eduard Hovy , Mira Vossers, 1993.<cite>On the Knowledge Underlying Multimedia Presentations. In Intelligent Multimedia Interfaces, Mark Maybury (ed). AAAI Press (280–306).</cite></dd>
-
-<dt id="bib-Bernsen">[BERNSEN-1993]</dt>
-
-<dd>BERNSEN, O. <cite>  “Foundations of multimodal representations. A taxonomy of 
-representational modalities”. In: Interacting with Computers, 1993, Vol. 6, No. 4, p. 347-371.
-</cite> Available at URL: <a
-href="http://dx.doi.org/10.1016/0953-5438(94)90008-6">http://dx.doi.org/</a></dd>
-
-<dt id="bib-Bouchet">[BOUCHET-2006]</dt>
- 
-<dd>Bouchet, J.<cite>Ingénierie de l'interaction multimodale en entrée: approche à composants ICARE. Ph.D. thesis, Université Joseph Fourier, Grenoble 1, 2006.</cite> Available at URL: <a
-href="http://tel.archives-ouvertes.fr/docs/00/15/52/27/PDF/these_Jullien_Bouchet_finale.pdf">http://iihm.imag.fr/publication/B06c/</a></dd>
-
-<dt id="bib-Serrano">[SERRANO-2008]</dt>
-
-<dd>Serrano,M., Nigay,L., Lawson,J-Y. L.,  Ramsay, a., Murray-Smith, R. and Denef, S. <cite>"The openInterface framework: a tool for multimodal interaction" In: CHI '08 extended abstracts on Human factors in computing systems -CHI EA08. ACM, New York, NY, USA. p.p.3501-3506. </cite></a> Available at URL: <a
-href="http://doi.acm.org/10.1145/1358628.1358881">http://doi.acm.org/</a></dd>
+<dt id="bib-Buxton">&nbsp;</dt>
+<dt id="bib-Bouchet">&nbsp;</dt>
 
 <dt id="bib-Burbeck">[BURBECK-1987]</dt>
 
@@ -1816,10 +1650,7 @@ href="http://doi.acm.org/10.1145/1358628.1358881">http://doi.acm.org/</a></dd>
 How to use Model-View-Controller (MVC) </cite></a> Available at URL: <a
 href="http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html">Applications Programming in Smalltalk-80(TM)</a></dd>
 
-<dt id="bib-Adjie">[ADJIE-1999]</dt>
-
-<dd>Adjie-Winoto, W., Schwartz,E.,  Balakrishnan,H. and Lilley,J. <cite>"The Design and Implementation of an Intentional Naming System". Proc. 17th ACM SOSP, Kiawah Island, SC. Dec. 1999.</cite></a> Available at URL: <a
-href="http://nms.csail.mit.edu/projects/ins/">http://nms.csail.mit.edu/projects/ins/</a></dd>
+<dt id="bib-Adjie">&nbsp;</dt>
 
 <dt id="bib-Bozdag">[BOZDAG-2007]</dt>
 
@@ -1830,3 +1661,5 @@ href="http://dx.doi.org/10.1109/WSE.2007.4380239">http://dx.doi.org/</a></dd>
 </dl>
 </body>
 </html>
+Status API Training Shop Blog About
+© 2015 GitHub, Inc. Terms Privacy Security Contact
