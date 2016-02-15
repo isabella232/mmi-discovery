@@ -13,7 +13,7 @@ The following documents have been produced by the <a href="https://www.w3.org/20
 <li>
 <a href="http://w3c.github.io/mmi-discovery/Discovery_and_Registration.html">
 Latest Discovery draft
-<a>.
+<a>
 </li>
 
 <li>
