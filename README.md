@@ -10,7 +10,13 @@ The document has been produced by the <a href="https://www.w3.org/2002/mmi">W3C 
 </p>
 
 <p>
-The latest draft is available at:
+The latest Discovery draft is available at:
 <a href="http://w3c.github.io/mmi-discovery/Discovery_and_Registration.html">
 http://w3c.github.io/mmi-discovery/Discovery_and_Registration.html</a>.
+</p>
+
+<p>
+The latest Vocabulary draft is available at:
+<a href="http://w3c.github.io/mmi-discovery/vocabulary.html">
+http://w3c.github.io/mmi-discovery/vocabulary.html</a>.
 </p>
