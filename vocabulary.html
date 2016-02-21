@@ -18,7 +18,6 @@ xml:lang="en">
          * The following software licensing rules apply:
          * http://www.w3.org/Consortium/Legal/copyright-software 
          ****************************************************************************/
-
         body {
           padding: 2em 1em 2em 70px;
           margin: 0;
@@ -33,18 +32,14 @@ xml:lang="en">
         :link { color: #00C; background: transparent }
         :visited { color: #609; background: transparent }
         a:active { color: #C00; background: transparent }
-
         a img { color: white; }        /* trick to hide the border in Netscape 4 */
         @media all {                   /* hide the next rule from Netscape 4 */
           a img { color: inherit; }    /* undo the color change above */
         }
-
         th, td { /* ns 4 */
           font-family: sans-serif;
         }
-
         h1, h2, h3, h4, h5, h6 { text-align: left }
-
         h1, h2, h3, h4 { color: #005A9C; background: white }
         h1 { font: 170% sans-serif }
         h2 { font: 140% sans-serif }
@@ -52,13 +47,11 @@ xml:lang="en">
         h4 { font: 110% sans-serif }
         h5 { font: italic 100% sans-serif }
         h6 { font: small-caps 100% sans-serif }
-
         .ReqsTable { border-left:  1px solid #CFE1FF; border-right:  1px solid #CFE1FF;width:80%; border-bottom:  1px solid #CFE1FF;
             margin-left:5%; }
         .headReqsTable { font: bold 103% sans-serif; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; width:12%; }
         .subheadReqsTable { font: 100% sans-serif; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; text-align:center;width:44%; }
         .sublineReqsTable { border-bottom:  1px solid #DDD; padding-top:5px;padding-bottom:5px; }
-
         .IntroTable { border-left: 1px solid #CFE1FF; border-right:  1px solid #CFE1FF;width:80%; border-bottom:  1px solid #CFE1FF;
              font-size: 13px; margin-left:7%;}
         .headIntroTable { font: bold 103% sans-serif; text-align:center; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; width:15%; }
@@ -74,30 +67,22 @@ xml:lang="en">
                
         
         .hide { display: none }
-
         div.head { margin-bottom: 1em }
         div.head h1 { margin-top: 2em; clear: both }
         div.head table { margin-left: 2em; margin-top: 2em }
-
         p.copyright { font-size: small }
         p.copyright small { font-size: small }
-
         @media screen {  /* hide from IE3 */
         a[href]:hover { background: #FFBBB2 }
         }
-
         pre { margin-left: 2em }
-
         dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
         dt { font-weight: bold }
-
         pre, code { font-family: monospace } /* navigator 4 requires this */
-
         ul.toc, ol.toc {
           list-style: disc;     /* Mac NS has problem with 'none' */
           list-style: none;
         }
-
         @media aural {  
           h1, h2, h3 { stress: 20; richness: 90 }
           .hide { speak: none }
@@ -105,8 +90,6 @@ xml:lang="en">
           dt { pause-before: 20% }
           pre { speak-punctuation: code } 
         }
-
-
         /* --- INLINES --- */
  
         
@@ -115,37 +98,29 @@ xml:lang="en">
             color:              #0F3E00;
         }
         
-
         h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, a acronym,
         h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
             border: none;
         }
-
         dfn {
             font-weight:    bold;
         }
-
         a.internalDFN {
             color:  inherit;
             border-bottom:  1px solid #CFE1FF;
             text-decoration:    none;
         }
-
         a.externalDFN {
             color:  inherit;
             border-bottom:  1px dotted #ccc;
             text-decoration:    none;
         }
-
         a.bibref {
             text-decoration:    none;
         }
-
         code {
             color:  #ff4500;
         }
-
-
         /* --- WEB IDL --- */
         pre.idl {
             border-top: 1px solid #90b8de;
@@ -153,7 +128,6 @@ xml:lang="en">
             padding:    1em;
             line-height:    120%;
         }
-
         pre.idl::before {
             content:    "WebIDL";
             display:    block;
@@ -165,19 +139,13 @@ xml:lang="en">
             font-weight:    bold;
             margin: -1em 0 1em -1em;
         }
-
         .idlType {
             color:  #ff4500;
             font-weight:    bold;
             text-decoration:    none;
         }
-
         
 /*        .mmImage { border: solid 1px black; width:403px height:268px;} */
-
-
-
-
         /*.idlModule*/
         /*.idlModuleID*/
         /*.idlInterface*/
@@ -185,12 +153,10 @@ xml:lang="en">
             font-weight:    bold;
             color:  #005a9c;
         }
-
         .idlSuperclass {
             font-style: italic;
             color:  #005a9c;
         }
-
         /*.idlAttribute*/
         .idlAttrType, .idlFieldType, .idlMemberType {
             color:  #005a9c;
@@ -203,7 +169,6 @@ xml:lang="en">
             border-bottom:  1px dotted #ff4500;
             text-decoration: none;
         }
-
         /*.idlMethod*/
         .idlMethType {
             color:  #005a9c;
@@ -216,7 +181,6 @@ xml:lang="en">
             border-bottom:  1px dotted #ff4500;
             text-decoration: none;
         }
-
         /*.idlParam*/
         .idlParamType {
             color:  #005a9c;
@@ -224,11 +188,9 @@ xml:lang="en">
         .idlParamName {
             font-style: italic;
         }
-
         .extAttr {
             color:  #666;
         }
-
         /*.idlConst*/
         .idlConstType {
             color:  #005a9c;
@@ -241,59 +203,47 @@ xml:lang="en">
             border-bottom:  1px dotted #ff4500;
             text-decoration: none;
         }
-
         /*.idlException*/
         .idlExceptionID {
             font-weight:    bold;
             color:  #c00;
         }
-
         .idlTypedefID, .idlTypedefType {
             color:  #005a9c;
         }
-
         .idlRaises, .idlRaises a.idlType, .idlRaises a.idlType code, .excName a, .excName a code {
             color:  #c00;
             font-weight:    normal;
         }
-
         .excName a {
             font-family:    monospace;
         }
-
         .idlRaises a.idlType, .excName a.idlType {
             border-bottom:  1px dotted #c00;
         }
-
         .excGetSetTrue, .excGetSetFalse, .prmNullTrue, .prmNullFalse, .prmOptTrue, .prmOptFalse {
             width:  45px;
             text-align: center;
         }
         .excGetSetTrue, .prmNullTrue, .prmOptTrue { color:  #0c0; }
         .excGetSetFalse, .prmNullFalse, .prmOptFalse { color:  #c00; }
-
         .idlImplements a {
             font-weight:    bold;
         }
-
         dl.attributes, dl.methods, dl.constants, dl.fields, dl.dictionary-members {
             margin-left:    2em;
         }
-
         .attributes dt, .methods dt, .constants dt, .fields dt, .dictionary-members dt {
             font-weight:    normal;
         }
-
         .attributes dt code, .methods dt code, .constants dt code, .fields dt code, .dictionary-members dt code {
             font-weight:    bold;
             color:  #000;
             font-family:    monospace;
         }
-
         .attributes dt code, .fields dt code, .dictionary-members dt code {
             background:  #ffffd2;
         }
-
         .attributes dt .idlAttrType code, .fields dt .idlFieldType code, .dictionary-members dt .idlMemberType code {
             color:  #005a9c;
             background:  transparent;
@@ -301,19 +251,15 @@ xml:lang="en">
             font-weight:    normal;
             font-style: italic;
         }
-
         .methods dt code {
             background:  #d9e6f8;
         }
-
         .constants dt code {
             background:  #ddffd2;
         }
-
         .attributes dd, .methods dd, .constants dd, .fields dd, .dictionary-members dd {
             margin-bottom:  1em;
         }
-
         table.parameters, table.exceptions {
             border-spacing: 0;
             border-collapse:    collapse;
@@ -322,7 +268,6 @@ xml:lang="en">
         }
         table.parameters { border-bottom:  1px solid #90b8de; }
         table.exceptions { border-bottom:  1px solid #deb890; }
-
         .parameters th, .exceptions th {
             color:  #fff;
             padding:    3px 5px;
@@ -333,86 +278,69 @@ xml:lang="en">
         }
         .parameters th { background: #90b8de; }
         .exceptions th { background: #deb890; }
-
         .parameters td, .exceptions td {
             padding:    3px 10px;
             border-top: 1px solid #ddd;
             vertical-align: top;
         }
-
         .parameters tr:first-child td, .exceptions tr:first-child td {
             border-top: none;
         }
-
         .parameters td.prmName, .exceptions td.excName, .exceptions td.excCodeName {
             width:  100px;
         }
-
         .parameters td.prmType {
             width:  120px;
         }
-
         table.exceptions table {
             border-spacing: 0;
             border-collapse:    collapse;
             width:  100%;
         }
-
         /* --- TOC --- */
         .toc a {
             text-decoration:    none;
         }
-
         a .secno {
             color:  #000;
         }
-
         /* --- TABLE --- */
         table.simple {
             border-spacing: 0;
             border-collapse:    collapse;
             border-bottom:  3px solid #005a9c;
         }
-
         .simple th {
             background: #005a9c;
             color:  #fff;
             padding:    3px 5px;
             text-align: left;
         }
-
         .simple th[scope="row"] {
             background: inherit;
             color:  inherit;
             border-top: 1px solid #ddd;
         }
-
         .simple td {
             padding:    3px 10px;
             border-top: 1px solid #ddd;
         }
-
         .simple tr:nth-child(even) {
             background: #f0f6ff;
         }
-
         /* --- DL --- */
         .section dd > p:first-child {
             margin-top: 0;
         }
-
         .section dd > p:last-child {
             margin-bottom: 0;
         }
-
         .section dd {
             margin-bottom:  1em;
         }
-
         .section dl.attrs dd, .section dl.eldef dd {
             margin-bottom:  0;
         }
-
         /* --- EXAMPLES --- */
         pre.example {
             border-top: 1px solid #ff4500;
@@ -420,7 +348,6 @@ xml:lang="en">
             padding:    1em;
             margin-top: 1em;
         }
-
         pre.example::before {
             content:    "Example";
             display:    block;
@@ -432,7 +359,6 @@ xml:lang="en">
             font-weight:    bold;
             margin: -1em 0 1em -1em;
         }
-
         /* --- EDITORIAL NOTES --- */
         .issue {
             padding:    1em;
@@ -440,7 +366,6 @@ xml:lang="en">
             border: 1px solid #f00;
             background: #ffc;
         }
-
         .issue::before {
             content:    "Issue";
             display:    block;
@@ -451,14 +376,12 @@ xml:lang="en">
             background: #fff;
             padding:    3px 1em;
         }
-
         .note {
             margin: 1em 0em 0em;
             padding:    1em;
             border: 2px solid #cff6d9;
             background: #e2fff0;
         }
-
         .note::before {
             content:    "Note";
             display:    block;
@@ -469,31 +392,25 @@ xml:lang="en">
             background: #fff;
             padding:    3px 1em;
         }
-
         /* --- Best Practices --- */
         div.practice {
             border: solid #bebebe 1px;
             margin: 2em 1em 1em 2em;
         }
-
         span.practicelab {
             margin: 1.5em 0.5em 1em 1em;
             font-weight: bold;
             font-style: italic;
         }
-
         span.practicelab   { background: #dfffff; }
-
         span.practicelab {
             position: relative;
             padding: 0 0.5em;
             top: -1.5em;
         }
-
         p.practicedesc {
             margin: 1.5em 0.5em 1em 1em;
         }
-
         @media screen {
             p.practicedesc {
                 position: relative;
@@ -502,7 +419,6 @@ xml:lang="en">
                 margin: 1.5em 0.5em -1em 1em;
             }
         }
-
         /* --- SYNTAX HIGHLIGHTING --- */
         pre.sh_sourceCode {
           background-color: white;
@@ -510,7 +426,6 @@ xml:lang="en">
           font-style: normal;
           font-weight: normal;
         }
-
         pre.sh_sourceCode .sh_keyword { color: #005a9c; font-weight: bold; }           /* language keywords */
         pre.sh_sourceCode .sh_type { color: #666; }                            /* basic types */
         pre.sh_sourceCode .sh_usertype { color: teal; }                             /* user defined types */
@@ -524,28 +439,21 @@ xml:lang="en">
         pre.sh_sourceCode .sh_function { color: black; font-weight: bold; }         /* function calls and declarations */
         pre.sh_sourceCode .sh_cbracket { color: red; }                              /* block brackets (e.g., {, }) */
         pre.sh_sourceCode .sh_todo { font-weight: bold; background-color: #00FFFF; }   /* TODO and FIXME */
-
         /* Predefined variables and functions (for instance glsl) */
         pre.sh_sourceCode .sh_predef_var { color: #00008B; }
         pre.sh_sourceCode .sh_predef_func { color: #00008B; font-weight: bold; }
-
         /* for OOP */
         pre.sh_sourceCode .sh_classname { color: teal; }
-
         /* line numbers (not yet implemented) */
         pre.sh_sourceCode .sh_linenum { display: none; }
-
         /* Internet related */
         pre.sh_sourceCode .sh_url { color: blue; text-decoration: underline; font-family: monospace; }
-
         /* for ChangeLog and Log files */
         pre.sh_sourceCode .sh_date { color: blue; font-weight: bold; }
         pre.sh_sourceCode .sh_time, pre.sh_sourceCode .sh_file { color: #00008B; font-weight: bold; }
         pre.sh_sourceCode .sh_ip, pre.sh_sourceCode .sh_name { color: #006400; }
-
         /* for Prolog, Perl... */
         pre.sh_sourceCode .sh_variable { color: #006400; }
-
         /* for LaTeX */
         pre.sh_sourceCode .sh_italics { color: #006400; font-style: italic; }
         pre.sh_sourceCode .sh_bold { color: #006400; font-weight: bold; }
@@ -555,22 +463,18 @@ xml:lang="en">
         pre.sh_sourceCode .sh_optionalargument { color: purple; }
         pre.sh_sourceCode .sh_math { color: orange; }
         pre.sh_sourceCode .sh_bibtex { color: blue; }
-
         /* for diffs */
         pre.sh_sourceCode .sh_oldfile { color: orange; }
         pre.sh_sourceCode .sh_newfile { color: #006400; }
         pre.sh_sourceCode .sh_difflines { color: blue; }
-
         /* for css */
         pre.sh_sourceCode .sh_selector { color: purple; }
         pre.sh_sourceCode .sh_property { color: blue; }
         pre.sh_sourceCode .sh_value { color: #006400; font-style: italic; }
-
         /* other */
         pre.sh_sourceCode .sh_section { color: black; font-weight: bold; }
         pre.sh_sourceCode .sh_paren { color: red; }
         pre.sh_sourceCode .sh_attribute { color: #006400; }
-
 /* Kaz Ashimura - 4 July 2012 - for figures and captions */
 img.mmImage {
   display: block;
@@ -579,7 +483,6 @@ img.mmImage {
   border: solid 1px black;
   width: 50%;
 }
-
 img.mmBigImage {
   display: block;
   margin-left: auto;
@@ -661,14 +564,14 @@ class="internalDFN">device</a> or distributed across a
 network.<br />
 <h2 id="vocablo"><span class="secno">2.</span> A vocabulary for the annotation of Modality Components</h2>
 
-<p>This proposal is designed to support the annotation or tagging of (in/out) Modality Components, to enhance their discovery and registering in a multimodal system. The focus is the dynamic discovery of Modality Component as services using generic information about the underlaid type of processes. This information is provided by an announcement and a description (a capabilities manifest, for example) advertised in some network.</p>
+<p>This proposal is designed to support the annotation  of  Modality Components, to allow their discovery and registering in a multimodal system. The focus is the dynamic discovery of Modality Component as services using generic information about the underlaid properties and type of processes. This information is provided by an announcement and a description (a capabilities manifest, for example) advertised in some network.</p>
 <p>The Modality Components can be described with a document that evolves on complexity depending on the application needs. This description can be limited to indications about the Input and Output interfaces or be more detailed describing functional and non-functional properties, using as a basis the Extensible Multimodal Annotation Markup Language (EMMA) [W3C-EMMA 2009].</p>
 <p>
   The meaning of the terms for a controlled vocabulary in the form of a Glossary for the  annotation of Modality Components,  is divided in two parts: Subsumption terms and Life-Cycle an behavior terms.</p>
 
-    <img class="mmImage" src="http://upload.wikimedia.org/wikipedia/commons/c/c8/Vocablo_high.png" alt="Basic Vocabulary for MC annotation " onclick="
+    <img src="http://www.berthele.com/multimodal/img/vocablo_high.png" alt="Basic Vocabulary for MC annotation " width="719" class="mmImage" onclick="
     window.open('http://upload.wikimedia.org/wikipedia/commons/c/c8/Vocablo_high.png','Vocabulary');" />
-    <p class="caption">Figure 9: Basic Vocabulary for MC annotation </p>
+    <p class="caption">Figure 1: Basic Vocabulary for MC annotation </p>
     
 
 <p>The first part concerns the attributes incorporating the Modality Components under a more general category based on multimodal criteria. It is structured on metadata classifying the Modality Component according to its membership or association to a Multimodal class in conformance to the modes handled by the System. This first description allows a discovery filtering for a precise target mode.</p>
@@ -697,103 +600,21 @@ network.<br />
 <p>The first term, &quot;Name&quot; is used to announce the service in the network.  It is a compound name in three parts and provides the semantics about the implementation of the component, its most important attribute and its more important role.</p>
 
 <p>Based on this term, the Modality Component's capabilities can be classified from a high level perspective. The triplet is inspired on the intentional name schema <a href="#bib-Adjie" class="internalDFN">[ADJIE-1999]</a> and show hierarchical tree relationships between general concepts (including some negative differentiating aspects). These names are intentional; they describe the intent of the Modaity Component and its implementation in the form of a tuple of attributes.</p>
-
-<img class="mmBigImage" src="http://upload.wikimedia.org/wikipedia/commons/2/2f/MMI_Name.png" alt="Intentional Name" onclick="
-   window.open('http://upload.wikimedia.org/wikipedia/commons/2/2f/MMI_Name.png','Intentional Name');" />
-   <p class="caption">Figure 10: The Modality Component's Name Structure</p>
-   <p>&nbsp;</p>
+<p>&nbsp;</p>
    
  <p>The second term &quot;Affiliation&quot; specifies the generic information about some complementary association of high level.  It puts forward an aspect of the Modality Component that could affect its selection and that is part of the advertisement policy of the service. It can be for example, a complementary inheritance relationship or a relation based on some association or analogy.</p>   
  <p>In the first case, the affiliation can be related to a particular &quot;myModality&quot; that is in some extent associated to the particular &quot;myMCService&quot;. In the second case, the affiliation can be asserted about other particular which is related with the service by an analogical relationship.
   For example, a myVoice Synthesizer service is affiliated with  myVoiceModality by association, but it can be also affiliated with myAcousticMode by analogy (in the emission side). </p>
-   
-   <img class="mmBigImage" src="http://upload.wikimedia.org/wikipedia/commons/0/02/MMI_Affiliation.png" alt="Multimodal affiliation" onclick="
-      window.open('http://upload.wikimedia.org/wikipedia/commons/0/02/MMI_Affiliation.png','Multimodal affiliation');" />
-      <p class="caption">Figure 11: The Modality Component's affiliation</p>
-      <p>&nbsp;</p>
-   
 <p>The third term &quot;Modality&quot; specifies the form in which some information is realized according to a precise mode. A modality is described by a situation and contains a recognizable logical structure: the information object. For example, a gesture modality is the visual and haptic realization of some intention in a situation of communication (the information object is the «message» to communicate): a cross drawn in the air with a hand gesture, is perceived visually, and in some social contexts this expresses the benediction message.</p>
-
-  <img class="mmBigImage" src="http://upload.wikimedia.org/wikipedia/commons/1/19/MMI_Modality.png" alt="Mode and Modality in Modality Components" onclick="
-      window.open('http://upload.wikimedia.org/wikipedia/commons/1/19/MMI_Modality.png','Mode and Modality in Modality Components');" />
-      <p class="caption">Figure 12: Mode and Modality in Modality Components</p>
-      <p>&nbsp;</p>
+<p>&nbsp;</p>
 
        <p>In Figure 11 &quot;myMCService&quot; <strong>actsIn</strong> some mode that is perceived by a final user through a modality that is part of a medium, i.e. a face synthesis service <strong>actsIn</strong> the visual mode that is perceived through a 3D mesh modality that is part of an avatar medium. </p>  
        <p>A medium is a technical entity  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
        A Modality Component acts with media. Each medium uses one or more modalities that realizes some mode. This term defines the list of media participating in the service, ordered by importance and by mode. For example, a gesture recognizer service    <strong>actsWith</strong> the sign language medium, using the single hand gesture modality that realizes the haptic mode and is perceived in the visual mode.</p>
-       
-       <img class="mmBigImage" src="http://upload.wikimedia.org/wikipedia/commons/e/eb/MMI_Medium.png" alt="Medium in Modality Components" onclick="
-           window.open('http://upload.wikimedia.org/wikipedia/commons/e/eb/MMI_Medium.png','Medium in Modality Components');" />
-           <p class="caption">Figure 13: Medium in Modality Components</p>
-           <p>&nbsp;</p>
+<p>&nbsp;</p>
      
    
-<p>The second part concerns the life-cycle and the general behavior attributes from a qualitative point of view. This part is structured on six attributes:</p>
-<table width="70%" class='semTable'>
-  <tr >
-    <td rowspan="6" class='headsemTable'>TERMS BASED ON LIFE-CYCLE<br />
-AND BEHAVIOR</td>
-    <td class='semItem'>Life </td>
-    <td class='semComm'>Life	GoodFrom<br />
-GoodUntil<br />
-NoGoodUntil</td>
-  </tr>
-  <tr>
-    <td class="semItem">State</td>
-    <td class="semComm">Condition<br />
-Temporal Evolution<br />
-Directional Evolution</td>
-  </tr>
-  
-    <tr>
-      <td class="semItem">Type </td>
-      <td class="semComm">Temporal Aspect<br />
-  Decisional Aspect<br />
-  Relational Aspect</td>
-    </tr>
-  <tr>
-    <td class="semItem">Skill </td>
-    <td class="semComm">Talent<br />
-Weakness<br />
-Dexterity</td>
-  </tr>
-  <tr>
-    <td class="semItem">Privacy</td>
-    <td class="semComm">Data Policy<br />
-Behavior Policy<br />
-Inference Policy</td>
-  </tr>
-    <tr>
-    <td class="semItem">Operations</td>
-    <td class="semComm">my Operations List</td>
-  </tr>
-</table>
-<p>&nbsp;</p> 
-
-<p>The &quot;Life&quot; term  corresponds to the registering of the Modality Component to be part of the multimodal system. It is inspired from the ServiceData attributes of the Open Grid Services Architecture  <a href="#bib-Foster" class="internalDFN">[FOSTER-2002]</a> and represents:
-    <UL><li>the temporal moment when the service is registered: «GoodFrom» </li><li> the final moment of validity for this registration opening a period to allow a new registering and the update of the service metadata: «GoodUntil» </li><li>  the final moment when registration is no more allowed «NoGoodUntil».To include this term in a description will allow to handle the state of the system and to renew the information about the available services.</li></UL>
-
-<p>The &quot;State&quot; term corresponds to a triplet representing <UL><li> the current condition of the service for example: «Running» , «Iddle», «Loading», «Sleeping»;  </li><li>  the temporal evolution of the state, for example: a timestamp or a symbolic description;  </li><li>  the directional aspects of the state what is the dynamics of the state of the entity: «Blocked», «Failing».</li></UL>
-
-<p>The &quot;Type&quot; term corresponds to a triplet representing:
-    <ul><li>the temporal support provided by the modality component. It expresses for example, if the Modality Component service does not have an explicit management of its current or past states because it does not dispose of a state manager; or if the Modality Component service can keep track of the state of the interaction cycle, the participants or the environment and context because it has a state manager implemented. </li><li> the decisional support provided by the modality component. It expresses for example, if the Modality Component  can’t collect dynamic data or make decisions, or if the Modality Component has an implementation that can make decisions based on some knowledge and is autonomous  in some extent. </li><li>  the relational aspect of the implementation expresses for example, if the Modality Component can advertise its  behavior and interfaces and communicate externally, or if it does not provide a detailed description of its behavior and interfaces. </li></ul>
-
-<p>The &quot;Skill&quot; term represents the information that the designer of the modality component want to put forward to help in the selection of the service. It is an advertisement information related to the impression that the provider would like to convey. As a provider it is always important to promote what we can do, what we are not capable to do and what we do best. This is the &quot;Skill&quot; semantics. <ul><li> The talent is the more important aptitude  that the provider will emphasize. </li><li> The weakness is the more evident disadvantage  that the provider would like to disclose. </li><li> The dexterity is the proficiency in performing a given task.</li></ul>
-
-
-<p>Finally, the &quot;Privacy&quot; term represents the ability to preserve some information about an individual or a group and to reveal in each situation some information selectively.  Then the privacy is related to the intention of contextualized anonymity. 
-A Modality Component can be selected according to its degree of privacy on three facets: </p>
-<ul>
-    <li>the data policy reflects the level of anonymization in  concrete information. This means that the Modality Component can ensure that personal data is not collected nor transmitted at one of this three inclusive levels: the identity, the relations and the categories. In the first case, information like a digital fingerprint must be anonymized, in the second case, information like what numbers I called by a voice commanded phone must be anonymized and in the third case, information about my gender coming from my voice pitch must be anonymized.
-</li>
-<li>
- The behavior policy reflects the anonymization of the logs permitting to infer a given behavior. In identity anonymization the graph of the places I visit more frequently  and the temporal patterns of my visits must be anonymized. In relation anonymization the graph of modalities I use more frequently must be anonymized and finally in categorial anonymization the inferences about my personality coming from my behavior must be anonymized. 
- </li>
-<li>
-The inference policy reflects the control over my social and semantic data at the higher level. In the first case, identity, my physical information must be anonymous, like my interaction handicaps inferred from  my modalities choices. In the second case, my demographic information must be anonymous, like my age range inferred from some low level information, as some face recognition. In the third case, my categorial information must be anonymized, like my status of not-originally-national coming from my speech accent or my usage of multiple languages. This last term will be more and more pertinent, as the semantic web of data and the internet of «intelligent» things will evolve. This is an important topic to reflect the reasoning or collection power of a Modality Component but also its capability of adaptation and personalization.
-</li>
-</ul>
+<p>&nbsp;</p>
 <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. Inputs, Outputs, Preconditions and Effects are the IOPEs  properties.</p>
 
 <p>An example of annotation for a video controller, that can be classified as a generic Commander Modality Component is:</p>
@@ -861,8 +682,7 @@ The inference policy reflects the control over my social and semantic data at th
 		} }
 }
 </pre>
-<p class="caption">Code 1: MC Annotation example (YAML) </p>
+<p class="caption">Code 1: MC Annotation example </p>
     
 </body>
 </html>
-
