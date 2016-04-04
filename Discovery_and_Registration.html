@@ -1,10 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
-<meta name="generator" content="HTML Tidy, see www.w3.org">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+lang="en">
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
 <title>Discovery &amp; Registration of Multimodal Modality
 Components: State Handling</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=UTF-8" />
 <style type="text/css">
         /****************************************************************************
          * 2015 Modified by : B.Helena RODRIGUEZ ( berthele at soixante-dix dot com)
@@ -540,7 +543,8 @@ p.caption {
     
 </style>
 
-<link href="https://www.w3.org/StyleSheets/TR/W3C-WD.css" rel="stylesheet" type="text/css" charset="utf-8">
+<link href="https://www.w3.org/StyleSheets/TR/W3C-WD.css" rel=
+"stylesheet" type="text/css" charset="utf-8" />
 <style type="text/css">
 div.exampleInner {background-color: #d5dee3;
                    border-top-width: 4px;
@@ -742,57 +746,89 @@ height: 28px;
 </head>
 <body style="display: inherit;">
 <div class="head">
-<p>
-<a href="http://www.w3.org/"><img height="48" width="72" alt="W3C" src="http://www.w3.org/Icons/w3c_home"></a>
-</p>
+<p><a href="http://www.w3.org/"><img height="48" width="72" alt=
+"W3C" src="http://www.w3.org/Icons/w3c_home" /></a></p>
 
 <h1 class="title" id="title">Discovery &amp; Registration of
 Multimodal Modality Components: State Handling</h1>
 
-<h2 id="w3c-MMI-working-group-wd-@@-february-2016"><acronym title="World Wide Web Consortium">W3C</acronym> Working Draft @@ February 2016</h2>
+<h2 id="w3c-MMI-working-group-wd-@@-february-2016"><acronym title=
+"World Wide Web Consortium">W3C</acronym> Working Draft @@ February
+2016</h2>
 
 <dl>
 <dt>This version:</dt>
 
-<dd><a href="http://www.w3.org/TR/2016/WD-mmi-mc-discovery-201602@@/">http://www.w3.org/TR/2016/WD-mmi-mc-discovery-201602@@/</a></dd>
+<dd><a href=
+"http://www.w3.org/TR/2016/WD-mmi-mc-discovery-201602@@/">http://www.w3.org/TR/2016/WD-mmi-mc-discovery-201602@@/</a></dd>
 
 <dt>Latest published version:</dt>
 
-<dd><a href="http://www.w3.org/TR/mmi-mc-discovery/">http://www.w3.org/TR/mmi-mc-discovery/</a></dd>
+<dd><a href=
+"http://www.w3.org/TR/mmi-mc-discovery/">http://www.w3.org/TR/mmi-mc-discovery/</a></dd>
 
 <dt>Previous version:</dt>
 
-<dd><a href="http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/">http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/</a></dd>
+<dd><a href=
+"http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/">http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/</a></dd>
 
 <dt>Editor:</dt>
 
-<dd><span>B. Helena Rodríguez</span>, <!--a href="http://www.soixante-dix.com/" title="soixante-dix [clever services]"-->W3C Invited Expert<!--/a--></dd>
+<dd><span>B. Helena Rodr&Atilde;&shy;guez</span>, 
+<!--a href="http://www.soixante-dix.com/" title="soixante-dix [clever services]"-->W3C
+Invited Expert<!--/a--></dd>
 
 <dt>Authors:</dt>
 
-<dd><span>Jim Barnett</span>, <!--a href="http://www.genesyslab.com/" title="Genesys Telecommunications Labs"-->Genesys Telecommunications Laboratories<!--/a--></dd>
+<dd><span>Jim Barnett</span>, 
+<!--a href="http://www.genesyslab.com/" title="Genesys Telecommunications Labs"-->Genesys
+Telecommunications Laboratories<!--/a--></dd>
 
-<dd><span>Deborah Dahl</span>, <!--a href="http://www.conversational-technologies.com/" title="Conversational Technologies"-->W3C Invited Expert<!--/a--></dd>
+<dd><span>Deborah Dahl</span>, 
+<!--a href="http://www.conversational-technologies.com/" title="Conversational Technologies"-->W3C
+Invited Expert<!--/a--></dd>
 
-<dd><span>Raj Tumuluri</span>, <!--a href="http://www.openstream.com/" title="Openstream, Inc."-->Openstream, Inc.<!--/a--></dd>
+<dd><span>Raj Tumuluri</span>, 
+<!--a href="http://www.openstream.com/" title="Openstream, Inc."-->Openstream,
+Inc.<!--/a--></dd>
 
-<dd><span>Nagesh Kharidi</span>, <!--a href="http://www.openstream.com/" title="Openstream, Inc."-->Openstream, Inc.<!--/a--></dd>
+<dd><span>Nagesh Kharidi</span>, 
+<!--a href="http://www.openstream.com/" title="Openstream, Inc."-->Openstream,
+Inc.<!--/a--></dd>
 
-<dd><span>Kazuyuki Ashimura</span>, <!--a href="http://www.w3.org/" title="Keio University"-->W3C<!--/a--></dd>
+<dd><span>Kazuyuki Ashimura</span>, 
+<!--a href="http://www.w3.org/" title="Keio University"-->W3C
+<!--/a--></dd>
 </dl>
 
-<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+<p class="copyright"><a href=
+"http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+&Acirc;&copy; 2016 <a href="http://www.w3.org/"><acronym title=
+"World Wide Web Consortium">W3C</acronym></a><sup>&Acirc;&reg;</sup>
+(<a href="http://www.csail.mit.edu/"><acronym title=
+"Massachusetts Institute of Technology">MIT</acronym></a>, <a href=
+"http://www.ercim.eu/"><acronym title=
+"European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>,
+<a href="http://www.keio.ac.jp/">Keio</a>, <a href=
+"http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href=
+"http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+<a href=
+"http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
+and <a href=
+"http://www.w3.org/Consortium/Legal/copyright-documents">document
+use</a> rules apply.</p>
 
-
-<hr>
+<hr />
 </div>
 
 <h2 id="abstract">Abstract</h2>
 
 <p>This document is addressed to people who want either to develop
-Modality Components for Multimodal <a href="#dfn-application" class="internalDFN">Applications</a> distributed over a local
+Modality Components for Multimodal <a href="#dfn-application"
+class="internalDFN">Applications</a> distributed over a local
 network or "in the cloud". With this goal, in a multimodal system
-implemented according to the <a href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
+implemented according to the <a href=
+"http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
 Architecture Specification</a>, the system must discover and
 register its Modality Components in order to preserve the overall
 state of the distributed elements. In this way, Modality Components
@@ -803,185 +839,262 @@ Application to the state of the surrounding environment.</p>
 
 <p><em>This section describes the status of this document at the
 time of its publication. Other documents may supersede this
-document. A list of current <acronym title="World Wide Web Consortium">W3C</acronym> publications and the
-latest revision of this technical report can be found in the <a href="http://www.w3.org/TR/"><acronym title="World Wide Web Consortium">W3C</acronym> technical reports
+document. A list of current <acronym title=
+"World Wide Web Consortium">W3C</acronym> publications and the
+latest revision of this technical report can be found in the <a
+href="http://www.w3.org/TR/"><acronym title=
+"World Wide Web Consortium">W3C</acronym> technical reports
 index</a> at http://www.w3.org/TR/.</em></p>
 
-<p>This is the @@ February 2016 <a href="https://www.w3.org/2015/Process-20150901/#working-draft"><acronym title="World Wide Web Consortium">W3C</acronym> Working Draft</a>
+<p>This is the @@ February 2016 <a href=
+"https://www.w3.org/2015/Process-20150901/#working-draft"><acronym
+title="World Wide Web Consortium">W3C</acronym> Working Draft</a>
 on "Discovery &amp; Registration of Multimodal Modality Components:
 State Handling".</p>
-<p>This draft  was modified to enhance the contrast in graphics to meet WCAG requirements for color contrast. Fonts in Graphics were increased in size, a longdesc was added and the support for keyboard interaction. We modify the<br>
-  state diagram, update the normative part about states, edit the code examples and remove some informative text.</p>
 
-<p>
-A <a href="diff.html">diff-marked version</a> of this document is also available for comparison purposes.
-</p>
+<p>This draft was modified to enhance the contrast in graphics to
+meet WCAG requirements for color contrast. Fonts in Graphics were
+increased in size, a longdesc was added and the support for
+keyboard interaction. We modify the<br />
+ state diagram, update the normative part about states, edit the
+code examples and remove some informative text.</p>
+
+<p>A <a href="diff.html">diff-marked version</a> of this document
+is also available for comparison purposes.</p>
 
 <p>This <acronym title="World Wide Web Consortium">W3C</acronym>
-Working Draft has been developed by the <a href="http://www.w3.org/2002/mmi/">Multimodal Interaction Working
-Group</a> of the <acronym title="World Wide Web Consortium">W3C</acronym> <a href="http://www.w3.org/2002/mmi/Activity.html">Multimodal Interaction
+Working Draft has been developed by the <a href=
+"http://www.w3.org/2002/mmi/">Multimodal Interaction Working
+Group</a> of the <acronym title=
+"World Wide Web Consortium">W3C</acronym> <a href=
+"http://www.w3.org/2002/mmi/Activity.html">Multimodal Interaction
 Activity</a>.</p>
 
-<p>This document was published by the <a href="http://www.w3.org/2002/mmi/">Multimodal Interaction Working
+<p>This document was published by the <a href=
+"http://www.w3.org/2002/mmi/">Multimodal Interaction Working
 Group</a> as a Working Draft. If you wish to make comments
-regarding this document, please send them to <a href="mailto:www-multimodal@w3.org">www-multimodal@w3.org</a> (<a href="mailto:www-multimodal-request@w3.org?subject=subscribe">subscribe</a>,
-<a href="http://lists.w3.org/Archives/Public/www-multimodal/">archives</a>).
+regarding this document, please send them to <a href=
+"mailto:www-multimodal@w3.org">www-multimodal@w3.org</a> (<a href=
+"mailto:www-multimodal-request@w3.org?subject=subscribe">subscribe</a>,
+<a href=
+"http://lists.w3.org/Archives/Public/www-multimodal/">archives</a>).
 All comments are welcomed and should have a subject starting with
 the prefix '[dis]'.</p>
 
 <p>Publication as a First Public Working Draft does not imply
-endorsement by the W3C Membership. This is a draft document and may be
-updated, replaced or obsoleted by other documents at any time. It is
-inappropriate to cite this document as other than work in
+endorsement by the W3C Membership. This is a draft document and may
+be updated, replaced or obsoleted by other documents at any time.
+It is inappropriate to cite this document as other than work in
 progress.</p>
 
-<p>This document was produced by a group operating under the <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5
-February 2004 <acronym title="World Wide Web Consortium">W3C</acronym> Patent Policy</a>.
+<p>This document was produced by a group operating under the <a
+href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5
+February 2004 <acronym title=
+"World Wide Web Consortium">W3C</acronym> Patent Policy</a>.
 <acronym title="World Wide Web Consortium">W3C</acronym> maintains
-a <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/34607/status">public list of any
+a <a rel="disclosure" href=
+"http://www.w3.org/2004/01/pp-impl/34607/status">public list of any
 patent disclosures</a> made in connection with the deliverables of
 the group; that page also includes instructions for disclosing a
 patent. An individual who has actual knowledge of a patent which
-the individual believes contains <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">
+the individual believes contains <a href=
+"http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">
 Essential Claim(s)</a> must disclose the information in accordance
-with <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">
-section 6 of the <acronym title="World Wide Web Consortium">W3C</acronym> Patent Policy</a>.</p>
+with <a href=
+"http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">
+section 6 of the <acronym title=
+"World Wide Web Consortium">W3C</acronym> Patent Policy</a>.</p>
 
 <p>Sections in this document that are not marked as Normative are
 Informative.</p>
 
-<p>This document is governed by the <a id="w3c_process_revision" href="http://www.w3.org/2015/Process-20150901/">1 September 2015 W3C Process Document</a>. </p>
+<p>This document is governed by the <a id="w3c_process_revision"
+href="http://www.w3.org/2015/Process-20150901/">1 September 2015
+W3C Process Document</a>.</p>
 
 <h2 id="toc" class="introductory">Table of Contents</h2>
 
 <ul class="toc">
-<li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1.</span> Introduction</a></li>
+<li class="tocline"><a href="#introduction" class="tocxref"><span
+class="secno">1.</span> Introduction</a></li>
 
-<li class="tocline"><a href="#vocabulary" class="tocxref"><span class="secno">2.</span> Domain Vocabulary</a></li>
+<li class="tocline"><a href="#vocabulary" class="tocxref"><span
+class="secno">2.</span> Domain Vocabulary</a></li>
 
-<li class="tocline"><a href="#scope" class="tocxref"><span class="secno">3.</span> Scope</a></li>
+<li class="tocline"><a href="#scope" class="tocxref"><span class=
+"secno">3.</span> Scope</a></li>
 
 <!-- RESOURCES MANAGER CHAPTER -->
-<li class="tocline"><a href="#manager" class="tocxref"><span class="secno">4.</span> A Resources Manager to handle the general state of the multimodal system</a></li>
+<li class="tocline"><a href="#manager" class="tocxref"><span class=
+"secno">4.</span> A Resources Manager to handle the general state
+of the multimodal system</a></li>
 
-<li class="subline"><a href="#RM_mvc" class="tocxref"><span class="secno">4.1</span> The Resources Manager and the MVC design pattern of the MMI Architecture</a></li>
+<li class="subline"><a href="#RM_mvc" class="tocxref"><span class=
+"secno">4.1</span> The Resources Manager and the MVC design pattern
+of the MMI Architecture</a></li>
 
-<li class="subline"><a href="#RM_resp" class="tocxref"><span class="secno">4.2</span> The Resources Manager responsibilities</a></li>
+<li class="subline"><a href="#RM_resp" class="tocxref"><span class=
+"secno">4.2</span> The Resources Manager responsibilities</a></li>
 
-<li class="subline"><a href="#RM_states" class="tocxref"><span class="secno">4.3</span> Data structures handled by the Resources Manager</a></li>
+<li class="subline"><a href="#RM_states" class="tocxref"><span
+class="secno">4.3</span> Data structures handled by the Resources
+Manager</a></li>
 
-<li class="subline"><a href="#RM_req" class="tocxref"><span class="secno">4.4</span> Requirements Addressed</a></li>
+<li class="subline"><a href="#RM_req" class="tocxref"><span class=
+"secno">4.4</span> Requirements Addressed</a></li>
 
 <!-- PROTOCOL CHAPTER -->
-<li style="list-style: none"><br>
+<li style="list-style: none"><br />
 </li>
 
-<li class="tocline"><a href="#pull" class="tocxref"><span class="secno">5.</span> A bidirectional flow of messages</a></li>
+<li class="tocline"><a href="#pull" class="tocxref"><span class=
+"secno">5.</span> A bidirectional flow of messages</a></li>
 
-<li class="subline">5<a href="#pullRA" class="tocxref"><span class="secno">.1</span> Requirements Addressed</a></li>
+<li class="subline">5<a href="#pullRA" class="tocxref"><span class=
+"secno">.1</span> Requirements Addressed</a></li>
 
-<li style="list-style: none"><br>
+<li style="list-style: none"><br />
 </li>
 
-<li class="tocline"><a href="#events" class="tocxref"><span class="secno">6.</span> Two events for system updates</a></li>
+<li class="tocline"><a href="#events" class="tocxref"><span class=
+"secno">6.</span> Two events for system updates</a></li>
 
-<li class="subline"><a href="#EV_time" class="tocxref"><span class="secno">6.1</span>The timeout attribute for state handling and registration renewal</a></li>
+<li class="subline"><a href="#EV_time" class="tocxref"><span class=
+"secno">6.1</span>The timeout attribute for state handling and
+registration renewal</a></li>
 
-<li class="subline"><a href="#check" class="tocxref"><span class="secno">6.2</span> CheckUpdate Event</a></li>
+<li class="subline"><a href="#check" class="tocxref"><span class=
+"secno">6.2</span> CheckUpdate Event</a></li>
 
-<li class="sub-subline"><a href="#check-type" class="tocxref"><span class="secno">6.2.1</span> UpdateType</a></li>
+<li class="sub-subline"><a href="#check-type" class="tocxref"><span
+class="secno">6.2.1</span> UpdateType</a></li>
 
-<li class="sub-subline"><a href="#check-state" class="tocxref"><span class="secno">6.2.2</span> State</a></li>
+<li class="sub-subline"><a href="#check-state" class=
+"tocxref"><span class="secno">6.2.2</span> State</a></li>
 
-<li class="subm-subline"><a href="#check-state-alive" class="tocxref"><span class="secno">6.2.2.1</span> Alive</a></li>
+<li class="subm-subline"><a href="#check-state-alive" class=
+"tocxref"><span class="secno">6.2.2.1</span> Alive</a></li>
 
-<li class="subm-subline"><a href="#check-state-loading" class="tocxref"><span class="secno">6.2.2.2</span> Loading</a></li>
+<li class="subm-subline"><a href="#check-state-loading" class=
+"tocxref"><span class="secno">6.2.2.2</span> Loading</a></li>
 
-<li class="subm-subline"><a href="#check-state-registering" class="tocxref"><span class="secno">6.2.2.3</span> Registering</a></li>
+<li class="subm-subline"><a href="#check-state-registering" class=
+"tocxref"><span class="secno">6.2.2.3</span> Registering</a></li>
 
-<li class="subm-subline"><a href="#check-state-available" class="tocxref"><span class="secno">6.2.2.4</span> Available</a></li>
+<li class="subm-subline"><a href="#check-state-available" class=
+"tocxref"><span class="secno">6.2.2.4</span> Available</a></li>
 
-<li class="subm-subline"><a href="#check-state-idle" class="tocxref"><span class="secno">6.2.2.5</span> Idle</a></li>
+<li class="subm-subline"><a href="#check-state-idle" class=
+"tocxref"><span class="secno">6.2.2.5</span> Idle</a></li>
 
-<li class="subm-subline"><a href="#check-state-busy" class="tocxref"><span class="secno">6.2.2.6</span> Busy Waiting</a></li>
+<li class="subm-subline"><a href="#check-state-busy" class=
+"tocxref"><span class="secno">6.2.2.6</span> Busy Waiting</a></li>
 
-<li class="subm-subline"><a href="#check-state-processing" class="tocxref"><span class="secno">6.2.2.7</span> Processing</a></li>
+<li class="subm-subline"><a href="#check-state-processing" class=
+"tocxref"><span class="secno">6.2.2.7</span> Processing</a></li>
 
-<li class="subm-subline"><a href="#check-state-unregistered" class="tocxref"><span class="secno">6.2.2.8</span> Unregistered</a></li>
+<li class="subm-subline"><a href="#check-state-unregistered" class=
+"tocxref"><span class="secno">6.2.2.8</span> Unregistered</a></li>
 
-<li class="subm-subline"><a href="#check-state-unavailable" class="tocxref"><span class="secno">6.2.2.9</span> Unavailable</a><br>
+<li class="subm-subline"><a href="#check-state-unavailable" class=
+"tocxref"><span class="secno">6.2.2.9</span> Unavailable</a><br />
 </li>
 
-<li class="sub-subline"><a href="#check-automatic" class="tocxref"><span class="secno">6.2.3</span> AutomaticUpdate</a></li>
+<li class="sub-subline"><a href="#check-automatic" class=
+"tocxref"><span class="secno">6.2.3</span> AutomaticUpdate</a></li>
 
-<li class="sub-subline"><a href="#check-metadata" class="tocxref"><span class="secno">6.2.4</span> Metadata</a></li>
+<li class="sub-subline"><a href="#check-metadata" class=
+"tocxref"><span class="secno">6.2.4</span> Metadata</a></li>
 
-<li class="sub-subline"><a href="#check-timeout" class="tocxref"><span class="secno">6.2.5</span> Timeout</a></li>
+<li class="sub-subline"><a href="#check-timeout" class=
+"tocxref"><span class="secno">6.2.5</span> Timeout</a></li>
 
-<li class="sub-subline"><a href="#check-example" class="tocxref"><span class="secno">6.2.6</span> Example</a><br>
-<br>
+<li class="sub-subline"><a href="#check-example" class=
+"tocxref"><span class="secno">6.2.6</span> Example</a><br />
+<br />
 </li>
 
-<li class="subline"><a href="#upnot" class="tocxref"><span class="secno">6.3</span> UpdateNotification</a></li>
+<li class="subline"><a href="#upnot" class="tocxref"><span class=
+"secno">6.3</span> UpdateNotification</a></li>
 
-<li class="sub-subline"><a href="#upnot-type" class="tocxref"><span class="secno">6.3.1</span> UpdateType</a></li>
- <li class="sub-subline"><a href="#upnot-state" class="tocxref"><span class="secno">6.3.2</span> State</a></li>
+<li class="sub-subline"><a href="#upnot-type" class="tocxref"><span
+class="secno">6.3.1</span> UpdateType</a></li>
 
-<li class="sub-subline"><a href="#upnot-example" class="tocxref"><span class="secno">6.3.3</span> Example</a><br>
-<br>
+<li class="sub-subline"><a href="#upnot-state" class=
+"tocxref"><span class="secno">6.3.2</span> State</a></li>
+
+<li class="sub-subline"><a href="#upnot-example" class=
+"tocxref"><span class="secno">6.3.3</span> Example</a><br />
+<br />
 </li>
 
-<li class="subline"><a href="#req6" class="tocxref"><span class="secno">6.4</span> Requirements Addressed</a><br>
-<br>
+<li class="subline"><a href="#req6" class="tocxref"><span class=
+"secno">6.4</span> Requirements Addressed</a><br />
+<br />
  <!-- OPE ISSUES -->
 </li>
 
-<li class="tocline">7<a href="#open" class="tocxref"><span class="secno"></span> Open Issues</a></li>
+<li class="tocline">7 <a href="#open" class="tocxref">Open
+Issues</a></li>
 
-<li class="tocline">8 <a href="#acknowledgements">Acknowledgements</a></li>
+<li class="tocline">8 <a href=
+"#acknowledgements">Acknowledgements</a></li>
 
-<li class="tocline"><a href="#references" class="tocxref"><span class="secno">A.</span>References</a></li>
+<li class="tocline"><a href="#references" class="tocxref"><span
+class="secno">A.</span>References</a></li>
 </ul>
 
-
-<h2 id="introduction"><span class="secno">1.</span> Introduction</h2>
+<h2 id="introduction"><span class="secno">1.</span>
+Introduction</h2>
 
 <p>To the best of our knowledge, there is no standardized way to
-build a web <a href="#dfn-application" class="internalDFN">Application</a> that can dynamically combine, and
+build a web <a href="#dfn-application" class=
+"internalDFN">Application</a> that can dynamically combine, and
 control discovered components by querying a registry build based on
- modality states. This document covers three needs on Discovery
-&amp; Registration for this kind of web <a href="#dfn-application" class="internalDFN">Application</a> implemented following the <a href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
+modality states. This document covers three needs on Discovery
+&amp; Registration for this kind of web <a href="#dfn-application"
+class="internalDFN">Application</a> implemented following the <a
+href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
 Architecture Specification</a>.</p>
 
 <p>First, we propose to define a new component responsible for the
-management of the state of a <a href="#dfn-multimodal-system" class="internalDFN">Multimodal System</a>, extending the
-control layer already defined in the <a href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
+management of the state of a <a href="#dfn-multimodal-system"
+class="internalDFN">Multimodal System</a>, extending the control
+layer already defined in the <a href=
+"http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
 Architecture Specification</a>. This component will be responsible
 for handling the messages exchanged in order to declare the
-presence (or absence) of the <strong><a href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
+presence (or absence) of the <strong><a href=
+"http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
 Components</a></strong> of the system.</p>
 
 <p>Second, this document presents an adaptive push/pull mechanism,
 needed to inform the system about the changes in the state of the
-  <strong><a href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
-Components</a></strong>. These changes are not necessarily related to
-the interaction context itself, but they can affect it, for
-example, in the case of the unavailability of a given <strong><a href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
+<strong><a href=
+"http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
+Components</a></strong>. These changes are not necessarily related
+to the interaction context itself, but they can affect it, for
+example, in the case of the unavailability of a given <strong><a
+href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
 Component</a></strong>.</p>
 
 <p>And finally, to allow the advertisement of the state of the
-  <strong><a href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
-Components</a></strong> by using the adaptive mechanism, two new events
-are needed. The semantics of these new events is not directly
-related to the interaction context; for this reason a new component
-responsible for the management of the state of the <a href="#dfn-multimodal-system" class="internalDFN">Multimodal System</a> is needed.</p>
+<strong><a href=
+"http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
+Components</a></strong> by using the adaptive mechanism, two new
+events are needed. The semantics of these new events is not
+directly related to the interaction context; for this reason a new
+component responsible for the management of the state of the <a
+href="#dfn-multimodal-system" class="internalDFN">Multimodal
+System</a> is needed.</p>
 
 <table class="IntroTable">
 <tbody>
 <tr>
 <td class="headIntroTable">Resources Handling</td>
 <td class="headIntroTable">A new direction of messages flow</td>
-<td class="headIntroTable">Events for System’s updates</td>
+<td class="headIntroTable">Events for System&acirc;&euro;&trade;s
+updates</td>
 </tr>
 
 <tr>
@@ -994,7 +1107,7 @@ availability or other kind of evolution on the state of the
 Modality Components.</td>
 <td>A new event and a new notification to support the pull
 mechanism and the advertisement, registering, search and update of
-Modality Component’s availability.</td>
+Modality Component&acirc;&euro;&trade;s availability.</td>
 </tr>
 </tbody>
 </table>
@@ -1007,126 +1120,163 @@ Vocabulary</h2>
 
 <dd>For the purposes of this document an Interaction Context
 represents a single exchange between a system and one or multiple
-users across one or multiple interaction modes. It covers the longest period of communication over which it
-would make sense for components to keep the information available.
-It can be as simple as a single period of audiovisual content
-(e.g. a program), a phone call or a web session. </dd>
-<dt>&nbsp;</dt>
-<dd>The Interaction Context can be also a richer interaction combining, for example, voice, gesture and a direct interaction with a light pointer or a shared whiteboard with an associated VoIP call that during the interaction evolves to a text chat. In these cases, a single context persists across various modality configurations. [See: the multimodal <a href="http://www.w3.org/TR/mmi-arch/#ComponentInterface">context</a> in
-  the MMI architecture]</dd>
+users across one or multiple interaction modes. It covers the
+longest period of communication over which it would make sense for
+components to keep the information available. It can be as simple
+as a single period of audiovisual content (e.g. a program), a phone
+call or a web session.</dd>
 
-<dd><br>
+<dt>&nbsp;</dt>
+
+<dd>The Interaction Context can be also a richer interaction
+combining, for example, voice, gesture and a direct interaction
+with a light pointer or a shared whiteboard with an associated VoIP
+call that during the interaction evolves to a text chat. In these
+cases, a single context persists across various modality
+configurations. [See: the multimodal <a href=
+"http://www.w3.org/TR/mmi-arch/#ComponentInterface">context</a> in
+the MMI architecture]</dd>
+
+<dd><br />
 </dd>
 
 <dt><dfn id="dfn-multimodal-system">Multimodal System</dfn></dt>
 
-<dd>For the purposes of this document, a <a href="#dfn-multimodal-system" class="internalDFN">Multimodal System</a>
+<dd>For the purposes of this document, a <a href=
+"#dfn-multimodal-system" class="internalDFN">Multimodal System</a>
 is any system communicating with the user through different
 modalities such as voice, gesture, or handwriting in the same
-interaction cycle identified by a unique <a href="#dfn-context" class="internalDFN">context</a>. In a <a href="#dfn-multimodal-system" class="internalDFN">Multimodal System</a>
+interaction cycle identified by a unique <a href="#dfn-context"
+class="internalDFN">context</a>. In a <a href=
+"#dfn-multimodal-system" class="internalDFN">Multimodal System</a>
 the <a href="#dfn-application" class="internalDFN">Application</a>
-or the end user can dynamically switch <a href="#dfn-modality-component" class="internalDFN">modalities</a> in the
+or the end user can dynamically switch <a href=
+"#dfn-modality-component" class="internalDFN">modalities</a> in the
 same <a href="#dfn-context" class="internalDFN">context</a> of
 information exchange. This is a bi-directional system with combined
 inputs and outputs in multiple sensorial modes (e.g. visual,
 acoustic, haptic, olfactive, gustative) and modalities (e.g. voice,
-gesture, handwriting, biometrics capture, temperature sensing).<br>
-<br>
+gesture, handwriting, biometrics capture, temperature
+sensing).<br />
+<br />
 </dd>
 
 <dt><dfn id="dfn-modality-component">Modality Component</dfn></dt>
 
-<dd>For the purpose of this document, a 'modality' is the way an idea could be communicated or the manner an
-action could be performed through a medium. In some mobile
-multimodal systems, for example, the primary modality is a speech and
-an additional modalitycan typically be gesture, gaze, sketch, or
-a combination thereof. These are forms of representing
-information in a known and recognizable logical structure. </dd>
+<dd>For the purpose of this document, a 'modality' is the way an
+idea could be communicated or the manner an action could be
+performed through a medium. In some mobile multimodal systems, for
+example, the primary modality is a speech and an additional
+modalitycan typically be gesture, gaze, sketch, or a combination
+thereof. These are forms of representing information in a known and
+recognizable logical structure.</dd>
+
 <dt>&nbsp;</dt>
-<dd>For
-  example, visual data can be expressed as a gesture modality (e.g. a
-  pointing gesture) or as a signing modality (e.g. a deaf human
-  talking). Following this idea, in this document a <strong><a href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
-    Component</a></strong> is a logical entity that handles the input
-  or output of different hardware 
-  <!--a href="#dfn-device" class="internalDFN"-->Devices<!--/a--> (e.g. camera, microphone, graphic tablet,
-  keyboard) or software <a href="#dfn-service" class="internalDFN">Services</a> (e.g. motion detection, image
-  recognition) associated with the <a href="#dfn-multimodal-system" class="internalDFN">Multimodal System</a>. Modality Components are
-  responsible for specific tasks, including handling inputs and
-  outputs in various ways, such as speech, writing, video, etc.
-  Modality Components are also loosely coupled software modules that
-  may be either co-resident on a 
-  <!--a href="#dfn-device" class="internalDFN"-->device<!--/a--> or distributed across a network.<br>
-  <br>
+
+<dd>For example, visual data can be expressed as a gesture modality
+(e.g. a pointing gesture) or as a signing modality (e.g. a deaf
+human talking). Following this idea, in this document a <strong><a
+href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
+Component</a></strong> is a logical entity that handles the input
+or output of different hardware 
+<!--a href="#dfn-device" class="internalDFN"-->Devices<!--/a-->
+(e.g. camera, microphone, graphic tablet, keyboard) or software <a
+href="#dfn-service" class="internalDFN">Services</a> (e.g. motion
+detection, image recognition) associated with the <a href=
+"#dfn-multimodal-system" class="internalDFN">Multimodal System</a>.
+Modality Components are responsible for specific tasks, including
+handling inputs and outputs in various ways, such as speech,
+writing, video, etc. Modality Components are also loosely coupled
+software modules that may be either co-resident on a 
+<!--a href="#dfn-device" class="internalDFN"-->device<!--/a--> or
+distributed across a network.<br />
+<br />
 </dd>
 
 <dt><dfn id="dfn-interaction-manager">Interaction
-  Manager</dfn></dt>
+Manager</dfn></dt>
 
-<dd>For the purposes of this document, the <a href="http://www.w3.org/TR/2012/REC-mmi-arch-20121025/#d3e386">Interaction Manager</a> is
-also a logical component handling the multimodal
+<dd>For the purposes of this document, the <a href=
+"http://www.w3.org/TR/2012/REC-mmi-arch-20121025/#d3e386">Interaction
+Manager</a> is also a logical component handling the multimodal 
 <!--a href="#dfn-fusion" class="internalDFN"-->integration<!--/a-->
-and
-<!--a href="#dfn-fission" class="internalDFN"-->composition<!--/a-->.
+and <!--a href="#dfn-fission" class="internalDFN"-->composition
+<!--/a-->. It is responsible for all message exchanges between the
+components of the <a href="#dfn-multimodal-system" class=
+"internalDFN">Multimodal System</a> and the hosting runtime
+framework [See : <a href="images/MMI-Arch.png">Architecture
+Components</a>, the <a href=
+"http://www.w3.org/TR/mmi-framework/#s6">Description of an
+Interaction Manager in the Multimodal Interaction
+Framework</a>].</dd>
 
-It is responsible for all message exchanges between the components of the
-<a href="#dfn-multimodal-system" class="internalDFN">Multimodal
-System</a> and the hosting runtime framework [See : <a href="images/MMI-Arch.png">Architecture
-Components</a>, the <a href="http://www.w3.org/TR/mmi-framework/#s6">Description of an
-Interaction Manager in the Multimodal Interaction Framework</a>].</dd>
-
-<dd><br>
+<dd><br />
 </dd>
 
 <dt><dfn id="dfn-data-component">Data Component</dfn></dt>
 
-<dd>For the purposes of this document a <strong><a href="http://www.w3.org/TR/2012/REC-mmi-arch-20121025/#d3e414">Data Component</a></strong>
-is a logical entity that stores the public and private data of any
-module in a <a href="#dfn-multimodal-system" class="internalDFN">Multimodal System</a>. The data component's primary
-role is to save the public data that may be required by one or
-several <strong><a href="#dfn-modality-component" class="internalDFN">Modality Components</a></strong> or by other modules
-(eg., a session component in the hosting framework). [See: the
-Multimodal Interaction Framework <a href="http://www.w3.org/TR/mmi-framework/#s7">Description</a> of a
+<dd>For the purposes of this document a <strong><a href=
+"http://www.w3.org/TR/2012/REC-mmi-arch-20121025/#d3e414">Data
+Component</a></strong> is a logical entity that stores the public
+and private data of any module in a <a href=
+"#dfn-multimodal-system" class="internalDFN">Multimodal System</a>.
+The data component's primary role is to save the public data that
+may be required by one or several <strong><a href=
+"#dfn-modality-component" class="internalDFN">Modality
+Components</a></strong> or by other modules (eg., a session
+component in the hosting framework). [See: the Multimodal
+Interaction Framework <a href=
+"http://www.w3.org/TR/mmi-framework/#s7">Description</a> of a
 Session Component].</dd>
 
-<dd><br>
+<dd><br />
 </dd>
 
 <dt><dfn id="dfn-application">Application</dfn></dt>
 
-<dd>For the purposes of this document, the term <a href="#dfn-application" class="internalDFN">Application</a> refers to a
+<dd>For the purposes of this document, the term <a href=
+"#dfn-application" class="internalDFN">Application</a> refers to a
 collection of events, components and resources which use
-server-side or client-side processing and the <a href="http://www.w3.org/TR/mmi-arch/">Multimodal Architecture
+server-side or client-side processing and the <a href=
+"http://www.w3.org/TR/mmi-arch/">Multimodal Architecture
 Specification</a> to provide sensory, cognitive and emotional
-information [See : <a href="http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases">
+information [See : <a href=
+"http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases">
 Emotion Use Cases</a>] through a rich multimodal user experience.
-For example, a multimodal <a href="#dfn-application" class="internalDFN">Application</a> can be implemented for use in an
-integrated way, mobile
+For example, a multimodal <a href="#dfn-application" class=
+"internalDFN">Application</a> can be implemented for use in an
+integrated way, mobile 
 <!--a href="#dfn-device" class="internalDFN"-->Devices<!--/a-->
-and cell phones, home appliances,
-Internet of Things, objects, robots, television and home networks,
-enterprise applications, web applications, "smart" cars or medical
-devices.</dd>
+and cell phones, home appliances, Internet of Things, objects,
+robots, television and home networks, enterprise applications, web
+applications, "smart" cars or medical devices.</dd>
 
-<dd><br>
+<dd><br />
 </dd>
 
 <dt><dfn id="dfn-service">Service</dfn></dt>
 
-<dd>For the purposes of this document, a <a href="#dfn-service" class="internalDFN">Service</a> is a set of functionalities
+<dd>For the purposes of this document, a <a href="#dfn-service"
+class="internalDFN">Service</a> is a set of functionalities
 associated with a process or system that performs a task and is
-wrapped in a <a href="#dfn-modality-component" class="internalDFN">Modality Component</a> abstraction. A multimodal <a href="#dfn-service" class="internalDFN">Service</a> is any
-functionality wrapped in a Multimodal Component (e.g. a <strong><a href="#dfn-modality-component" class="internalDFN">Modality
-Component</a></strong> or the <strong><a href="#dfn-interaction-manager" class="internalDFN">Interaction
+wrapped in a <a href="#dfn-modality-component" class=
+"internalDFN">Modality Component</a> abstraction. A multimodal <a
+href="#dfn-service" class="internalDFN">Service</a> is any
+functionality wrapped in a Multimodal Component (e.g. a <strong><a
+href="#dfn-modality-component" class="internalDFN">Modality
+Component</a></strong> or the <strong><a href=
+"#dfn-interaction-manager" class="internalDFN">Interaction
 Manager</a></strong>), publishing information about its behavior
-and using one or multiple devices. We will use the term <a href="#dfn-service" class="internalDFN">Service</a> Description as a set of attributes
-(metadata) describing a particular service. The term Service
-Advertisement refers to the publication of the metadata about the
-<a href="#dfn-service" class="internalDFN">Service</a> by indexing
-this metadata in some registry and making available the <a href="#dfn-service" class="internalDFN">Service</a> to the client's
+and using one or multiple devices. We will use the term <a href=
+"#dfn-service" class="internalDFN">Service</a> Description as a set
+of attributes (metadata) describing a particular service. The term
+Service Advertisement refers to the publication of the metadata
+about the <a href="#dfn-service" class="internalDFN">Service</a> by
+indexing this metadata in some registry and making available the <a
+href="#dfn-service" class="internalDFN">Service</a> to the client's
 requests.</dd>
 
-<dd><br>
+<dd><br />
 </dd>
 
 <dt><dfn id="dfn-push">Push notifications</dfn></dt>
@@ -1143,19 +1293,24 @@ registry of registered subscribers must be created. The server
 determines when things change, and simply sends down the new data.
 In this way, new HTTP connections don't have to be opened all the
 time.</dd>
-
 </dl>
+
 <!--
 <p>&nbsp;</p>
 -->
-<br>
+<br />
+ 
 
 <h2 id="scope"><span class="secno">3.</span>Scope</h2>
 
-<p>In the current state of the <a href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
+<p>In the current state of the <a href=
+"http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
 Architecture Specification</a>, the events that are responsible for
-handling the control of the user-system interaction, like <a href="http://www.w3.org/TR/mmi-arch/#d3e749">Prepare</a> or <a href="http://www.w3.org/TR/mmi-arch/#StartRequest">Start</a>, must be
-triggered only by the <a href="http://www.w3.org/TR/mmi-arch/#d3e386">Interaction Manager</a> and
+handling the control of the user-system interaction, like <a href=
+"http://www.w3.org/TR/mmi-arch/#d3e749">Prepare</a> or <a href=
+"http://www.w3.org/TR/mmi-arch/#StartRequest">Start</a>, must be
+triggered only by the <a href=
+"http://www.w3.org/TR/mmi-arch/#d3e386">Interaction Manager</a> and
 sent to the Modality Components. As a result, a Modality Component
 can not send a StartRequest or a PrepareRequest to the Interaction
 Manager. In both cases the Modality Component depends on the
@@ -1163,81 +1318,104 @@ Interaction Manager to begin the interaction cycle by raising an
 event, originated by an internal command or in reaction to a
 previous notification sent by a Modality Component (Figure 1).</p>
 
-<p>A Modality Component may send a <a href="http://www.w3.org/TR/mmi-arch/#d3e646">NewContextRequest</a> to
+<p>A Modality Component may send a <a href=
+"http://www.w3.org/TR/mmi-arch/#d3e646">NewContextRequest</a> to
 the <a href="http://www.w3.org/TR/mmi-arch/#d3e386">Interaction
 Manager</a> to request the creation of a new context of
 interaction. The interaction can be started by different Modality
 Components independently. Nevertheless, to start an interaction the
-<strong><a href="#dfn-modality-component" class="internalDFN">Modality
-Component</a></strong> needs to be already part of the system a to be
-registered, given that a context represents a single extended
-interaction with one or more Modality Components. The semantics of
-the <a href="http://www.w3.org/TR/mmi-arch/#d3e646">NewContextRequest</a> event
+<strong><a href="#dfn-modality-component" class=
+"internalDFN">Modality Component</a></strong> needs to be already
+part of the system a to be registered, given that a context
+represents a single extended interaction with one or more Modality
+Components. The semantics of the <a href=
+"http://www.w3.org/TR/mmi-arch/#d3e646">NewContextRequest</a> event
 is different and mostly oriented to the interaction phase, while
 the registering process is part of a previous phase, when even the
 presence of the user is not mandatory. This phase is designed for a
-system that will  handle one or more interaction
-processes at the same time.</p>
+system that will handle one or more interaction processes at the
+same time.</p>
+
 <p>&nbsp;</p>
 
-<img class="ImageFigure" src="images/Fig1_small.png" alt="Current push mechanism ( input and output direction )" width="640" height="1052" onClick=" window.open('images/Fig1.png','Push');"  longdesc="descriptions/Fig1.txt"> 
+<img class="ImageFigure" src="images/Fig1_small.png" alt=
+"Current push mechanism ( input and output direction )" width="640"
+height="1052" onclick=" window.open('images/Fig1.png','Push');"
+longdesc="descriptions/Fig1.txt" /> 
 
 <p class="caption">Figure 1: Current MMI communication mechanism:
 IM to MC ( input and output direction )</p>
 
-<p>In addition, in the current state of the <a href="http://www.w3.org/TR/mmi-arch/">MMI Recommendation</a>, the
+<p>In addition, in the current state of the <a href=
+"http://www.w3.org/TR/mmi-arch/">MMI Recommendation</a>, the
 Interaction Manager is supposed to know ahead of time, the address
 and port of all the Modality Components available in the system. In
 consequence, the preparation of the media or the start of the
 interaction cycle also currently implies the setting up of a
 "multimodal session" that is not completely defined at the current
-stage of the <a href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">specification</a>.</p>
+stage of the <a href=
+"http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">specification</a>.</p>
 
-<p>On the other hand, the <a href="http://www.w3.org/TR/mmi-arch/#d3e1410">Extension</a> and <a href="http://www.w3.org/TR/mmi-arch/#d3e1565">Status</a> notifications
+<p>On the other hand, the <a href=
+"http://www.w3.org/TR/mmi-arch/#d3e1410">Extension</a> and <a href=
+"http://www.w3.org/TR/mmi-arch/#d3e1565">Status</a> notifications
 are dedicated to the exchange of interaction data, while the data
 exchange in a discovery process is mostly previous to any
 interaction between the user and the system. For example, at
 load-time, when the system prepares and registers the information
-about the Modality Components (availability, technical characteristics,
-cost). In this way, all this information might be used in the
-future, when the user-system interaction actually begins.</p>
+about the Modality Components (availability, technical
+characteristics, cost). In this way, all this information might be
+used in the future, when the user-system interaction actually
+begins.</p>
 
 <p>In other terms, the semantics of the two existing notifications
 differ from the features needed for discovery. The communication
 protocol paradigm (the flow of messages always initiated by the
 Interaction Manager) is not sufficient if the Recommendation is
 used to address use cases evolving in dynamic environments, as
-described in uses cases like <a href="http://www.w3.org/TR/mmi-discovery/#uc-set-2" target="_blank">[UC
-2.1] Personal Externalized Interfaces: Smart Cars</a>, <a href="http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[UC
-3.1] Public Spaces: Interactive Spaces</a> or <a href="http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[UC
-3.2] Public Spaces:In-Office Events Assistance</a>, <a href="http://www.w3.org/wiki/MMI/Use_Cases" target="_blank">MMI Use
-Cases</a>, or some of the <a href="https://www.w3.org/wiki/MMI/Use_Cases">use cases</a> described in
+described in uses cases like <a href=
+"http://www.w3.org/TR/mmi-discovery/#uc-set-2" target="_blank">[UC
+2.1] Personal Externalized Interfaces: Smart Cars</a>, <a href=
+"http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[UC
+3.1] Public Spaces: Interactive Spaces</a> or <a href=
+"http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[UC
+3.2] Public Spaces:In-Office Events Assistance</a>, <a href=
+"http://www.w3.org/wiki/MMI/Use_Cases" target="_blank">MMI Use
+Cases</a>, or some of the <a href=
+"https://www.w3.org/wiki/MMI/Use_Cases">use cases</a> described in
 our current charter.</p>
 
 <p>In all these cases, the Modality Components enter and quit the
-multimodal system dynamically, and they must declare  to the system, their
-existence, availability and capabilities in some
-way:</p>
+multimodal system dynamically, and they must declare to the system,
+their existence, availability and capabilities in some way:</p>
 
-<p>In the first case, <a href="http://www.w3.org/TR/mmi-discovery/#uc-set-2" target="_blank">[UC
-2.1] Personal Externalized Interfaces: Smart Cars</a>, the
-Modality Components provided by a smartphone must be detected by
-the multimodal system to relate these features to the features
-provided by the Modality Components in the car.</p>
+<p>In the first case, <a href=
+"http://www.w3.org/TR/mmi-discovery/#uc-set-2" target="_blank">[UC
+2.1] Personal Externalized Interfaces: Smart Cars</a>, the Modality
+Components provided by a smartphone must be detected by the
+multimodal system to relate these features to the features provided
+by the Modality Components in the car.</p>
 
-<p>In the second case, <a href="http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[UC
+<p>In the second case, <a href=
+"http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[UC
 3.1] Public Spaces: Interactive Spaces</a>, the discovery of the
 Modality Components installed on the client's smartphone can affect
 the behavior of the multimodal application in the public space.</p>
 
-<p>In the third case, <a href="http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[ UC
+<p>In the third case, <a href=
+"http://www.w3.org/TR/mmi-discovery/#uc-set-3" target="_blank">[ UC
 3.2 ] Public Spaces: In-Office Events Assistance</a>, the
 announcement and discovery of the Modality Component capabilities
 in a smart conference room can allow the attendees to access to
 some of the multimodal services provided by the conference room,
 providing a fine-grained adaptation of the application features to
 the multimodal interaction's environment state.</p>
-<p>For all these reasons the current document addresses the need of support for discovery and registration in very dynamical environments, like the ones described above by proposing a resources manager, a new flow of messages and two events specifically designed to carry discovery and registration data.</p>
+
+<p>For all these reasons the current document addresses the need of
+support for discovery and registration in very dynamical
+environments, like the ones described above by proposing a
+resources manager, a new flow of messages and two events
+specifically designed to carry discovery and registration data.</p>
 
 <h2 id="manager"><span class="secno">4.</span> A manager to handle
 the state of the resources of the multimodal system</h2>
@@ -1246,80 +1424,91 @@ the state of the resources of the multimodal system</h2>
 tracing the relevant session data to be handled on the control
 layer. This is the first of the responsibilities for a Resources
 Manager. This manager is responsible for handling the evolution of
-the "multimodal session" [See: Functions of Session Component in
-<a href="http://www.w3.org/TR/mmi-framework/" target="_blank">W3C
+the "multimodal session" [See: Functions of Session Component in <a
+href="http://www.w3.org/TR/mmi-framework/" target="_blank">W3C
 Multimodal Interaction Framework</a>] and the modifications in any
 of the participants of the system that could affect its global
-state. This component is also aware of the system’s capabilities,
-like the address of modalities, their availability or their
-processing state.</p>
+state. This component is also aware of the
+system&acirc;&euro;&trade;s capabilities, like the address of
+modalities, their availability or their processing state.</p>
 
 <p>The inclusion of the Resources Manager responds to the
 functional requirement concerning the management of the interaction
 cycles locally and globally, the requirement of an appropriate
 real-time sensing for dynamic uses; and, partially, to the
 requirement concerning the support of processing of dynamic and
-incomplete data. [See: <a href="http://www.w3.org/TR/mmi-reqs/#Distributedsynchronization" target="_blank">MMI Framework requirements</a>]</p>
+incomplete data. [See: <a href=
+"http://www.w3.org/TR/mmi-reqs/#Distributedsynchronization" target=
+"_blank">MMI Framework requirements</a>]</p>
 
 <p>The Resources Manager is nested in the control layer of the
 multimodal system (turquoise in Figure 2) which is slightly
 different from the proposal of a Session Component described in the
 <a href="http://www.w3.org/TR/mmi-framework/" target="_blank">W3C
-Multimodal Interaction Framework</a>.<br>
-<br>
- <img class="ImageFigure" src="images/Fig2_small.png" alt="Two implementations for multimodal state handling" onClick=" window.open('images/Fig2.png','Resource Manager');" longdesc="descriptions/Fig2.txt">
-</p>
+Multimodal Interaction Framework</a>.<br />
+<br />
+ <img class="ImageFigure" src="images/Fig2_small.png" alt=
+"Two implementations for multimodal state handling" onclick=
+" window.open('images/Fig2.png','Resource Manager');" longdesc=
+"descriptions/Fig2.txt" /></p>
 
 <p class="caption">Figure 2: The Multimodal System's state
 handling: a Resources Manager</p>
 
-<br>
-The Resources Manager keeps the control of the global state and
-the resources of the system in a unified layer with the control of the
-user interaction (<a href="http://www.w3.org/TR/mmi-arch/#d3e386">Interaction Manager</a>).
+<br />
+The Resources Manager keeps the control of the global state and the
+resources of the system in a unified layer with the control of the
+user interaction (<a href=
+"http://www.w3.org/TR/mmi-arch/#d3e386">Interaction Manager</a>).
 In other words, the control layer (dark gray in Figure 2)
 encompasses the handling of the multimodal interaction and the
 management of the resources on the multimodal system. In this way,
 the architecture preserves its compliance with the MVC design
-pattern. As Figure 2 shows, the Resources Manager can be also be nested in a Complex Modality Component, following the Russian Doll Pattern.<br>
-<br>
+pattern. As Figure 2 shows, the Resources Manager can be also be
+nested in a Complex Modality Component, following the Russian Doll
+Pattern.<br />
+<br />
 <h4 id="RM_mvc"><span class="secno">4.1</span> The Resources
 Manager and the MVC design pattern of the MMI Architecture</h4>
 
 <p>In the MVC model (Figure 3), the Controller translates the
-user’s actions into method calls on the Model. The Model broadcasts
-a notification to the View and to the Controller to inform that its
-state has changed. The View queries the Model to determine the
-exact change. Upon reception of the response, the View updates the
-display according to the information received. Thus, in the MVC
-pattern, the View is directly linked with its controller, but it can
-also query and communicate with the Model.</p>
+user&acirc;&euro;&trade;s actions into method calls on the Model.
+The Model broadcasts a notification to the View and to the
+Controller to inform that its state has changed. The View queries
+the Model to determine the exact change. Upon reception of the
+response, the View updates the display according to the information
+received. Thus, in the MVC pattern, the View is directly linked
+with its controller, but it can also query and communicate with the
+Model.</p>
 
 <p>In this pattern, the Model offers a registration mechanism so
 that multiple Views and Controllers can express their interest in
 the Model through anonymous callbacks. This allows an easy
 implementation of multiple renderings of the same domain concepts
 either on one local device or across multiple distributed
-devices.<br>
-<br>
- <img class="ImageFigureSmall" src="images/Fig3_small.png" alt="The MVC architecture design pattern" onClick=" window.open('images/Fig3.png','MCV');" longdesc="descriptions/Fig3.txt">
-</p>
+devices.<br />
+<br />
+ <img class="ImageFigureSmall" src="images/Fig3_small.png" alt=
+"The MVC architecture design pattern" onclick=
+" window.open('images/Fig3.png','MCV');" longdesc=
+"descriptions/Fig3.txt" /></p>
 
 <p class="caption">Figure 3: The MVC architecture design
 pattern</p>
 
-<p><br>
-<br>
+<p><br />
+<br />
 The Resources Manager proposed in the current document, allows the
-management of the states of the Modality Component (which represents
- the MVC view in the MMI Architecture) putting this function in the
-control layer (dark gray in Figure 4).</p>
+management of the states of the Modality Component (which
+represents the MVC view in the MMI Architecture) putting this
+function in the control layer (dark gray in Figure 4).</p>
 
-<p>The Resources Manager translates the user’s actions
-into method calls on the Data Component, as the MVC pattern
+<p>The Resources Manager translates the user&acirc;&euro;&trade;s
+actions into method calls on the Data Component, as the MVC pattern
 proposes. But also, the Modality Component's communication and
 request of state information is restricted to exchanges with the
-Control layer as the <a href="http://www.w3.org/TR/mmi-arch/#Interfaces">MMI Recommendation</a>
+Control layer as the <a href=
+"http://www.w3.org/TR/mmi-arch/#Interfaces">MMI Recommendation</a>
 defines.</p>
 
 <p>The Model broadcasts a notification to the Resources Manager
@@ -1328,16 +1517,18 @@ Component that the state has changed using a flow of messages
 through an UpdateNotification or a CheckUpdateResponse. Upon
 reception of the UpdateNotification or the checkUpdateResponse, the
 Modality Component updates the user interface according to the
-information received.<br>
-<br>
- <img class="ImageFigureSmall" src="images/Fig4_small.png" alt="The State Manager included on the MMI structure" onClick=" window.open('images/Fig4.png','The State Manager');" longdesc="descriptions/Fig4.txt">
-</p>
+information received.<br />
+<br />
+ <img class="ImageFigureSmall" src="images/Fig4_small.png" alt=
+"The State Manager included on the MMI structure" onclick=
+" window.open('images/Fig4.png','The State Manager');" longdesc=
+"descriptions/Fig4.txt" /></p>
 
 <p class="caption">Figure 4: The Resources Manager included on the
 MMI structure</p>
 
-<br>
-<br>
+<br />
+<br />
 <h4 id="RM_resp"><span class="secno">4.2</span> The Resources
 Manager responsibilities</h4>
 
@@ -1364,8 +1555,8 @@ Modality Components.</li>
 capabilities of the available Modality Components.</li>
 </ul>
 
-<br>
-<br>
+<br />
+<br />
  
 
 <h4 id="RM_states"><span class="secno">4.3</span> Data structures
@@ -1373,13 +1564,13 @@ handled by the Resources Manager</h4>
 
 <p>The Resources Manager can also process and serialize in data
 structures the traces of external and internal phenomena. Depending
-on the complexity of the implementation, the application can store  in the
-Data Component:</p>
+on the complexity of the implementation, the application can store
+in the Data Component:</p>
 
 <ul>
 <li><em><strong>The image of the current state</strong></em>,
-represented by the current situation and its state metadata.<br>
-<br>
+represented by the current situation and its state metadata.<br />
+<br />
  For example, to setup a context of interaction the application
 needs to check the resources currently available. In this case, the
 Resources Manager can be implemented as a directory of resources,
@@ -1392,8 +1583,8 @@ state of the multimodal system.</li>
 <ul>
 <li><em><strong>The history of the states</strong></em>,
 represented by a set of data structures and its metadata. The type
-and values of these structures is implementation-dependent.<br>
-<br>
+and values of these structures is implementation-dependent.<br />
+<br />
  For example, to adapt the context of interaction to the collection
 of user preferences and component's states. In this case, the
 Resources Manager can be implemented as an statistical directory of
@@ -1414,8 +1605,8 @@ Component.</li>
 
 <ul>
 <li><em><strong>The expected states</strong></em>, represented by
-the extrapolation of the current situation in the future.<br>
-<br>
+the extrapolation of the current situation in the future.<br />
+<br />
  For example, to adapt the context of interaction to the expected
 states of the system. As more sophisticated applications might use
 past and future, the Resources Manager can be implemented as a
@@ -1446,33 +1637,48 @@ Addressed</h4>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#distribution" target="_blank">Distribution</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#distribution" target=
+"_blank">Distribution</a> </td>
 <td class="sublineReqsTable">The State Manager supports the
 coordination between distributed agents, and their communication
 through the control layer. This enables it to synchronize the input
-constraints across modalities <a href="http://www.w3.org/TR/mmi-reqs/#Coordinatedconstraintsandinterpretations" target="_blank">[MMI-I16]</a> and also enhances the resolution of
-input conflicts from distributed modalities <a href="http://www.w3.org/TR/mmi-reqs/#Coordinatedconstraintsandinterpretations" target="_blank">[MMI-I17]</a>.</td>
+constraints across modalities <a href=
+"http://www.w3.org/TR/mmi-reqs/#Coordinatedconstraintsandinterpretations"
+ target="_blank">[MMI-I16]</a> and also enhances the resolution of
+input conflicts from distributed modalities <a href=
+"http://www.w3.org/TR/mmi-reqs/#Coordinatedconstraintsandinterpretations"
+ target="_blank">[MMI-I17]</a>.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#advertisement" target="_blank">Advertisement</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#advertisement" target=
+"_blank">Advertisement</a> </td>
 <td class="sublineReqsTable">The State Manager is the starting
 point to declare and process the advertised announcements and to
 keep them up to date.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#discovery" target="_blank">Discovery</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#discovery" target=
+"_blank">Discovery</a> </td>
 <td class="sublineReqsTable">The State Manager is also the core
-support for <a href="http://www.w3.org/TR/2012/NOTE-mmi-discovery-20120705/#discovery">mediated</a>
-and <a href="http://www.w3.org/TR/2012/NOTE-mmi-discovery-20120705/#discovery">passive</a>
-discovery and ilt can also be used to trigger <a href="http://www.w3.org/TR/2012/NOTE-mmi-discovery-20120705/#discovery">active</a>
+support for <a href=
+"http://www.w3.org/TR/2012/NOTE-mmi-discovery-20120705/#discovery">mediated</a>
+and <a href=
+"http://www.w3.org/TR/2012/NOTE-mmi-discovery-20120705/#discovery">passive</a>
+discovery and ilt can also be used to trigger <a href=
+"http://www.w3.org/TR/2012/NOTE-mmi-discovery-20120705/#discovery">active</a>
 discovery using the push mechanism or to execute some of the tasks
 on fixed discovery.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#registration" target="_blank">Registration</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#registration" target=
+"_blank">Registration</a> </td>
 <td class="sublineReqsTable">The State Manager is also the
 interface that can be requested to register the Modality
 Component's information. It handles all the communication between
@@ -1483,7 +1689,8 @@ state of the interaction cycle.</td>
 </tr>
 
 <tr>
-<td><a href="http://www.w3.org/TR/mmi-discovery/#query" target="_blank">Querying</a> </td>
+<td><a href="http://www.w3.org/TR/mmi-discovery/#query" target=
+"_blank">Querying</a> </td>
 <td>The flow of queries transit through the State Manager who
 dispatches the requests to the Data Component and notifies the
 Interaction Manager if needed. Some of these queries must be
@@ -1494,8 +1701,8 @@ document.</td>
 </table>
 
 <!-- <h2 id="pull">&nbsp;</h2> -->
-
-<h2 id="pull"><span class="secno">5.</span> A bidirectional flow of messages</h2>
+<h2 id="pull"><span class="secno">5.</span> A bidirectional flow of
+messages</h2>
 
 <p>According to the current MMI life-cycle events protocol, the
 command of Modality Components is initiated by the Interaction
@@ -1503,7 +1710,8 @@ Manager, which means that if there is an HTTP client-server
 implementation, it must be designed following a push notification
 technique.</p>
 
-<p>In the communication protocol designed for the <a href="http://www.w3.org/TR/mmi-arch/#LifeCycleEvents">MMI life-cycle
+<p>In the communication protocol designed for the <a href=
+"http://www.w3.org/TR/mmi-arch/#LifeCycleEvents">MMI life-cycle
 events</a> , the direction of the message flow (mostly from the
 Interaction Manager to the Modality Components) is suggested by the
 specification through the description of the control events, even
@@ -1534,18 +1742,20 @@ is instigated from the Modality Component itself.</p>
 the Resources Manager (i.e. in a server), which notifies the
 Modality Component about changes on the user interface displayed
 with other distant components or in the data related to the overall
-state of the system, causing eventually the Modality Component‘s
-state to evolve, for example, by putting it on stand-by. The
-connection is closed after each transfer and the Modality Component
-is told when to open a new connection, and what data to fetch when
-it does so.</p>
+state of the system, causing eventually the Modality
+Component&acirc;&euro;&tilde;s state to evolve, for example, by
+putting it on stand-by. The connection is closed after each
+transfer and the Modality Component is told when to open a new
+connection, and what data to fetch when it does so.</p>
 
 <p>The inclusion of this new direction in the flow of messages is
 the best option for tightly coupled clients to which the Resources
 Manager has reliable access.</p>
 
-<img class="ImageFigure" src="images/Fig5_small.png" alt="Discovery of MC components : pull request to announce (and confirm) availability and capabilities" onClick=" window.open('images/Fig5.png','Pull');" longdesc="descriptions/Fig5.txt">
- 
+<img class="ImageFigure" src="images/Fig5_small.png" alt=
+"Discovery of MC components : pull request to announce (and confirm) availability and capabilities"
+ onclick=" window.open('images/Fig5.png','Pull');" longdesc=
+"descriptions/Fig5.txt" /> 
 
 <p class="caption">Figure 5: Discovery of MC components : pull
 request to announce (and confirm) availability and capabilities</p>
@@ -1578,11 +1788,19 @@ Addressed</h4>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#distribution" target="_blank">Distribution</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#distribution" target=
+"_blank">Distribution</a> </td>
 <td class="sublineReqsTable">Modality Components can be distributed
 in a centralized way, an hybrid way or a fully decentralized way in
-order to support distributed processing <a href="http://www.w3.org/TR/mmi-reqs/#Distributedprocessing" target="_blank">[MMI-A14]</a>, <a href="http://www.w3.org/TR/mmi-reqs/#Distributedprocessing" target="_blank">[MMI-A15]</a> and distributed input / output
-synchronization <a href="http://www.w3.org/TR/mmi-reqs/#Distributedsynchronization" target="_blank">[MMI-A13]</a>.<br>
+order to support distributed processing <a href=
+"http://www.w3.org/TR/mmi-reqs/#Distributedprocessing" target=
+"_blank">[MMI-A14]</a>, <a href=
+"http://www.w3.org/TR/mmi-reqs/#Distributedprocessing" target=
+"_blank">[MMI-A15]</a> and distributed input / output
+synchronization <a href=
+"http://www.w3.org/TR/mmi-reqs/#Distributedsynchronization" target=
+"_blank">[MMI-A13]</a>.<br />
  Given the number of devices that could be used, a more flexible
 way to recognize and include the device in the multimodal system's
 registry requires to adding a new direction in the flow of messages
@@ -1590,59 +1808,89 @@ to allow an announcement of modalities coming from the device every
 time an important change occurs. This reduces the number of
 permanent connections, and allows a more pertinent monitoring of
 the availability and changes on Modality Components at the session
-level <a href="http://www.w3.org/TR/mmi-reqs/#Synchronizationgranularities" target="_blank">[MMI-A6]</a>.</td>
+level <a href=
+"http://www.w3.org/TR/mmi-reqs/#Synchronizationgranularities"
+target="_blank">[MMI-A6]</a>.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#advertisement" target="_blank">Advertisement</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#advertisement" target=
+"_blank">Advertisement</a> </td>
 <td class="sublineReqsTable">With a pull mechanism, the unique
 identifier of the Modality Component, its name, address, port
 number, its embedded services, constructor, version and lifetime
 can be announced when important changes affecting this information
 occurs. This proactive updating of information facilitates the
 management of scalable multimodal systems across wide ranges of
-devices, and supports the application's adaptability <a href="http://www.w3.org/TR/mmi-reqs/#Scalabilityacrosswiderangeofdevicescapabilities" target="_blank">[MMI-G2]</a> and the coordination capabilities of
-the multimodal session <a href="http://www.w3.org/TR/mmi-reqs/#Compositemultimodalinput" target="_blank">[MMI-I8]</a>. It also supports the announcement of
-evolution in the user profile or user preferences <a href="http://www.w3.org/TR/mmi-reqs/#Securityandprivacy" target="_blank">[MMI-G13]</a> - <a href="http://www.w3.org/TR/mmi-reqs/#Deliveryandcontext" target="_blank">[MMI-G14]</a>.<br>
+devices, and supports the application's adaptability <a href=
+"http://www.w3.org/TR/mmi-reqs/#Scalabilityacrosswiderangeofdevicescapabilities"
+ target="_blank">[MMI-G2]</a> and the coordination capabilities of
+the multimodal session <a href=
+"http://www.w3.org/TR/mmi-reqs/#Compositemultimodalinput" target=
+"_blank">[MMI-I8]</a>. It also supports the announcement of
+evolution in the user profile or user preferences <a href=
+"http://www.w3.org/TR/mmi-reqs/#Securityandprivacy" target=
+"_blank">[MMI-G13]</a> - <a href=
+"http://www.w3.org/TR/mmi-reqs/#Deliveryandcontext" target=
+"_blank">[MMI-G14]</a>.<br />
  A new direction in the flow of messages also supports the
 extensibility of the system, through the active announcement of the
 new modalities or new devices and capabilities to be dynamically
-added <a href="http://www.w3.org/TR/mmi-reqs/#InputExtensibility" target="_blank">[MMI-I12]</a> - <a href="http://www.w3.org/TR/mmi-reqs/#outputExtensibility" target="_blank">[MMI-O8]</a>. This implies the management of external
-input events during the announcement process <a href="http://www.w3.org/TR/mmi-reqs/#Externalinput" target="_blank">[MMI-A16]</a>.</td>
+added <a href="http://www.w3.org/TR/mmi-reqs/#InputExtensibility"
+target="_blank">[MMI-I12]</a> - <a href=
+"http://www.w3.org/TR/mmi-reqs/#outputExtensibility" target=
+"_blank">[MMI-O8]</a>. This implies the management of external
+input events during the announcement process <a href=
+"http://www.w3.org/TR/mmi-reqs/#Externalinput" target=
+"_blank">[MMI-A16]</a>.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#discovery" target="_blank">Discovery</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#discovery" target=
+"_blank">Discovery</a> </td>
 <td class="sublineReqsTable">This new direction in the flow of
 messages facilitates the mediated and passive discovery of Modality
 Components. Functions can be partitioned and distributed across
 several servers or devices that notify periodically their
-availability and general state. <a href="http://www.w3.org/TR/mmi-reqs/#Configurations" target="_blank">[MMI-C1] and [MMI-C2]</a> .<br>
+availability and general state. <a href=
+"http://www.w3.org/TR/mmi-reqs/#Configurations" target=
+"_blank">[MMI-C1] and [MMI-C2]</a> .<br />
  It also facilitates the deployments using mobile networks,
 preventing bandwidth limitations and delays because the embedded
 Modality Component itself can announce and update its current
-state. <a href="http://www.w3.org/TR/mmi-reqs/#Mobiledeployments" target="_blank">[MMI-R1]</a> and <a href="http://www.w3.org/TR/mmi-reqs/#Mobiledeployments" target="_blank">[MMI-R2]</a>.</td>
+state. <a href="http://www.w3.org/TR/mmi-reqs/#Mobiledeployments"
+target="_blank">[MMI-R1]</a> and <a href=
+"http://www.w3.org/TR/mmi-reqs/#Mobiledeployments" target=
+"_blank">[MMI-R2]</a>.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#registration" target="_blank">Registration</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#registration" target=
+"_blank">Registration</a> </td>
 <td class="sublineReqsTable">Using a new direction in the flow of
 messages, the updates to the register are triggered by changes
 dynamically declared by the Modality Component itself without the
 need of a persistent connection to update data that is not very
-frequently modified.<br>
+frequently modified.<br />
  This also helps in the registration of high level information used
 to specify the preconditions and effects produced by the addition
 of this new Modality Component to the system or its unavailability
-<a href="http://www.w3.org/TR/mmi-reqs/#Deliveryandcontext" target="_blank">[MMI-G15]</a> <br>
+<a href="http://www.w3.org/TR/mmi-reqs/#Deliveryandcontext" target=
+"_blank">[MMI-G15]</a> <br />
  It also supports the registering of other information that does
 not change very often, like the semantics of some kinds of inputs,
 or any specification of the meaning of the embedded modalities
-implemented in the Modality Component to be registered <a href="http://www.w3.org/TR/mmi-reqs/#SemanticsofinputgeneratedbyUIcomponents" target="_blank">[MMI-I13]</a> </td>
+implemented in the Modality Component to be registered <a href=
+"http://www.w3.org/TR/mmi-reqs/#SemanticsofinputgeneratedbyUIcomponents"
+ target="_blank">[MMI-I13]</a> </td>
 </tr>
 
 <tr>
-<td><a href="http://www.w3.org/TR/mmi-discovery/#query" target="_blank">Querying</a> </td>
+<td><a href="http://www.w3.org/TR/mmi-discovery/#query" target=
+"_blank">Querying</a> </td>
 <td>To enable information gathering in a multimodal system, the
 simplest strategy is to have all Modality Components providing a
 continuous stream of all the data that they gather to the
@@ -1650,7 +1898,7 @@ Interaction Manager. However, for many types of applications where
 only a small subset of the collected information is likely to be
 useful, updated or pertinent, this simple approach can become very
 inefficient. For this reason, our tunable communication strategy
-offers significant advantages for optimizing querying.<br>
+offers significant advantages for optimizing querying.<br />
  </td>
 </tr>
 </tbody>
@@ -1659,8 +1907,8 @@ offers significant advantages for optimizing querying.<br>
 <!--
 <h2 id="events">&nbsp;</h2>
 -->
-
-<h2 id="events"><span class="secno">6.</span> Two events for system updates</h2>
+<h2 id="events"><span class="secno">6.</span> Two events for system
+updates</h2>
 
 <p>With these mechanisms of communication a Modality Component can
 register its services for a specific period of time. This is the
@@ -1679,23 +1927,25 @@ Modality Component, and if it is not renewed before expiration, the
 Modality Component will be assumed to no longer be part of the
 multimodal system. Thus, by the use of this kind of registering,
 the multimodal system can implement a procedure to confirm its
-global state and update the «inventory» of the components that
-could eventually participate in the interaction cycle. Therefore,
-registering involves some Modality Components' timeout information,
-which can be always exchanged between components and, in the case
-of a dynamic environment, can be updated from time to time.</p>
+global state and update the &Acirc;&laquo;inventory&Acirc;&raquo;
+of the components that could eventually participate in the
+interaction cycle. Therefore, registering involves some Modality
+Components' timeout information, which can be always exchanged
+between components and, in the case of a dynamic environment, can
+be updated from time to time.</p>
 
 <p>For this reason, a registration renewal mechanism is needed. We
 propose a renewal mechanism based on the use of the timeout
-attribute and two new events: the checkUpdate Event and the UpdateNotification,
-used in conjunction with an automatic process that
-ensures periodical requests.</p>
+attribute and two new events: the checkUpdate Event and the
+UpdateNotification, used in conjunction with an automatic process
+that ensures periodical requests.</p>
 
-The checkUpdate Event is provided :<br>
+The checkUpdate Event is provided :<br />
 <ul>
 <li>to verify if there are any changes in the system side</li>
 
-<li>to recover the eventual message (under the form of a <a href="http://www.w3.org/TR/mmi-arch/#LifeCycleEvents">MMI
+<li>to recover the eventual message (under the form of a <a href=
+"http://www.w3.org/TR/mmi-arch/#LifeCycleEvents">MMI
 event</a>)</li>
 
 <li>to adapt the request <em>timeout</em> if needed</li>
@@ -1708,29 +1958,28 @@ true</li>
 <!--
 <li style="list-style: none">
 -->
-
 <p>On the other hand, the UpdateNotification is proposed:</p>
 
 <ul>
-<li>to periodically inform the Resource Manager about the state
-of the Modality Component</li>
+<li>to periodically inform the Resource Manager about the state of
+the Modality Component</li>
 
 <li>to help in the decision making process used by the state
-handler (in the server side, for example)<br>
+handler (in the server side, for example)<br />
 </li>
 </ul>
 
-<br>
-<br>
+<br />
+<br />
 <h4 id="EV_time"><span class="secno">6.1</span> The timeout
 attribute for state handling and registration renewal</h4>
 
 <p>We propose a dedicated data structure for registration: the
 timeout attribute. A timeout is an ordered list of three
-elements:<br>
-<br>
-<img class="ImageFigure" src="images/Def1.png" alt="The timeout tuple" longdesc="descriptions/Def1.txt">
-</p>
+elements:<br />
+<br />
+<img class="ImageFigure" src="images/Def1.png" alt=
+"The timeout tuple" longdesc="descriptions/Def1.txt" /></p>
 
 <p class="caption">Definition 1: The timeout tuple</p>
 
@@ -1750,10 +1999,14 @@ environment.</p>
 life-time. A Modality Component leaves the multimodal system when
 its life-time is exceeded and needs to restart its registering
 mechanism to obtain a new Modality Component ID and timeout pace.
-This supports periodic updates of the availability of the Component (e.g. authorization) or the renewal of its metadata (See Figure 6).</p>
+This supports periodic updates of the availability of the Component
+(e.g. authorization) or the renewal of its metadata (See Figure
+6).</p>
 
-<img class="ImageFigure" src="images/Fig6_small.png" alt="Example of the timeout use" onClick=" window.open('images/Fig6.png','Sleep');" longdesc="descriptions/Fig6.txt">
- 
+<img class="ImageFigure" src="images/Fig6_small.png" alt=
+"Example of the timeout use" onclick=
+" window.open('images/Fig6.png','Sleep');" longdesc=
+"descriptions/Fig6.txt" /> 
 
 <p class="caption">Figure 6: Using the timeout tuple to manage
 availability</p>
@@ -1763,18 +2016,19 @@ modulated according to the multimodal system's needs by a set of
 static rules or by a prediction mechanism used in the state handler
 Component. This element informs the Modality Component before-hand
 about the frequency of requests that can be allowed by the
-recipient component (a Resources Manager in a server, for example) in
-  the current conditions. This value is exchanged on each request,
-  which means that it can be changed at any moment in the multimodal
+recipient component (a Resources Manager in a server, for example)
+in the current conditions. This value is exchanged on each request,
+which means that it can be changed at any moment in the multimodal
 session.</p>
-<p>With our proposal, the 
-  communication intervals will be synchronized, because the Modality Component knows the exact publish
-  interval beforehand according to a time pattern. In this way, data
-  coherence is ensured and network performance maintained. Since the
-  Resources Manager has access to all the state data, it can for
-  example, use a prediction algorithm implemented in the Data
-  Component, to foresee a time when the data is going to change. The
-  Resources Manager then attaches this time value in the timeout
+
+<p>With our proposal, the communication intervals will be
+synchronized, because the Modality Component knows the exact
+publish interval beforehand according to a time pattern. In this
+way, data coherence is ensured and network performance maintained.
+Since the Resources Manager has access to all the state data, it
+can for example, use a prediction algorithm implemented in the Data
+Component, to foresee a time when the data is going to change. The
+Resources Manager then attaches this time value in the timeout
 triplet to the outgoing data allowing the data synchronization.</p>
 
 <p>Finally, if the Resources Manager prediction is wrong and still
@@ -1784,15 +2038,20 @@ original push technique proposed here. In this case the push
 command is handled as an interruption of the default pull update
 mechanism. In this way, the system maintains its reliability.</p>
 
-<br>
-<h4 id="check"><span class="secno">6.2</span> CheckUpdateRequest and CheckUpdateResponse</h4>
+<br />
+<h4 id="check"><span class="secno">6.2</span> CheckUpdateRequest
+and CheckUpdateResponse</h4>
 
 <p>This section is Normative.</p>
 
 <p>The CheckUpdate events are the request/response pair,
 CheckUpdateRequest and CheckUpdateResponse. CheckUpdateRequest and
 CheckUpdateResponse are used to check to see if there are any
-changes in the system. They share the <a href="http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>, <a href="http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>, <a href="http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>, <a href="http://www.w3.org/TR/mmi-arch/#requestidfield">RequestID</a> and
+changes in the system. They share the <a href=
+"http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>, <a href=
+"http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>, <a href=
+"http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>, <a href=
+"http://www.w3.org/TR/mmi-arch/#requestidfield">RequestID</a> and
 <a href="http://www.w3.org/TR/mmi-arch/#DataField">Data</a> fields
 with MMI Life Cycle Events. A CheckUpdate event MUST include
 Source, Target and RequestID. It MAY include a Data field. It MAY
@@ -1819,8 +2078,10 @@ component and its value. Some values can be: Alive, Loading,
 Registering, Available, Idle, Busy Waiting, Processing,
 Unavailable, Unregistered. (See Figure 7)</p>
 
-<img class="ImageFigure" src="images/Fig7_small.png" alt="States for a Modality Component" onClick=" window.open('images/Fig7.png','States');" longdesc="descriptions/Fig7.txt">
- 
+<img class="ImageFigure" src="images/Fig7_small.png" alt=
+"States for a Modality Component" onclick=
+" window.open('images/Fig7.png','States');" longdesc=
+"descriptions/Fig7.txt" /> 
 
 <p class="caption">Figure 7: Discovery and Regisration states for a
 Modality Component</p>
@@ -1910,56 +2171,58 @@ Some examples of this flow between the states are:
 
 <p><strong>- Unauthorized Component</strong></p>
 
-<table class="stateTable" cellpadding="0" cellspacing="0" border="0">
+<table class="stateTable" cellpadding="0" cellspacing="0" border=
+"0">
 <tbody>
-  <tr >
-    <td width="6%" class="alive3" >ALIVE</td> 
-    <td width="7%" class="available2"  >AVAILABLE</td>
-    <td width="9%" class="busy3" >BUSY WAITING</td>
-    <td width="9%" class="unregistered" >UNREGISTERED</td>
-     <td width="9%" class="unavailable" >UNAVAILABLE</td>
-  </tr>
+<tr>
+<td width="6%" class="alive3">ALIVE</td>
+<td width="7%" class="available2">AVAILABLE</td>
+<td width="9%" class="busy3">BUSY WAITING</td>
+<td width="9%" class="unregistered">UNREGISTERED</td>
+<td width="9%" class="unavailable">UNAVAILABLE</td>
+</tr>
 
 <tr>
-<td colspan="5" height="22"><br>
+<td colspan="5" height="22"><br />
  First the Modality Component announces that it is ALIVE and
-declares its AVAILABLE state to the system.<br>
+declares its AVAILABLE state to the system.<br />
  After sending this announcement, the Modality Component enters the
-BUSY WAITING state, waiting a response from the system.<br>
+BUSY WAITING state, waiting a response from the system.<br />
  The system does not allow the Modality Component to continue
 joining the system (it is no more authorized to join the system),
 then the Component pass to an UNREGISTERED state, and becomes
-UNAVAILABLE.<br>
+UNAVAILABLE.<br />
  </td>
 </tr>
 </tbody>
 </table>
 
-<br>
+<br />
  
 
 <p><strong>- Failure of a Registered Component</strong></p>
 
-<table class="stateTable" cellpadding="0" cellspacing="0" border="0">
+<table class="stateTable" cellpadding="0" cellspacing="0" border=
+"0">
 <tbody>
-<tr >
-    <td width="6%" class="alive2" >ALIVE</td>
-    <td width="7%" class="registering" >REGISTERING</td>
-    <td width="7%" class="available"  >AVAILABLE</td>
-    <td width="4%" class="idle" >IDLE</td>
-    <td width="9%" class="processing3" >PROCESSING</td>
-     <td width="9%" class="unavailable" >UNAVAILABLE</td>
-  </tr>
+<tr>
+<td width="6%" class="alive2">ALIVE</td>
+<td width="7%" class="registering">REGISTERING</td>
+<td width="7%" class="available">AVAILABLE</td>
+<td width="4%" class="idle">IDLE</td>
+<td width="9%" class="processing3">PROCESSING</td>
+<td width="9%" class="unavailable">UNAVAILABLE</td>
+</tr>
 
 <tr>
-<td colspan="6" height="22"><br>
+<td colspan="6" height="22"><br />
  The Modality Component is ALIVE and announces its address and port
 to the Resources Manager which registers this data allowing the
-component to pass to the REGISTERED state.<br>
-The Modality Component passes to the AVAILABLE state.<br>
+component to pass to the REGISTERED state.<br />
+The Modality Component passes to the AVAILABLE state.<br />
  When the system is ready to interact with a user, the Modality
 Component passes to the IDLE state, waiting for a user
-action.<br>
+action.<br />
  If the user interacts with the Modality Component it passes to a
 PROCESSING state, but then, the current process fails and the
 component becomes UNAVAILABLE.</td>
@@ -1967,31 +2230,32 @@ component becomes UNAVAILABLE.</td>
 </tbody>
 </table>
 
-<br>
+<br />
 <p><strong>- Unavailability of a Registered Component</strong></p>
 
-<table class="stateTable" cellpadding="0" cellspacing="0" border="0">
+<table class="stateTable" cellpadding="0" cellspacing="0" border=
+"0">
 <tbody>
-  <tr >
-    <td width="6%" class="alive2" >ALIVE</td> 
-    <td width="7%" class="registering" >REGISTERING</td>
-    <td width="7%" class="available"  >AVAILABLE</td>
-    <td width="4%" class="idle" >IDLE</td>
-    <td width="9%" class="processing2" >PROCESSING</td>
-     <td width="9%" class="busy2" >BUSY WAITING</td>
-     <td width="9%" class="unavailable" >UNAVAILABLE</td>
-  </tr>
+<tr>
+<td width="6%" class="alive2">ALIVE</td>
+<td width="7%" class="registering">REGISTERING</td>
+<td width="7%" class="available">AVAILABLE</td>
+<td width="4%" class="idle">IDLE</td>
+<td width="9%" class="processing2">PROCESSING</td>
+<td width="9%" class="busy2">BUSY WAITING</td>
+<td width="9%" class="unavailable">UNAVAILABLE</td>
+</tr>
 
 <tr>
-<td colspan="7" height="22"><br>
+<td colspan="7" height="22"><br />
  The Modality Component is ALIVE and announces its address and
-port. It is allowed to pass to the REGISTERED state.<br>
+port. It is allowed to pass to the REGISTERED state.<br />
 The Modality Component passes to the AVAILABLE state. When the
 system is ready to interact with a user, the Modality Component
-passes to the IDLE state, waiting for a user action.<br>
+passes to the IDLE state, waiting for a user action.<br />
  The user interacts with the Modality Component it passes to a
 PROCESSING state. The process needs an exchange with another
-component on the system, then it waits for a response.<br>
+component on the system, then it waits for a response.<br />
  After a certain time with no response (or after a response making
 impossible to continue the process), the current process fails and
 the component becomes UNAVAILABLE.</td>
@@ -1999,36 +2263,37 @@ the component becomes UNAVAILABLE.</td>
 </tbody>
 </table>
 
-<br>
+<br />
 <p><strong>- Registration of a Component needing multimodal
 resources</strong></p>
 
-<table class="stateTable" cellpadding="0" cellspacing="0" border="0">
+<table class="stateTable" cellpadding="0" cellspacing="0" border=
+"0">
 <tbody>
- <tr >
-    <td width="6%" class="alive" >ALIVE</td>
-    <td width="6%" class="loading" >LOADING</td>
-    <td width="7%" class="registering" >REGISTERING</td>
-    <td width="7%" class="available"  >AVAILABLE</td>
-    <td width="4%" class="idle" >IDLE</td>
-    <td width="9%" class="processing2" >PROCESSING</td>
-     <td width="9%" class="busy" >BUSY WAITING</td>
-     <td width="9%" class="processing" >PROCESSING</td>
-     <td width="5%" class="idle_fin">IDLE</td>
-  </tr>
+<tr>
+<td width="6%" class="alive">ALIVE</td>
+<td width="6%" class="loading">LOADING</td>
+<td width="7%" class="registering">REGISTERING</td>
+<td width="7%" class="available">AVAILABLE</td>
+<td width="4%" class="idle">IDLE</td>
+<td width="9%" class="processing2">PROCESSING</td>
+<td width="9%" class="busy">BUSY WAITING</td>
+<td width="9%" class="processing">PROCESSING</td>
+<td width="5%" class="idle_fin">IDLE</td>
+</tr>
 
 <tr>
-<td colspan="9" height="22"><br>
+<td colspan="9" height="22"><br />
 The Modality Component is ALIVE. It needs to load some resources,
-passing on LOADING state.<br>
+passing on LOADING state.<br />
  Then the Modality Component announces its address, port and
-resources and is allowed to pass to the REGISTERED state.<br>
+resources and is allowed to pass to the REGISTERED state.<br />
 The Modality Component passes to the AVAILABLE state. When the
 system is ready to interact with a user, the Modality Component
-passes to the IDLE state, waiting for a user action.<br>
+passes to the IDLE state, waiting for a user action.<br />
  The user interacts with the Modality Component, it passes to a
 PROCESSING state. The process communicates with another component
-on the system, and receives a response.<br>
+on the system, and receives a response.<br />
  The process ends and then the Modality Component returns to its
 IDLE state to wait for another user interaction.</td>
 </tr>
@@ -2038,7 +2303,6 @@ IDLE state to wait for another user interaction.</td>
 <!--
 <h4>&nbsp;</h4>
 -->
-
 <h4 id="check-automatic">6.2.3 AutomaticUpdate</h4>
 
 <p>A boolean-valued attribute indicating whether the state of the
@@ -2050,7 +2314,6 @@ waiting for another CheckUpdateRequest event.</p>
 <!--
 <h4>&nbsp;</h4>
 -->
-
 <h4 id="check-metadata">6.2.4 Metadata</h4>
 
 <p>An element with an attribute to link with external complementary
@@ -2067,16 +2330,19 @@ period", a <strong>validity</strong> attribute to represent the
 interval" in milliseconds. Example:</p>
 
 <div class="exampleInner">
-<pre>&lt;mmi:Timeout sleep="1000" validity="5000" interval="500"/&gt;
+<pre>
+&lt;mmi:Timeout sleep="1000" validity="5000" interval="500"/&gt;
 </pre>
 </div>
 
 <h4 id="check-example">6.2.6 Example</h4>
 
-<h5 id="check-example-request">CheckUpdateRequest (from MC to RM)</h5>
+<h5 id="check-example-request">CheckUpdateRequest (from MC to
+RM)</h5>
 
 <div class="exampleInner">
-<pre>&lt;mmi:mmi xmlns:mmi="http://www.w3.org/2008/04/mmi-arch" version="1.0"&gt;
+<pre>
+&lt;mmi:mmi xmlns:mmi="http://www.w3.org/2008/04/mmi-arch" version="1.0"&gt;
     &lt;mmi:CheckUpdateRequest 
         mmi:Source="URIForMC"
         mmi:Target="URIForRM" 
@@ -2091,10 +2357,12 @@ interval" in milliseconds. Example:</p>
 </pre>
 </div>
 
-<h5 id="check-example-response">CheckUpdateResponse (from RM to MC)</h5>
+<h5 id="check-example-response">CheckUpdateResponse (from RM to
+MC)</h5>
 
 <div class="exampleInner">
-<pre>&lt;mmi:mmi xmlns:mmi="http://www.w3.org/2008/04/mmi-arch" version="1.0"&gt;
+<pre>
+&lt;mmi:mmi xmlns:mmi="http://www.w3.org/2008/04/mmi-arch" version="1.0"&gt;
     &lt;mmi:CheckUpdateResponse 
         mmi:Source="URIForRM"
         mmi:Target="URIForMC" 
@@ -2113,9 +2381,9 @@ interval" in milliseconds. Example:</p>
 <!--
 <h3>&nbsp;</h3>
 -->
-
-<br>
-<h4 id="upnot"><span class="secno">6.3</span> UpdateNotification</h4>
+<br />
+<h4 id="upnot"><span class="secno">6.3</span>
+UpdateNotification</h4>
 
 <p>This section is Normative.</p>
 
@@ -2123,12 +2391,11 @@ interval" in milliseconds. Example:</p>
 (periodically or not) about the changes on the state of a
 Component. If automatic updates are enabled, the Component may send
 multiple UpdateNotification messages after a single
-CheckUpdateRequest message. It shares the
-<a href="http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>,
-<a href="http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>,
-<a href="http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>,
-<a href="http://www.w3.org/TR/mmi-arch/#RequestIDField">RequestID</a>
-and
+CheckUpdateRequest message. It shares the <a href=
+"http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>, <a href=
+"http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>, <a href=
+"http://www.w3.org/TR/mmi-arch/#TargetField">Target</a>, <a href=
+"http://www.w3.org/TR/mmi-arch/#RequestIDField">RequestID</a> and
 <a href="http://www.w3.org/TR/mmi-arch/#DataField">Data</a> fields
 with MMI Life Cycle Events. An UpdateNotification event MUST
 include Source, Target, and RequestID. It MAY include a Data field.
@@ -2136,9 +2403,9 @@ It MAY also include a Context field, if the notification pertains
 to a specific context.</p>
 
 <p>In addition, an UpdateNotification MUST include the additional
-fields UpdateType, State, and Timeout. The UpdateNotification
-event can be sent from either the Modality Component to the
-Resources Manager or from the Resources Manager to the Modality
+fields UpdateType, State, and Timeout. The UpdateNotification event
+can be sent from either the Modality Component to the Resources
+Manager or from the Resources Manager to the Modality
 Components.</p>
 
 <h4 id="upnot-type">6.3.1 UpdateType</h4>
@@ -2176,10 +2443,12 @@ milliseconds.</p>
 
 <h4 id="upnot-example">6.3.4 Example</h4>
 
-<h5 id="upnot-example-mc2rm">UpdateNotification (from MC to RM)</h5>
+<h5 id="upnot-example-mc2rm">UpdateNotification (from MC to
+RM)</h5>
 
 <div class="exampleInner1">
-<pre>&lt;mmi:mmi xmlns:mmi="http://www.w3.org/2008/04/mmi-arch" version="1.0"&gt;
+<pre>
+&lt;mmi:mmi xmlns:mmi="http://www.w3.org/2008/04/mmi-arch" version="1.0"&gt;
     &lt;mmi:UpdateNotification 
         mmi:Source="URIForMC"
         mmi:Target="URIForRM" 
@@ -2197,10 +2466,12 @@ milliseconds.</p>
 
 <p>&nbsp;</p>
 -->
-<br>
-<br>
+<br />
+<br />
+ 
 
-<h4 id="req6"><span class="secno">6.4</span> Requirements Addressed</h4>
+<h4 id="req6"><span class="secno">6.4</span> Requirements
+Addressed</h4>
 
 <table class="ReqsTable">
 <tbody>
@@ -2210,24 +2481,32 @@ milliseconds.</p>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#distribution" target="_blank">Distribution</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#distribution" target=
+"_blank">Distribution</a> </td>
 <td class="sublineReqsTable">For notification of failures, progress
-or delays in distributed processing <a href="http://www.w3.org/TR/mmi-reqs/#Distributedprocessing" target="_blank">[MMI-A14]</a> the UpdateNotification ensures periodical
+or delays in distributed processing <a href=
+"http://www.w3.org/TR/mmi-reqs/#Distributedprocessing" target=
+"_blank">[MMI-A14]</a> the UpdateNotification ensures periodical
 requests informing other components if any change occurs in the
 Modality Component's state. This can support, for example, grammar
 updates or image recognition updates for a subset of differential
 data (the general recognized image is the same but one little part
 of the image has changed, i. e. the face is the same but there is a
-smile)<br>
+smile)<br />
  On the other hand, if a Modality Component is waiting for some
 processing provided by other distributed component, the checkUpdate
 Event allows the recovery of progress information and the fine
 tuning of requests by changing the timeout attribute. This enhances
-input/output synchronization in distributed environments <a href="http://www.w3.org/TR/mmi-reqs/#Distributedsynchronization" target="_blank">[MMI-A13]</a>.</td>
+input/output synchronization in distributed environments <a href=
+"http://www.w3.org/TR/mmi-reqs/#Distributedsynchronization" target=
+"_blank">[MMI-A13]</a>.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#advertisement" target="_blank">Advertisement</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#advertisement" target=
+"_blank">Advertisement</a> </td>
 <td class="sublineReqsTable">The use of the timeout attribute helps
 in the management of the validity of the advertised data. If a
 Modality Component communication is out-of-date, the system can
@@ -2236,24 +2515,37 @@ invalid.</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#discovery" target="_blank">Discovery</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#discovery" target=
+"_blank">Discovery</a> </td>
 <td class="sublineReqsTable">The UpdateNotification and the
 checkUpdate Event support mediated and passive discovery of
 Modality Components, by allowing servers or devices to announce
 their capabilities at bootstrapping and notify or check
-periodically availability and session state changes <a href="http://www.w3.org/TR/mmi-reqs/#Configurations" target="_blank">[MMI-C1]</a> .</td>
+periodically availability and session state changes <a href=
+"http://www.w3.org/TR/mmi-reqs/#Configurations" target=
+"_blank">[MMI-C1]</a> .</td>
 </tr>
 
 <tr>
-<td class="sublineReqsTable"><a href="http://www.w3.org/TR/mmi-discovery/#registration" target="_blank">Registration</a> </td>
+<td class="sublineReqsTable"><a href=
+"http://www.w3.org/TR/mmi-discovery/#registration" target=
+"_blank">Registration</a> </td>
 <td class="sublineReqsTable">The UpdateNotification and the
 checkUpdate Event tuned by a timeout mechanism for pull requests
 allow the dynamic registration and update of the information about
-the capabilities of the Modality Component <a href="http://www.w3.org/TR/mmi-reqs/#Scalabilityacrosswiderangeofdevicescapabilities" target="_blank">[MMI-G2]</a> or the user preferences <a href="http://www.w3.org/TR/mmi-reqs/#Securityandprivacy" target="_blank">[MMI-G13]</a> and profile <a href="http://www.w3.org/TR/mmi-reqs/#Deliveryandcontext" target="_blank">[MMI-G14]</a> collected on the device.</td>
+the capabilities of the Modality Component <a href=
+"http://www.w3.org/TR/mmi-reqs/#Scalabilityacrosswiderangeofdevicescapabilities"
+ target="_blank">[MMI-G2]</a> or the user preferences <a href=
+"http://www.w3.org/TR/mmi-reqs/#Securityandprivacy" target=
+"_blank">[MMI-G13]</a> and profile <a href=
+"http://www.w3.org/TR/mmi-reqs/#Deliveryandcontext" target=
+"_blank">[MMI-G14]</a> collected on the device.</td>
 </tr>
 
 <tr>
-<td><a href="http://www.w3.org/TR/mmi-discovery/#query" target="_blank">Querying</a> </td>
+<td><a href="http://www.w3.org/TR/mmi-discovery/#query" target=
+"_blank">Querying</a> </td>
 <td>The checkUpdate Event allows the recovery of a small subset of
 the information provided by the interaction manager or the data
 component, to maintain up to date the data in the Modality
@@ -2300,63 +2592,85 @@ Isabelle Demeure.</p>
 
 <h2 id="references"><span class="secno">A.</span> References</h2>
 
-<h3 id="key-references"><span class="secno">A.1</span> Key References</h3>
+<h3 id="key-references"><span class="secno">A.1</span> Key
+References</h3>
 
 <dl>
 <dt id="bib-MMI-ARCH">[MMI-ARCH]</dt>
-<dd>Jim Barnett (Ed). <a href="http://www.w3.org/TR/mmi-arch/"><cite>Multimodal Architecture and
-Interfaces.</cite></a> 25 October 2012 W3C Recommendation. URL: <a href="http://www.w3.org/TR/mmi-arch/">http://www.w3.org/TR/mmi-arch/.</a></dd>
+
+<dd>Jim Barnett (Ed). <a href=
+"http://www.w3.org/TR/mmi-arch/"><cite>Multimodal Architecture and
+Interfaces.</cite></a> 25 October 2012 W3C Recommendation. URL: <a
+href=
+"http://www.w3.org/TR/mmi-arch/">http://www.w3.org/TR/mmi-arch/.</a></dd>
 
 <dt id="bib-MMI-REQ">[MMI-REQ]</dt>
-<dd>Stéphane H. Maes and Vijay Saraswat (Eds). <a href="http://www.w3.org/TR/mmi-reqs/"><cite>Multimodal Interaction
+
+<dd>St&Atilde;&copy;phane H. Maes and Vijay Saraswat (Eds). <a
+href="http://www.w3.org/TR/mmi-reqs/"><cite>Multimodal Interaction
 Requirements</cite></a> 8 January 2003. W3C Working Group Note.
-URL: <a href="http://www.w3.org/TR/mmi-reqs/">http://www.w3.org/TR/mmi-reqs/</a></dd>
+URL: <a href=
+"http://www.w3.org/TR/mmi-reqs/">http://www.w3.org/TR/mmi-reqs/</a></dd>
 
 <dt id="bib-DIS-USE">[DIS-USE]</dt>
-<dd>B. Helena Rodríguez (Ed).<a href="http://www.w3.org/TR/mmi-discovery/"><cite>Registration &amp;
+
+<dd>B. Helena Rodr&Atilde;&shy;guez (Ed).<a href=
+"http://www.w3.org/TR/mmi-discovery/"><cite>Registration &amp;
 Discovery of Multimodal Modality Components in Multimodal Systems:
 Use Cases and Requirements</cite></a> 15 July 2012. W3C Working
-Group Note. URL: <a href="http://www.w3.org/TR/mmi-discovery/">http://www.w3.org/TR/mmi-discovery/</a></dd>
+Group Note. URL: <a href=
+"http://www.w3.org/TR/mmi-discovery/">http://www.w3.org/TR/mmi-discovery/</a></dd>
 </dl>
 
-<h3 id="other-references"><span class="secno">A.2</span> Other References</h3>
+<h3 id="other-references"><span class="secno">A.2</span> Other
+References</h3>
 
 <dl class="bibliography">
 <dt id="bib-A-INTENT">[WEB-INTENTS]</dt>
+
 <dd>Paul Kinlan. <a href="http://webintents.org"><cite>Web
-Intents.</cite></a> Available at URL: <a href="http://webintents.org">http://webintents.org</a></dd>
+Intents.</cite></a> Available at URL: <a href=
+"http://webintents.org">http://webintents.org</a></dd>
 
 <dt id="bib-Foley">[FOLEY-1984]</dt>
-<dd><cite>Foley,J.D., Wallace,V.L. and Chan, P. “The Human Factors
-of computer Graphics interaction techniques” In: IEEE computer
-Graphics and Applications, 1984. Vol. 4. No.11, pp. 13-48.</cite>
-Available at URL: <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=6429355">
+
+<dd><cite>Foley,J.D., Wallace,V.L. and Chan, P.
+&acirc;&euro;&oelig;The Human Factors of computer Graphics
+interaction techniques&acirc;&euro; In: IEEE computer Graphics and
+Applications, 1984. Vol. 4. No.11, pp. 13-48.</cite> Available at
+URL: <a href=
+"http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=6429355">
 http://ieeexplore.ieee.org</a></dd>
 
 <dt id="bib-Foster">[FOSTER-2002]</dt>
-<dd>Foster,I et al.<a href="http://www.ogf.org/documents/GFD.80.pdf"><cite>The Open Grid
-Services Architecture</cite></a> Available at URL: <a href="http://www.ogf.org/documents/GFD.80.pdf">http://www.ogf.org</a></dd>
+
+<dd>Foster,I et al.<a href=
+"http://www.ogf.org/documents/GFD.80.pdf"><cite>The Open Grid
+Services Architecture</cite></a> Available at URL: <a href=
+"http://www.ogf.org/documents/GFD.80.pdf">http://www.ogf.org</a></dd>
 
 <!--
 <dt id="bib-Buxton">&nbsp;</dt>
 
 <dt id="bib-Bouchet">&nbsp;</dt>
 -->
-
 <dt id="bib-Burbeck">[BURBECK-1987]</dt>
+
 <dd>Steve Burbeck <cite>Applications Programming in
 Smalltalk-80(TM): How to use Model-View-Controller (MVC)</cite>
-Available at URL: <a href="http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html">Applications
+Available at URL: <a href=
+"http://st-www.cs.illinois.edu/users/smarch/st-docs/mvc.html">Applications
 Programming in Smalltalk-80(TM)</a></dd>
 
 <!--
 <dt id="bib-Adjie">&nbsp;</dt>
 -->
-
 <dt id="bib-Bozdag">[BOZDAG-2007]</dt>
+
 <dd>Engin Bozdag, Ali Mesbah and Arie van Deursen, 2007<cite>A
 Comparison of Push and Pull Techniques for AJAX. Report
-TUD-SERG-2007-016a. TU Delf, 2007</cite> Available at URL: <a href="http://dx.doi.org/10.1109/WSE.2007.4380239">http://dx.doi.org/</a></dd>
+TUD-SERG-2007-016a. TU Delf, 2007</cite> Available at URL: <a href=
+"http://dx.doi.org/10.1109/WSE.2007.4380239">http://dx.doi.org/</a></dd>
 </dl>
 
 <!--
@@ -2365,8 +2679,6 @@ TUD-SERG-2007-016a. TU Delf, 2007</cite> Available at URL: <a href="http://dx.do
 </dd>
 </dl>
 -->
+</body>
+</html>
 
-
-
-
-</body></html>
