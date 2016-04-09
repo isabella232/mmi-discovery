@@ -1,13 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-lang="en">
+<!doctype html>
+<html lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="HTML Tidy, see www.w3.org" />
-<title>Discovery &amp; Registration of Multimodal Modality
-Components: State Handling</title>
-<meta http-equiv="Content-Type"
-content="text/html; charset=UTF-8" />
+<title>Discovery &amp; Registration of Multimodal Modality Components: State Handling</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <style type="text/css">
         /****************************************************************************
          * 2015 Modified by : B.Helena RODRIGUEZ ( berthele at soixante-dix dot com)
@@ -543,8 +540,10 @@ p.caption {
     
 </style>
 
-<link href="https://www.w3.org/StyleSheets/TR/W3C-WD.css"
-rel="stylesheet" type="text/css" charset="utf-8" />
+<!--
+<link href="https://www.w3.org/StyleSheets/TR/W3C-WD.css" rel=
+"stylesheet" type="text/css" charset="utf-8" />
+-->
 <style type="text/css">
 div.exampleInner {background-color: #d5dee3;
                    border-top-width: 4px;
@@ -743,6 +742,12 @@ background-position:right top;
 height: 28px;
 } 
 </style>
+
+<!--
+Any internal style sheets MUST be cascaded before this link; i.e., the internal style sheets MUST NOT override the W3C tech report styles.
+-->
+<link rel="stylesheet" type="text/css" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD" />
+
 <style type='text/css'>
 .diff-old-a {
   font-size: smaller;
@@ -767,7 +772,7 @@ height: 28px;
 <div class="head">
 <p>
 <a href="http://www.w3.org/">
-<img height="48" width="72" alt="W3C" src="http://www.w3.org/Icons/w3c_home" />
+<img height="48" width="72" alt="W3C" src="http://www.w3.org/StyleSheets/TR/2016/logos/W3C"/>
 </a>
 </p>
 <h1 class="title" id="title">
@@ -781,7 +786,7 @@ Components:
 State
 Handling
 </h1>
-<h2 id="w3c-MMI-working-group-wd-@@-february-2016">
+<h2 id="w3c-MMI-working-group-wd-05-april-2016">
 <acronym title="World Wide Web Consortium">
 W3C
 </acronym>
@@ -794,8 +799,8 @@ Draft
 June
 2015
 </del>
-<ins class="diff-chg">@@
-February
+<ins class="diff-chg">9
+April
 2016
 </ins>
 </h2>
@@ -807,8 +812,8 @@ version:
 <dd>
 <del class="diff-old">http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/
 </del>
-<a href="http://www.w3.org/TR/2016/WD-mmi-mc-discovery-201602@@/">
-<ins class="diff-chg">http://www.w3.org/TR/2016/WD-mmi-mc-discovery-201602@@/
+<a href= "http://www.w3.org/TR/2016/WD-mmi-mc-discovery-20160409/">
+<ins class="diff-chg">http://www.w3.org/TR/2016/WD-mmi-mc-discovery-20160409/
 </ins>
 </a>
 </dd>
@@ -818,19 +823,23 @@ published
 version:
 </dt>
 <dd>
-<a href="http://www.w3.org/TR/mmi-mc-discovery/">
+<a href= "http://www.w3.org/TR/mmi-mc-discovery/">
 http://www.w3.org/TR/mmi-mc-discovery/
 </a>
 </dd>
 <dt>
-<ins class="diff-new">Previous
+<del class="diff-old">Editor:
+</del>
+<ins class="diff-chg">Previous
 version:
-</ins></dt><dd><a href="http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/"><ins class="diff-new">
-http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/
-</ins></a></dd><dt>
-Editor:
+</ins>
 </dt>
 <dd>
+<a href= "http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/">
+<ins class="diff-new">http://www.w3.org/TR/2015/WD-mmi-mc-discovery-20150611/
+</ins></a></dd><dt><ins class="diff-new">
+Editor:
+</ins></dt><dd data-editor-id="62235">
 <span>
 B.
 Helena
@@ -843,7 +852,7 @@ Expert
 <dt>
 Authors:
 </dt>
-<dd>
+<dd data-editor-id="34604">
 <span>
 Jim
 Barnett
@@ -852,7 +861,7 @@ Genesys
 Telecommunications
 Laboratories
 </dd>
-<dd>
+<dd data-editor-id="33758">
 <span>
 Deborah
 Dahl
@@ -861,7 +870,7 @@ W3C
 Invited
 Expert
 </dd>
-<dd>
+<dd data-editor-id="34068">
 <span>
 Raj
 Tumuluri
@@ -869,7 +878,7 @@ Tumuluri
 Openstream,
 Inc.
 </dd>
-<dd>
+<dd data-editor-id="34128">
 <span>
 Nagesh
 Kharidi
@@ -877,7 +886,7 @@ Kharidi
 Openstream,
 Inc.
 </dd>
-<dd>
+<dd data-editor-id="37442">
 <span>
 Kazuyuki
 Ashimura
@@ -886,49 +895,53 @@ W3C
 </dd>
 </dl>
 <p class="copyright">
-<a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">
+<a href= "http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">
 Copyright
 </a>
-©
-<del class="diff-old">2015
+<del class="diff-old">©
+2015
 </del>
-<ins class="diff-chg">2016
+<ins class="diff-chg">&copy;
+2016
 </ins>
 <a href="http://www.w3.org/">
-<acronym title="World Wide Web Consortium">
+<acronym title= "World Wide Web Consortium">
 W3C
 </acronym>
 </a>
 <sup>
-®
+<del class="diff-old">®
+</del>
+<ins class="diff-chg">&reg;
+</ins>
 </sup>
 (
 <a href="http://www.csail.mit.edu/">
-<acronym title="Massachusetts Institute of Technology">
+<acronym title= "Massachusetts Institute of Technology">
 MIT
 </acronym>
 </a>,
-<a href="http://www.ercim.eu/">
-<acronym title="European Research Consortium for Informatics and Mathematics">
+<a href= "http://www.ercim.eu/">
+<acronym title= "European Research Consortium for Informatics and Mathematics">
 ERCIM
 </acronym>
 </a>,
 <a href="http://www.keio.ac.jp/">
 Keio
 </a>,
-<a href="http://ev.buaa.edu.cn/">
+<a href= "http://ev.buaa.edu.cn/">
 Beihang
 </a>
 ).
 W3C
-<a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">
+<a href= "http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">
 liability
 </a>,
-<a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">
+<a href= "http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">
 trademark
 </a>
 and
-<a href="http://www.w3.org/Consortium/Legal/copyright-documents">
+<a href= "http://www.w3.org/Consortium/Legal/copyright-documents">
 document
 use
 </a>
@@ -1098,8 +1111,8 @@ the
 June
 2015
 </del>
-<ins class="diff-chg">@@
-February
+<ins class="diff-chg">9
+April
 2016
 </ins><a href="https://www.w3.org/2015/Process-20150901/#working-draft">
 <acronym title="World Wide Web Consortium">
@@ -1125,33 +1138,110 @@ though
 its
 first
 version
+</del>
+<ins class="diff-chg">This
+draft
+</ins>
 was
-published
+<del class="diff-old">published
 as
 a
 Working
 Group
 Note,
+</del>
+<ins class="diff-chg">modified
+to
+enhance
+</ins>
 the
-document
+<del class="diff-old">document
 status
 has
 been
 changed
+</del>
+<ins class="diff-chg">contrast
+in
+graphics
+</ins>
 to
+<ins class="diff-new">meet
+WCAG
+requirements
+for
+color
+contrast.
+Fonts
+in
+Graphics
+were
+increased
+in
+size,
+</ins>
 a
-Working
+<del class="diff-old">Working
 Draft
 with
+</del>
+<ins class="diff-chg">longdesc
+was
+added
+and
 the
-expectation
+support
+for
+keyboard
+interaction.
+We
+modify
+the
+</ins><br /><ins class="diff-chg">
+state
+diagram,
+update
+</ins>
+the
+<del class="diff-old">expectation
 of
 progressing
 towards
 a
-normative
-Recommendation.
 </del>
+normative
+<del class="diff-old">Recommendation.
+</del>
+<ins class="diff-chg">part
+about
+states,
+edit
+the
+code
+examples
+and
+remove
+some
+informative
+text.
+</ins></p><p><ins class="diff-chg">
+A
+</ins><a href="diff.html"><ins class="diff-chg">
+diff-marked
+version
+</ins></a><ins class="diff-chg">
+of
+this
+document
+is
+also
+available
+for
+comparison
+purposes.
+</ins>
+</p>
+<p>
 This
 <acronym title="World Wide Web Consortium">
 W3C
@@ -1240,8 +1330,9 @@ prefix
 Publication
 as
 a
-First
+<del class="diff-old">First
 Public
+</del>
 Working
 Draft
 does
@@ -1408,12 +1499,13 @@ Process
 Document
 </a>.
 </p>
-<h2 id="toc" class="introductory">
+<nav id="toc">
+<h2 class="introductory">
 Table
 of
 Contents
 </h2>
-<ul class="toc">
+<ul role="directory" class="toc">
 <li class="tocline">
 <a href="#introduction" class="tocxref">
 <span class="secno">
@@ -1457,7 +1549,7 @@ the
 multimodal
 system
 </a>
-</li>
+<ul role="directory" class="toc">
 <li class="subline">
 <a href="#RM_mvc" class="tocxref">
 <span class="secno">
@@ -1511,8 +1603,7 @@ Requirements
 Addressed
 </a>
 </li>
-<li style="list-style: none">
-<br />
+</ul>
 </li>
 <li class="tocline">
 <a href="#pull" class="tocxref">
@@ -1525,18 +1616,22 @@ flow
 of
 messages
 </a>
-</li>
+<ul role="directory" class="toc">
 <li class="subline">
-5
+<del class="diff-old">5
+</del>
 <a href="#pullRA" class="tocxref">
-<span class="secno">.1
+<del class="diff-old">.1
+</del>
+<span class="secno">
+<ins class="diff-chg">5.1
+</ins>
 </span>
 Requirements
 Addressed
 </a>
 </li>
-<li style="list-style: none">
-<br />
+</ul>
 </li>
 <li class="tocline">
 <a href="#events" class="tocxref">
@@ -1549,7 +1644,7 @@ for
 system
 updates
 </a>
-</li>
+<ul role="directory" class="toc">
 <li class="subline">
 <a href="#EV_time" class="tocxref">
 <span class="secno">
@@ -1574,7 +1669,7 @@ renewal
 CheckUpdate
 Event
 </a>
-</li>
+<ul role="directory" class="toc">
 <li class="sub-subline">
 <a href="#check-type" class="tocxref">
 <span class="secno">
@@ -1663,7 +1758,8 @@ Unregistered
 </span>
 Unavailable
 </a>
-<br />
+</li>
+</ul>
 </li>
 <li class="sub-subline">
 <a href="#check-automatic" class="tocxref">
@@ -1696,8 +1792,6 @@ Timeout
 </span>
 Example
 </a>
-<br />
-<br />
 </li>
 <li class="subline">
 <a href="#upnot" class="tocxref">
@@ -1706,7 +1800,7 @@ Example
 </span>
 UpdateNotification
 </a>
-</li>
+<ul role="directory" class="toc">
 <li class="sub-subline">
 <a href="#upnot-type" class="tocxref">
 <span class="secno">
@@ -1730,8 +1824,6 @@ State
 </span>
 Example
 </a>
-<br />
-<br />
 </li>
 <li class="subline">
 <a href="#req6" class="tocxref">
@@ -1741,19 +1833,29 @@ Example
 Requirements
 Addressed
 </a>
-<br />
-<br />
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="tocline">
-7
+<del class="diff-old">7
+</del>
 <a href="#open" class="tocxref">
+<span class="secno">
+<ins class="diff-new">7.
+</ins></span>
 Open
 Issues
 </a>
 </li>
 <li class="tocline">
-8
-<a href="#acknowledgements">
+<del class="diff-old">8
+</del>
+<a href="#acknowledgements" class="tocxref">
+<span class="secno">
+<ins class="diff-chg">8.
+</ins></span>
 Acknowledgements
 </a>
 </li>
@@ -1766,6 +1868,7 @@ References
 </a>
 </li>
 </ul>
+</nav>
 <h2 id="introduction">
 <span class="secno">
 1.
@@ -2060,7 +2163,10 @@ flow
 <td class="headIntroTable">
 Events
 for
-System’s
+<del class="diff-old">System’s
+</del>
+<ins class="diff-chg">System's
+</ins>
 updates
 </td>
 </tr>
@@ -2148,7 +2254,10 @@ and
 update
 of
 Modality
-Component’s
+<del class="diff-old">Component’s
+</del>
+<ins class="diff-chg">Component's
+</ins>
 availability.
 </td>
 </tr>
@@ -4193,7 +4302,10 @@ also
 aware
 of
 the
-system’s
+<del class="diff-old">system’s
+</del>
+<ins class="diff-chg">system's
+</ins>
 capabilities,
 like
 the
@@ -4468,7 +4580,10 @@ the
 Controller
 translates
 the
-user’s
+<del class="diff-old">user’s
+</del>
+<ins class="diff-chg">user's
+</ins>
 actions
 into
 method
@@ -4680,7 +4795,10 @@ Resources
 Manager
 translates
 the
-user’s
+<del class="diff-old">user’s
+</del>
+<ins class="diff-chg">user's
+</ins>
 actions
 into
 method
@@ -7062,7 +7180,10 @@ state
 and
 update
 the
-«inventory»
+<del class="diff-old">«inventory»
+</del>
+<ins class="diff-chg">&lt;&lt;inventory&gt;&gt;
+</ins>
 of
 the
 components
@@ -8767,11 +8888,11 @@ IDLE
 <td width="9%" class="processing2">
 PROCESSING
 </td>
-<td width="9%" class="busy2">
+<td width="10%" class="busy2">
 BUSY
 WAITING
 </td>
-<td width="9%" class="unavailable">
+<td width="8%" class="unavailable">
 UNAVAILABLE
 </td>
 </tr>
@@ -8908,7 +9029,7 @@ resources
 <table class="stateTable" cellpadding="0" cellspacing="0" border="0">
 <tbody>
 <tr>
-<td width="6%" class="alive">
+<td width="5%" class="alive">
 ALIVE
 </td>
 <td width="6%" class="loading">
@@ -8920,20 +9041,20 @@ REGISTERING
 <td width="7%" class="available">
 AVAILABLE
 </td>
-<td width="4%" class="idle">
+<td width="6%" class="idle">
 IDLE
 </td>
 <td width="9%" class="processing2">
 PROCESSING
 </td>
-<td width="9%" class="busy">
+<td width="12%" class="busy">
 BUSY
 WAITING
 </td>
 <td width="9%" class="processing">
 PROCESSING
 </td>
-<td width="5%" class="idle_fin">
+<td width="4%" class="idle_fin">
 IDLE
 </td>
 </tr>
@@ -10392,14 +10513,21 @@ Wallace,V.L.
 and
 Chan,
 P.
-“The
+<del class="diff-old">“The
+</del>
+<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=6429355">
+<ins class="diff-chg">The
+</ins>
 Human
 Factors
 of
 computer
 Graphics
 interaction
-techniques”
+<del class="diff-old">techniques”
+</del>
+<ins class="diff-chg">techniques
+</ins></a>
 In:
 IEEE
 computer
@@ -10507,5 +10635,10 @@ http://dx.doi.org/
 </a>
 </dd>
 </dl>
+<p role="navigation" id="back-to-top">
+<a href="#toc">
+<abbr title="Back to top">
+<ins class="diff-new">↑
+</ins></abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js" defer="" async=""></script>
 </body>
 </html>
