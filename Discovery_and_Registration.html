@@ -917,60 +917,83 @@ W3C Process Document</a>.</p>
 <h2 class="introductory">Table of Contents</h2>
 
 <ul role="directory" class="toc">
+<!-- 1 -->
 <li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1.</span> Introduction</a></li>
 
+<!-- 2 -->
 <li class="tocline"><a href="#vocabulary" class="tocxref"><span class="secno">2.</span> Domain Vocabulary</a></li>
 
+<!-- 3 -->
 <li class="tocline"><a href="#scope" class="tocxref"><span class="secno">3.</span> Scope</a></li>
 
+<!-- 4 -->
 <!-- RESOURCES MANAGER CHAPTER -->
-<li class="tocline"><a href="#manager" class="tocxref"><span class="secno">4.</span> A Resources Manager to handle the general state of the multimodal system</a></li>
+<li class="tocline"><a href="#manager" class="tocxref"><span class="secno">4.</span> A Resources Manager to handle the general state of the multimodal system</a>
+  <ul role="directory" class="toc">
+  <li class="subline"><a href="#RM_mvc" class="tocxref"><span class="secno">4.1</span> The Resources Manager and the MVC design pattern of the MMI Architecture</a></li>
+  <li class="subline"><a href="#RM_resp" class="tocxref"><span class="secno">4.2</span> The Resources Manager responsibilities</a></li>
+  <li class="subline"><a href="#RM_states" class="tocxref"><span class="secno">4.3</span> Data structures handled by the Resources Manager</a></li>
+  <li class="subline"><a href="#RM_req" class="tocxref"><span class="secno">4.4</span> Requirements Addressed</a></li>
+  </ul>
+</li>
 
-<ul role="directory" class="toc">
-<li class="subline"><a href="#RM_mvc" class="tocxref"><span class="secno">4.1</span> The Resources Manager and the MVC design pattern of the MMI Architecture</a></li>
-<li class="subline"><a href="#RM_resp" class="tocxref"><span class="secno">4.2</span> The Resources Manager responsibilities</a></li>
-<li class="subline"><a href="#RM_states" class="tocxref"><span class="secno">4.3</span> Data structures handled by the Resources Manager</a></li>
-<li class="subline"><a href="#RM_req" class="tocxref"><span class="secno">4.4</span> Requirements Addressed</a></li>
-</ul>
-
+<!-- 5 -->
 <!-- PROTOCOL CHAPTER -->
-<!-- remove extra break
-<li style="list-style: none"><br /> </li>
--->
+<li class="tocline"><a href="#pull" class="tocxref"><span class="secno">5.</span> A bidirectional flow of messages</a>
+  <ul role="directory" class="toc">
+  <li class="subline"><a href="#pullRA" class="tocxref"><span class="secno">5.1</span> Requirements Addressed</a></li>
+  </ul>
+</li>
 
-<li class="tocline"><a href="#pull" class="tocxref"><span class="secno">5.</span> A bidirectional flow of messages</a></li>
-<li class="subline"><a href="#pullRA" class="tocxref"><span class="secno">5.1</span> Requirements Addressed</a></li>
-<!-- remove extra break
-<li style="list-style: none"><br /> </li>
--->
+<!-- 6 -->
+<li class="tocline"><a href="#events" class="tocxref"><span class="secno">6.</span> Two events for system updates</a>
 
-<li class="tocline"><a href="#events" class="tocxref"><span class="secno">6.</span> Two events for system updates</a></li>
-<li class="subline"><a href="#EV_time" class="tocxref"><span class="secno">6.1</span>The timeout attribute for state handling and registration renewal</a></li>
-<li class="subline"><a href="#check" class="tocxref"><span class="secno">6.2</span> CheckUpdate Event</a></li>
-<li class="sub-subline"><a href="#check-type" class="tocxref"><span class="secno">6.2.1</span> UpdateType</a></li>
-<li class="sub-subline"><a href="#check-state" class="tocxref"><span class="secno">6.2.2</span> State</a></li>
-<li class="subm-subline"><a href="#check-state-alive" class="tocxref"><span class="secno">6.2.2.1</span> Alive</a></li>
-<li class="subm-subline"><a href="#check-state-loading" class="tocxref"><span class="secno">6.2.2.2</span> Loading</a></li>
-<li class="subm-subline"><a href="#check-state-registering" class="tocxref"><span class="secno">6.2.2.3</span> Registering</a></li>
-<li class="subm-subline"><a href="#check-state-available" class="tocxref"><span class="secno">6.2.2.4</span> Available</a></li>
-<li class="subm-subline"><a href="#check-state-idle" class="tocxref"><span class="secno">6.2.2.5</span> Idle</a></li>
-<li class="subm-subline"><a href="#check-state-busy" class="tocxref"><span class="secno">6.2.2.6</span> Busy Waiting</a></li>
-<li class="subm-subline"><a href="#check-state-processing" class="tocxref"><span class="secno">6.2.2.7</span> Processing</a></li>
-<li class="subm-subline"><a href="#check-state-unregistered" class="tocxref"><span class="secno">6.2.2.8</span> Unregistered</a></li>
-<li class="subm-subline"><a href="#check-state-unavailable" class="tocxref"><span class="secno">6.2.2.9</span> Unavailable</a><!--<br />--></li>
-<li class="sub-subline"><a href="#check-automatic" class="tocxref"><span class="secno">6.2.3</span> AutomaticUpdate</a></li>
-<li class="sub-subline"><a href="#check-metadata" class="tocxref"><span class="secno">6.2.4</span> Metadata</a></li>
-<li class="sub-subline"><a href="#check-timeout" class="tocxref"><span class="secno">6.2.5</span> Timeout</a></li>
-<li class="sub-subline"><a href="#check-example" class="tocxref"><span class="secno">6.2.6</span> Example</a><!--<br /> <br />--></li>
-<li class="subline"><a href="#upnot" class="tocxref"><span class="secno">6.3</span> UpdateNotification</a></li>
-<li class="sub-subline"><a href="#upnot-type" class="tocxref"><span class="secno">6.3.1</span> UpdateType</a></li>
-<li class="sub-subline"><a href="#upnot-state" class="tocxref"><span class="secno">6.3.2</span> State</a></li>
-<li class="sub-subline"><a href="#upnot-example" class="tocxref"><span class="secno">6.3.3</span> Example</a><!--<br /> <br />--></li>
-<li class="subline"><a href="#req6" class="tocxref"><span class="secno">6.4</span> Requirements Addressed</a><!--<br /> <br />--></li>
+  <ul role="directory" class="toc">
+  <li class="subline"><a href="#EV_time" class="tocxref"><span class="secno">6.1</span>The timeout attribute for state handling and registration renewal</a></li>
 
+  <li class="subline"><a href="#check" class="tocxref"><span class="secno">6.2</span> CheckUpdate Event</a>
+    <ul role="directory" class="toc">
+    <li class="sub-subline"><a href="#check-type" class="tocxref"><span class="secno">6.2.1</span> UpdateType</a></li>
+    <li class="sub-subline"><a href="#check-state" class="tocxref"><span class="secno">6.2.2</span> State</a></li>
+    <li class="subm-subline"><a href="#check-state-alive" class="tocxref"><span class="secno">6.2.2.1</span> Alive</a></li>
+    <li class="subm-subline"><a href="#check-state-loading" class="tocxref"><span class="secno">6.2.2.2</span> Loading</a></li>
+    <li class="subm-subline"><a href="#check-state-registering" class="tocxref"><span class="secno">6.2.2.3</span> Registering</a></li>
+    <li class="subm-subline"><a href="#check-state-available" class="tocxref"><span class="secno">6.2.2.4</span> Available</a></li>
+    <li class="subm-subline"><a href="#check-state-idle" class="tocxref"><span class="secno">6.2.2.5</span> Idle</a></li>
+    <li class="subm-subline"><a href="#check-state-busy" class="tocxref"><span class="secno">6.2.2.6</span> Busy Waiting</a></li>
+    <li class="subm-subline"><a href="#check-state-processing" class="tocxref"><span class="secno">6.2.2.7</span> Processing</a></li>
+    <li class="subm-subline"><a href="#check-state-unregistered" class="tocxref"><span class="secno">6.2.2.8</span> Unregistered</a></li>
+    <li class="subm-subline"><a href="#check-state-unavailable" class="tocxref"><span class="secno">6.2.2.9</span> Unavailable</a></li>
+    </ul>
+  </li>
+
+  <li class="sub-subline"><a href="#check-automatic" class="tocxref"><span class="secno">6.2.3</span> AutomaticUpdate</a></li>
+
+  <li class="sub-subline"><a href="#check-metadata" class="tocxref"><span class="secno">6.2.4</span> Metadata</a></li>
+
+  <li class="sub-subline"><a href="#check-timeout" class="tocxref"><span class="secno">6.2.5</span> Timeout</a></li>
+
+  <li class="sub-subline"><a href="#check-example" class="tocxref"><span class="secno">6.2.6</span> Example</a></li>
+
+  <li class="subline"><a href="#upnot" class="tocxref"><span class="secno">6.3</span> UpdateNotification</a>
+    <ul role="directory" class="toc">
+    <li class="sub-subline"><a href="#upnot-type" class="tocxref"><span class="secno">6.3.1</span> UpdateType</a></li>
+    <li class="sub-subline"><a href="#upnot-state" class="tocxref"><span class="secno">6.3.2</span> State</a></li>
+    <li class="sub-subline"><a href="#upnot-example" class="tocxref"><span class="secno">6.3.3</span> Example</a></li>
+    <li class="subline"><a href="#req6" class="tocxref"><span class="secno">6.4</span> Requirements Addressed</a></li>
+    </ul>
+  </li>
+  </ul>
+</li>
+
+<!-- 7 --> 
 <!-- OPEN ISSUES --> 
 <li class="tocline"><a href="#open" class="tocxref"><span class="secno">7.</span> Open Issues</a></li>
+
+<!-- 8 --> 
 <li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">8.</span> Acknowledgements</a></li>
+
+<!-- A --> 
 <li class="tocline"><a href="#references" class="tocxref"><span class="secno">A.</span> References</a></li>
 </ul>
 </nav>
