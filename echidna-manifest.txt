@@ -1,4 +1,4 @@
-Discovery_and_Registration.html?specStatus=WD;shortName=mmi-mc-discovery respec
+Discovery_and_Registration.html
 images/alive2.png
 images/alive3.png
 images/alive.png
