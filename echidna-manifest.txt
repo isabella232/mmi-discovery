@@ -61,3 +61,4 @@ images/processing3.png
 images/processing.png
 images/registering.png
 images/unregistered.png
+images/MMI-Arch.png
