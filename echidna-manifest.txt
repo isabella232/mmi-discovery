@@ -1,4 +1,5 @@
 Discovery_and_Registration.html
+diff.html
 images/alive2.png
 images/alive3.png
 images/alive.png
