@@ -569,7 +569,7 @@ network.<br />
 <p>
   The meaning of the terms for a controlled vocabulary in the form of a Glossary for the  annotation of Modality Components,  is divided in two parts: Subsumption terms and Life-Cycle an behavior terms.</p>
 
-    <img src="http://www.berthele.com/multimodal/img/vocablo_high.png" alt="Basic Vocabulary for MC annotation " width="719" class="mmImage" onclick="
+    <img src="imgs/Vocablo_High.png" alt="Basic Vocabulary for MC annotation " width="727" class="mmImage" onclick="
     window.open('http://upload.wikimedia.org/wikipedia/commons/c/c8/Vocablo_high.png','Vocabulary');" />
     <p class="caption">Figure 1: Basic Vocabulary for MC annotation </p>
     
@@ -592,31 +592,24 @@ network.<br />
     <td class="semComm">A list of the supported modalities classed by mode (to parse using generic modalities described by a multimodal taxonomy or ontology )</td>
   </tr>
     <tr>
-    <td class="semItem">Medium</td>
-    <td class="semComm">A list of the supported media classed by mode (to parse using generic media described by a multimodal taxonomy or ontology )</td>
+    <td class="semItem">Functions</td>
+    <td class="semComm">A list of the supported high-level functions classed by mode (to parse using generic functions described by a multimodal taxonomy or ontology )</td>
   </tr>
 </table>
 <p>&nbsp;</p>
-<p>The first term, &quot;Name&quot; is used to announce the service in the network.  It is a compound name in three parts and provides the semantics about the implementation of the component, its most important attribute and its more important role.</p>
+<p>The first term, &quot;Name&quot; is used to announce the service in the network.  It is a compound name in three parts and provides the semantics about the implementation of the component, its most important attribute and its more important role. For example: SVG_COUNTER_DISPLAY, HTML_VIDEO_CONTROL</p>
 
-<p>Based on this term, the Modality Component's capabilities can be classified from a high level perspective. The triplet is inspired on the intentional name schema <a href="#bib-Adjie" class="internalDFN">[ADJIE-1999]</a> and show hierarchical tree relationships between general concepts (including some negative differentiating aspects). These names are intentional; they describe the intent of the Modaity Component and its implementation in the form of a tuple of attributes.</p>
-<p>&nbsp;</p>
-   
- <p>The second term &quot;Affiliation&quot; specifies the generic information about some complementary association of high level.  It puts forward an aspect of the Modality Component that could affect its selection and that is part of the advertisement policy of the service. It can be for example, a complementary inheritance relationship or a relation based on some association or analogy.</p>   
- <p>In the first case, the affiliation can be related to a particular &quot;myModality&quot; that is in some extent associated to the particular &quot;myMCService&quot;. In the second case, the affiliation can be asserted about other particular which is related with the service by an analogical relationship.
-  For example, a myVoice Synthesizer service is affiliated with  myVoiceModality by association, but it can be also affiliated with myAcousticMode by analogy (in the emission side). </p>
-<p>The third term &quot;Modality&quot; specifies the form in which some information is realized according to a precise mode. A modality is described by a situation and contains a recognizable logical structure: the information object. For example, a gesture modality is the visual and haptic realization of some intention in a situation of communication (the information object is the «message» to communicate): a cross drawn in the air with a hand gesture, is perceived visually, and in some social contexts this expresses the benediction message.</p>
-<p>&nbsp;</p>
-
-       <p>In Figure 11 &quot;myMCService&quot; <strong>actsIn</strong> some mode that is perceived by a final user through a modality that is part of a medium, i.e. a face synthesis service <strong>actsIn</strong> the visual mode that is perceived through a 3D mesh modality that is part of an avatar medium. </p>  
-       <p>A medium is a technical entity  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
-       A Modality Component acts with media. Each medium uses one or more modalities that realizes some mode. This term defines the list of media participating in the service, ordered by importance and by mode. For example, a gesture recognizer service    <strong>actsWith</strong> the sign language medium, using the single hand gesture modality that realizes the haptic mode and is perceived in the visual mode.</p>
-<p>&nbsp;</p>
-     
-   
-<p>&nbsp;</p>
+<p>Based on this term, the Modality Component's capabilities can be classified from a high level perspective, for example, we can infere that the first component is part of the device class &quot;TEXT_DISPLAYS&quot;, and the second to the class &quot;MEDIA_CONTROLLERS&quot;. The triplet is inspired on the intentional name schema <a href="#bib-Adjie" class="internalDFN">[ADJIE-1999]</a> and show hierarchical tree relationships between general concepts (including some negative differentiating aspects). These names are intentional; they describe the intent of the Modaity Component and its implementation in the form of a tuple of attributes. </p>
+<p>The second term &quot;Affiliation&quot; specifies the generic information about some complementary association of high level.  It puts forward an aspect of the Modality Component that could affect its selection and that is part of the advertisement policy of the service. It can be for example, a complementary inheritance relationship or a relation based on some association or analogy. Some examples of  affiliation can be ANIMATED_GRAPHICS or in the second, CONTROLLERS. Thus, this term can be used to represent some kind of inheritance or association with a more generic component class.</p>
+<p>The third term &quot;Modality&quot; specifies the form in which some information is realized according to a precise mode. A modality is described by a situation and contains a recognizable logical structure: the information object. For example, a gesture modality is the visual realization and the haptic realization of some intention in a situation of communication (the information object is the «message» to communicate): a cross drawn in the air with a hand gesture, is perceived visually, and in some social contexts this expresses the benediction message.  </p>
+<p>In Figure 2 &quot;myMCService&quot; <strong>actsIn</strong> some mode that is perceived by a final user through a modality that is part of some functions, i.e. a face synthesis service <strong>actsIn</strong> the visual mode that is perceived through a 3D mesh modality that is part of an avatar function. </p>
+<p><img src="imgs/Functions.png" alt="Basic Vocabulary for MC annotation " width="913" class="mmImage" onclick="
+    window.open('http://upload.wikimedia.org/wikipedia/commons/c/c8/Vocablo_high.png','Vocabulary');" /> </p>
+<p class="caption">Figure 2: Mode, Modality, Function</p>
+<p>&nbsp;</p>  
+       <p>The functions are the technical entities  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
+       A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service    <strong>uses</strong> the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
 <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. Inputs, Outputs, Preconditions and Effects are the IOPEs  properties.</p>
-
 <p>An example of annotation for a video controller, that can be classified as a generic Commander Modality Component is:</p>
 <pre>
 {
