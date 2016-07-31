@@ -513,106 +513,78 @@ p.caption {
 <div class="head">
 <p>&nbsp;</p>
 </div>
-<h2 id="vocabulary"><span class="secno">1.</span> Domain Vocabulary</h2>
-
-<dl>
-<br /> 
-<dt><dfn id="dfn-multimodal-system">Multimodal System</dfn></dt>
-
-<dd>For the purposes of this document a <a
-href="#dfn-multimodal-system" class="internalDFN">Multimodal System</a>
-is any system communicating with the user through different
-modalities such as voice, gesture, or handwriting in the same
-interaction cycle identified by an unique <a href="#dfn-context"
-class="internalDFN">context</a>. In a <a
-href="#dfn-multimodal-system" class="internalDFN">Multimodal
-System</a> the <a href="#dfn-application"
-class="internalDFN">Application</a> or the final user can
-dynamically switch <a href="#dfn-modality-component"
-class="internalDFN">modalities</a> in the same <a
-href="#dfn-context" class="internalDFN">context</a> of information
-exchange. This is a bi-directional system with combined inputs and
-outputs in multiple sensorial modes (e.g. visual, acoustic, haptic,
-olfactive, gustative) and modalities (e.g. voice, gesture,
-handwriting, biometrics capture, temperature sensing, etc). 
-<br />
-<br />
-<dt><dfn id="dfn-modality-component">Modality Component</dfn></dt>
-
-<dd>For the purpose of this document, a modality is a term that
-covers the way an idea could be communicated or the manner an
-action could be performed. In some mobile multimodal systems, e.g.
-the primary modality is speech and an additional modality can be
-typically gesture, gaze, sketch, or any combination thereof. These
-are forms of representing information in a known and recognizable
-logical structure. For example, visual data can be expressed as a
-a gesture modality (e.g. a ponting gesture) or as a signing
-modality (e.g. a deaf human talking). Following this idea, in this
-document a <strong><a
-href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
-Component</a></strong> is a logic entity that handles the input and
-output of different hardware <a href="#dfn-device"
-class="internalDFN">Devices</a> (e.g. camera, microphone, graphic tablet,
-keyboard) or software <a href="#dfn-service"
-class="internalDFN">Services</a> (e.g. motion detection, image recognition) associated with the <a href="#dfn-multimodal-system"
-class="internalDFN">Multimodal System</a>. Modality Components are
-responsible for specific tasks, including handling inputs and
-outputs in various ways, such as speech, writing, video, etc..
-Modality Components are also loosely coupled software modules that
-may be either co-resident on a <a href="#dfn-device"
-class="internalDFN">device</a> or distributed across a
-network.<br />
-<h2 id="vocablo"><span class="secno">2.</span> A vocabulary for the annotation of Modality Components</h2>
-
-<p>This proposal is designed to support the annotation  of  Modality Components, to allow their discovery and registering in a multimodal system. The focus is the dynamic discovery of Modality Component as services using generic information about the underlaid properties and type of processes. This information is provided by an announcement and a description (a capabilities manifest, for example) advertised in some network.</p>
-<p>The Modality Components can be described with a document that evolves on complexity depending on the application needs. This description can be limited to indications about the Input and Output interfaces or be more detailed describing functional and non-functional properties, using as a basis the Extensible Multimodal Annotation Markup Language (EMMA) [W3C-EMMA 2009].</p>
-<p>
-  The meaning of the terms for a controlled vocabulary in the form of a Glossary for the  annotation of Modality Components,  is divided in two parts: Subsumption terms and Life-Cycle an behavior terms.</p>
-
-    <img src="images/Vocablo_High.png" alt="Basic Vocabulary for MC annotation " width="727" class="mmImage" " />
-    <p class="caption">Figure 1: Basic Vocabulary for MC annotation </p>
-    
-
-<p>The first part concerns the attributes incorporating the Modality Components under a more general category based on multimodal criteria. It is structured on metadata classifying the Modality Component according to its membership or association to a Multimodal class in conformance to the modes handled by the System. This first description allows a discovery filtering for a precise target mode.</p>
-<p>&nbsp;</p>
-
+<h2 id="vocabulary"><span class="secno">1.</span> A vocabulary for the annotation of Modality Components</h2>
+<dd>
+<p>This proposal is designed to support the annotation  of  Modality Components, to allow their discovery and registering in a multimodal system. The focus is the dynamic discovery of Modality Component as services using generic information about the underlying properties and types of processes. This information is provided by an announcement and a description (a capabilities manifest, for example) advertised in some network.</p>
+  <p>The Modality Components can be described with a document that evolves on complexity depending on the application needs. This description can be limited to indications about the Input and Output interfaces or be more detailed describing functional and non-functional properties, using as a basis the Extensible Multimodal Annotation Markup Language (EMMA) [W3C-EMMA 2009].</p>
+  <p>
+  The meaning of the terms for a controlled vocabulary in the form of a Glossary for the  annotation of Modality Components,  is divided in two parts: Subsumption terms and Life-Cycle and behavior terms.</p>
+  
+  <img src="images/Vocablo_High.png" alt="Basic Vocabulary for MC annotation " width="727" class="mmImage" " />
+<p class="caption">Figure 1: Basic Vocabulary for MC annotation </p>
+  
+  
+<h4 id="RM_mvc"><span class="secno">1.1</span> Subsumption Description Attributes</h4>
+  <p>Subsumption concerns the attributes classifiying the Modality Components. It is structured with metadata classifying the Modality Component according to its membership or association with a Multimodal class in conformance to the modes handled by the System. This first description allows discovery filtering for a precise target mode.</p>
+  <p>&nbsp;</p>
+  
 <table class='semTable'>
-  <tr >
-    <td  rowspan="4" class='headsemTable'>TERMS BASED ON SUBSUMPTION</td>
-    <td class='semItem'>Name </td>
-    <td  class='semComm'>The intentional name of  the service</td>
-  </tr>
-  <tr>
-    <td class="semItem">Affiliation </td>
-    <td class="semComm">The high level MC category to adhere (to parse using generic tasks described by a multimodal taxonomy or ontology )</td>
-  </tr>
+    <tr >
+      <td  rowspan="4" class='headsemTable'>TERMS BASED ON SUBSUMPTION</td>
+      <td class='semItem'>Name </td>
+      <td  class='semComm'>The intentional name of  the service</td>
+    </tr>
     <tr>
-    <td class="semItem">Modality</td>
-    <td class="semComm">A list of the supported modalities classed by mode (to parse using generic modalities described by a multimodal taxonomy or ontology )</td>
-  </tr>
+      <td class="semItem">Affiliation </td>
+      <td class="semComm">The high level MC category to adhere (to parse using generic tasks described by a multimodal taxonomy or ontology )</td>
+    </tr>
     <tr>
-    <td class="semItem">Functions</td>
-    <td class="semComm">A list of the supported high-level functions classed by mode (to parse using generic functions described by a multimodal taxonomy or ontology )</td>
-  </tr>
-</table>
-<p>&nbsp;</p>
-<p>The first term, &quot;Name&quot; is used to announce the service in the network.  It is a compound name in three parts and provides the semantics about the implementation of the component, its most important attribute and its more important role. For example: SVG_COUNTER_DISPLAY, HTML_VIDEO_CONTROL</p>
-
-<p>Based on this term, the Modality Component's capabilities can be classified from a high level perspective, for example, we can infere that the first component is part of the device class &quot;TEXT_DISPLAYS&quot;, and the second to the class &quot;MEDIA_CONTROLLERS&quot;. The triplet is inspired on the intentional name schema <a href="#bib-Adjie" class="internalDFN">[ADJIE-1999]</a> and show hierarchical tree relationships between general concepts (including some negative differentiating aspects). These names are intentional; they describe the intent of the Modaity Component and its implementation in the form of a tuple of attributes. </p>
-<p>The second term &quot;Affiliation&quot; specifies the generic information about some complementary association of high level.  It puts forward an aspect of the Modality Component that could affect its selection and that is part of the advertisement policy of the service. It can be for example, a complementary inheritance relationship or a relation based on some association or analogy. Some examples of  affiliation can be ANIMATED_GRAPHICS or in the second, CONTROLLERS. Thus, this term can be used to represent some kind of inheritance or association with a more generic component class.</p>
-<p>The third term &quot;Modality&quot; specifies the form in which some information is realized according to a precise mode. A modality is described by a situation and contains a recognizable logical structure: the information object. For example, a gesture modality is the visual realization and the haptic realization of some intention in a situation of communication (the information object is the «message» to communicate): a cross drawn in the air with a hand gesture, is perceived visually, and in some social contexts this expresses the benediction message.  </p>
-<p>In Figure 2 &quot;myMCService&quot; <strong>actsIn</strong> some mode that is perceived by a final user through a modality that is part of some functions, i.e. a face synthesis service <strong>actsIn</strong> the visual mode that is perceived through a 3D mesh modality that is part of an avatar function. </p>
-<p><img src="images/Functions.png" alt="Basic Vocabulary for MC annotation " width="913" class="mmImage"  /> </p>
+      <td class="semItem">Modalities</td>
+      <td class="semComm">A list of the supported modalities classed by mode (to parse using generic modalities described by a multimodal taxonomy or ontology available in the linked data web)</td>
+    </tr>
+    <tr>
+      <td class="semItem">Functions</td>
+      <td class="semComm">A list of the supported high-level functions classed by mode (to parse using generic functions described by a multimodal taxonomy or ontology )</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <UL><li>The first term, &quot;Name&quot; is used to announce the service in the network.  It is a compound name in three parts and provides the semantics about the implementation of the component, its most important attribute and its more important role. For example: SVG_COUNTER_DISPLAY, HTML_VIDEO_CONTROL, JS_FACIAL_RECOGNIZER</p>
+  
+  <p>Based on this term, the Modality Component's capabilities can be classified from a high level perspective, for example, we can infer that the first component is part of the device class &quot;TEXT_DISPLAYS&quot;, and the second to the class &quot;MEDIA_CONTROLLERS&quot;. The triplet is inspired by the intentional name schema <a href="#bib-INTENT" class="bib-INTENT">[ADJIE-1999]</a> and show hierarchical tree relationships between general concepts (including some negative differentiating aspects). These names are intentional; they describe the intent of the Modaity Component and its implementation in the form of a tuple of attributes. </p></LI>
+<LI>The second term &quot;Affiliation&quot; specifies the generic information about some complementary association at a high level.  It puts forward an aspect of the Modality Component that could affect its selection and that is part of the advertisement policy of the service. It can be for example, a complementary inheritance relationship or a relation based on some association or analogy. Some examples of  affiliation can be ANIMATED_GRAPHICS or in the second, CONTROLLERS. Thus, this term can be used to represent some kind of inheritance or association with a more generic component class.</LI><br/>
+<LI>The third term &quot;Modality&quot; specifies the form in which some information is realized according to a precise mode. A modality is described by a situation and contains a recognizable logical structure: the information object. For example, a gesture modality is the visual realization and the haptic realization of some intention in a situation of communication (the information object is the «message» to communicate): a cross drawn in the air with a hand gesture, is perceived visually, and in some social contexts this expresses the benediction message.  </p>
+  <p>For example, in Figure 2 &quot;myMCService&quot; <strong>actsIn</strong> some mode that is perceived by a final user through a modality that is part of some functions, i.e. a face synthesis service <strong>actsIn</strong> the visual mode that is perceived through a 3D mesh modality that is part of an avatar function. </LI>
+  <p><img src="images/Functions.png" alt="Basic Vocabulary for MC annotation " width="913" class="mmImage"  /> </p>
 <p class="caption">Figure 2: Mode, Modality, Function</p>
-<p>&nbsp;</p>  
-       <p>The functions are the technical entities  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
-       A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service    <strong>uses</strong> the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
-<p>Finally, the operations is the IOPE list of the Modality Component Capabilities. Inputs, Outputs, Preconditions and Effects are the IOPEs  properties.</p>
-<p>An example of annotation for a video controller, that can be classified as a generic Commander Modality Component is:</p>
-<pre>
+  <p>Thus, for the &quot;myMCService&quot; illustrated in Figure 2 the Modality Component's description will be:  </p>
+  <table class='semTable'>
+    <tr >
+      <td class='semItem' style="background-color:#EEE;">Name </td>
+      <td  class='semComm'>VRML_FACE_SYNTHESIZER</td>
+    </tr>
+    <tr>
+      <td class="semItem" style="background-color:#EEE;">Affiliation </td>
+      <td class="semComm">ANIMATED_3D_RENDERER</td>
+    </tr>
+    <tr>
+      <td class="semItem" style="background-color:#EEE;">Modalities</td>
+      <td class="semComm">visual:[REALTIME_SINTHESIZER]</td>
+    </tr>
+    <tr>
+      <td class="semItem" style="background-color:#EEE;">Functions</td>
+      <td class="semComm">visual:[VR_GRAPHICS]</td>
+    </tr>
+  </table>
+  <p></p>
+<h4 id="RM_mvc"><span class="secno">1.2</span> Behavior Description Attributes</h4>
+<p>The functions are the technical entities  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
+    A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service    <strong>uses</strong> the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
+  <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. Inputs, Outputs, Preconditions and Effects are the IOPEs  properties <a href="#bib-YU" class="internalDFN">[YU-2007]</a> <a href="#bib-YU" class="internalDFN">[OWL-S]</a>.</p>
+  <p>An example of annotation for a video controller, that can be classified as a generic Commander Modality Component is:</p>
+  <pre>
 {
-	"name": "feed", 
-	"affiliation": "dataLoader", 
+	"name": "TXT_DATA_LOADER", 
+	"affiliation": "DATA_RENDERER", 
 	"this_version": "1.0",
 	"endpoints": { 
 	"1.0" : { "description":"http://localhost:5000/1-0/description.js", "uri": "http://localhost:5000/feed/1-0" } 
@@ -621,7 +593,7 @@ network.<br />
 	"modalities":{
 		"cognitive":["PROCESSOR"] }
 	},
-	"media":{
+	"functions":{
 		"cognitive":["API"]
 	},
 	"operations": {
@@ -669,11 +641,27 @@ network.<br />
 					"position": 2,
 					"metadata": { "Content-Type":{ "cognitive": ["application/javascript","application/xml","text/csv"] } },
 					"documentation": "The list of the items added and their ids or a fail message."
-				} }
+				} },
+			"preconditions": {"documentation": "No precondition is needed other than the availability of the item's data."},
+			"effects": {&quot;documentation&quot;: &quot;No other effect than the output.&quot;}
 		} }
 }
 </pre>
-<p class="caption">Code 1: MC Annotation example </p>
-    
+  <p class="caption">Code 1: MC Annotation example </p>
+
+
+
+
+<h2 id="references"><span class="secno">A.</span> References</h2>
+
+<h3 id="key-references"><span class="secno">A.1</span> Key References</h3>
+<dt id="bib-INTENT">[OWL-S]</dt>
+<dd>http://www.w3.org/Submission/OWL-S/</dd>
+
+<h3 id="other-references"><span class="secno">A.2</span> Other References</h3>
+<dt id="bib-INTENT">[ADJIE-1999]</dt>
+<dd>ADJIE-WINOTO, W., SCHWARTZ,E.,  BALAKRISHNAN,H. and LILLEY,J. &quot;The Design and Implementation of an Intentional Naming System&quot;. Proc. 17th ACM SOSP, Kiawah Island, SC. Dec. 1999.</dd>
+<dt id="bib-YU">[YU-2007]</dt>
+<dd>Yu, Liyang. Introduction to the Semantic Web and Semantic Web Services</dd>
 </body>
 </html>
