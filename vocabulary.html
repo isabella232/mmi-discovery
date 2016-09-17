@@ -502,7 +502,23 @@ p.caption {
     border: solid 1px black;
     width: 40%;
 }
-     
+    
+	div.exampleInner {background-color: #d5dee3;
+                   border-top-width: 4px;
+                   border-top-style: double;
+                   border-top-color: #d3d3d3;
+                   border-bottom-width: 4px;
+                   border-bottom-style: double;
+                   border-bottom-color: #d3d3d3;
+                   padding: 4px; margin: 0em }
+div.exampleInner1 {background-color: #d5dee3;
+                   border-top-width: 4px;
+                   border-top-style: double;
+                   border-top-color: #d3d3d3;
+                   border-bottom-width: 4px;
+                   border-bottom-style: double;
+                   border-bottom-color: #d3d3d3;
+                   padding: 4px; margin: 0em } 
         
 </style>
 
@@ -516,148 +532,156 @@ p.caption {
 <h2 id="vocabulary"><span class="secno">1.</span> A vocabulary for the annotation of Modality Components</h2>
 <dd>
 <p>This proposal is designed to support the annotation  of  Modality Components, to allow their discovery and registering in a multimodal system. The focus is the dynamic discovery of Modality Component as services using generic information about the underlying properties and types of processes. This information is provided by an announcement and a description (a capabilities manifest, for example) advertised in some network.</p>
-  <p>The Modality Components can be described with a document that evolves on complexity depending on the application needs. This description can be limited to indications about the Input and Output interfaces or be more detailed describing functional and non-functional properties, using as a basis the Extensible Multimodal Annotation Markup Language (EMMA) [W3C-EMMA 2009].</p>
+  <p>The Modality Components can be described with a document that evolves on complexity depending on the application needs. This description can be limited to indications about the Input and Output interfaces or be more detailed describing functional and non-functional properties, inspired by some of  the Extensible Multimodal Annotation Markup Language (EMMA) <a href="http://www.w3.org/TR/2007/CR-emma-20071211/#s4.2.11">properties</a> [W3C-EMMA 2009] like  emma:function, emma:media-type, emma:medium and emma:mode.</p>
   <p>
-  The meaning of the terms for a controlled vocabulary in the form of a Glossary for the  annotation of Modality Components,  is divided in two parts: Subsumption terms and Life-Cycle and behavior terms.</p>
+  The meaning of the terms for a controlled vocabulary in the form of a Glossary for the  annotation of Modality Components,  is divided in two parts (Figure 2): Subsumption terms and behavior terms.</p>
   
   <img src="images/Vocablo_High.png" alt="Basic Vocabulary for MC annotation " width="727" class="mmImage" " />
 <p class="caption">Figure 1: Basic Vocabulary for MC annotation </p>
   
   
 <h4 id="RM_mvc"><span class="secno">1.1</span> Subsumption Description Attributes</h4>
-  <p>Subsumption concerns the attributes classifiying the Modality Components. It is structured with metadata classifying the Modality Component according to its membership or association with a Multimodal class in conformance to the modes handled by the System. This first description allows discovery filtering for a precise target mode.</p>
-  <p>&nbsp;</p>
-  
-<table class='semTable'>
-    <tr >
-      <td  rowspan="4" class='headsemTable'>TERMS BASED ON SUBSUMPTION</td>
-      <td class='semItem'>Name </td>
-      <td  class='semComm'>The intentional name of  the service</td>
-    </tr>
-    <tr>
-      <td class="semItem">Affiliation </td>
-      <td class="semComm">The high level MC category to adhere (to parse using generic tasks described by a multimodal taxonomy or ontology )</td>
-    </tr>
-    <tr>
-      <td class="semItem">Modalities</td>
-      <td class="semComm">A list of the supported modalities classed by mode (to parse using generic modalities described by a multimodal taxonomy or ontology available in the linked data web)</td>
-    </tr>
-    <tr>
-      <td class="semItem">Functions</td>
-      <td class="semComm">A list of the supported high-level functions classed by mode (to parse using generic functions described by a multimodal taxonomy or ontology )</td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <UL><li>The first term, &quot;Name&quot; is used to announce the service in the network.  It is a compound name in three parts and provides the semantics about the implementation of the component, its most important attribute and its more important role. For example: SVG_COUNTER_DISPLAY, HTML_VIDEO_CONTROL, JS_FACIAL_RECOGNIZER</p>
-  
-  <p>Based on this term, the Modality Component's capabilities can be classified from a high level perspective, for example, we can infer that the first component is part of the device class &quot;TEXT_DISPLAYS&quot;, and the second to the class &quot;MEDIA_CONTROLLERS&quot;. The triplet is inspired by the intentional name schema <a href="#bib-INTENT" class="bib-INTENT">[ADJIE-1999]</a> and show hierarchical tree relationships between general concepts (including some negative differentiating aspects). These names are intentional; they describe the intent of the Modaity Component and its implementation in the form of a tuple of attributes. </p></LI>
-<LI>The second term &quot;Affiliation&quot; specifies the generic information about some complementary association at a high level.  It puts forward an aspect of the Modality Component that could affect its selection and that is part of the advertisement policy of the service. It can be for example, a complementary inheritance relationship or a relation based on some association or analogy. Some examples of  affiliation can be ANIMATED_GRAPHICS or in the second, CONTROLLERS. Thus, this term can be used to represent some kind of inheritance or association with a more generic component class.</LI><br/>
-<LI>The third term &quot;Modality&quot; specifies the form in which some information is realized according to a precise mode. A modality is described by a situation and contains a recognizable logical structure: the information object. For example, a gesture modality is the visual realization and the haptic realization of some intention in a situation of communication (the information object is the «message» to communicate): a cross drawn in the air with a hand gesture, is perceived visually, and in some social contexts this expresses the benediction message.  </p>
-  <p>For example, in Figure 2 &quot;myMCService&quot; <strong>actsIn</strong> some mode that is perceived by a final user through a modality that is part of some functions, i.e. a face synthesis service <strong>actsIn</strong> the visual mode that is perceived through a 3D mesh modality that is part of an avatar function. </LI>
-  <p><img src="images/Functions.png" alt="Basic Vocabulary for MC annotation " width="913" class="mmImage"  /> </p>
-<p class="caption">Figure 2: Mode, Modality, Function</p>
-  <p>Thus, for the &quot;myMCService&quot; illustrated in Figure 2 the Modality Component's description will be:  </p>
-  <table class='semTable'>
-    <tr >
-      <td class='semItem' style="background-color:#EEE;">Name </td>
-      <td  class='semComm'>VRML_FACE_SYNTHESIZER</td>
-    </tr>
-    <tr>
-      <td class="semItem" style="background-color:#EEE;">Affiliation </td>
-      <td class="semComm">ANIMATED_3D_RENDERER</td>
-    </tr>
-    <tr>
-      <td class="semItem" style="background-color:#EEE;">Modalities</td>
-      <td class="semComm">visual:[REALTIME_SINTHESIZER]</td>
-    </tr>
-    <tr>
-      <td class="semItem" style="background-color:#EEE;">Functions</td>
-      <td class="semComm">visual:[VR_GRAPHICS]</td>
-    </tr>
-  </table>
-  <p></p>
+  <p>Subsumption concerns the attributes classifiying the Modality Components. It is structured with metadata classifying the Modality Component according to its membership or association with a Multimodal class in conformance to the modes handled by the System. This first description allows discovery filtering for a precise target mode. There are four properties:
+<UL>
+  </p>
+  <li>The first term, is the intentional &quot;Name&quot; of the service. It is used to announce the service in the network.  It is a compound name in three parts and provides the semantics about the implementation of the component, its most important attribute and its more important role. For example: SVG_COUNTER_DISPLAY, HTML_VIDEO_CONTROL, JS_FACIAL_RECOGNIZER</p>
+    
+<p>Based on this term, the Modality Component's capabilities can be classified from a high level perspective, for example, we can infer that the first component is part of the device class &quot;TEXT_DISPLAYS&quot;, and the second to the class &quot;MEDIA_CONTROLLERS&quot;. The triplet is inspired by the intentional name schema <a href="#bib-INTENT" class="bib-INTENT">[ADJIE-1999]</a> and show hierarchical tree relationships between general concepts (including some negative differentiating aspects). These names are intentional; they describe the intent of the Modaity Component and its implementation in the form of a tuple of attributes. </p></LI>
+<LI>The second term &quot;Affiliation&quot; is the high level Modality Component's category to adhere. It specifies the generic information about some complementary association at a high level.  It puts forward an aspect of the Modality Component that could affect its selection and that is part of the advertisement policy of the service. This information can be parsed using generic tasks described my a manifest, a multimodal taxonomy or an ontology. It can be, for example, a complementary inheritance relationship or a relation based on some association or analogy. Some examples of  affiliation can be ANIMATED_GRAPHICS or in the second, CONTROLLERS. Thus, this term can be used to represent some kind of inheritance or association with a more generic component class.</LI><br/>
+<LI>The third term &quot;Modalities&quot; is a list of the supported modalities classed by mode. I could be parsed using generic modalities described by a multimodal taxonomy or ontology available in the linked data web. It specifies the form in which some information is realized according to a precise mode. A modality is described by a situation and contains a recognizable logical structure: the information object. For example, a GESTURE modality is the visual realization and the haptic realization of some intention in a situation of communication (the information object is the «message» to communicate): a cross drawn in the air with a hand gesture, is perceived visually, and in some social contexts this expresses the benediction message.  
+  </p>
+</LI>
+<br/>
+<LI>The fourth term &quot;Functions&quot;
+is a list of the supported high-level functions classed by mode. It is inspired on the emma:function property, but it can support a list of generic communicative functions that the Modality Component can provide.
+</LI>
 <h4 id="RM_mvc"><span class="secno">1.2</span> Behavior Description Attributes</h4>
 <p>The functions are the technical entities  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
-    A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service    <strong>uses</strong> the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
-  <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. Inputs, Outputs, Preconditions and Effects are the IOPEs  properties <a href="#bib-YU" class="internalDFN">[YU-2007]</a> <a href="#bib-YU" class="internalDFN">[OWL-S]</a>.</p>
-  <p>An example of annotation for a video controller, that can be classified as a generic Commander Modality Component is:</p>
-  <pre>
+    A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service uses the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
+  <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. IOPE means Inputs, Outputs, Preconditions and Effects of a service<a href="#bib-YU" class="internalDFN">[YU-2007]</a> <a href="#bib-YU" class="internalDFN">[OWL-S]</a>. The Input specifies the triggers and data (or the general notion of a parameter) needed to execute a the process and the output specifies the data transformation produced by the process. Input and output are used to transform the information, while preconditions and effects are related to the context of execution of a service, and the requirements and results in the &quot;world' in which the service is executed. Preconditions specify a state of the context that must be true in order for the system to execute a multimodal service. Effects are the resulting states (atomic, sequential or concurrent) after a successful execution of the service or even in a case of failure. Preconditions and effects can be expressed in any rule (or logical) language.</p>
+<h4 id="RM_mvc"><span class="secno">1.3</span> Multimodal description example</h4>
+
+  <p>In Figure 2 &quot;myMCService&quot; acts in some mode that is perceived by a final user through a modality that is part of some functions, i.e. a face synthesis service acts in the visual mode that is perceived through a 3D mesh modality that is part of an avatar function. </p>
+
+<p><img src="images/Functions.png" alt="Basic Vocabulary for MC annotation " width="913" class="mmImage"  /></p>
+<p class="caption">Figure 2: Mode, Modalities, Functions</p>
+<p>Thus, for the &quot;Face Syntesizer&quot; service illustrated in Figure 2 the Modality Component's description (description.js document) will be:</p>
+<div class="exampleInner">
+<pre>
 {
-	"name": "TXT_DATA_LOADER", 
-	"affiliation": "DATA_RENDERER", 
-	"this_version": "1.0",
-	"endpoints": { 
-	"1.0" : { "description":"http://localhost:5000/1-0/description.js", "uri": "http://localhost:5000/feed/1-0" } 
-	},
+	&quot;name&quot;: &quot;<span class="semComm">VRML_FACE_SYNTHESIZER</span>&quot;, 
+	&quot;affiliation&quot;: &quot;<span class="semComm">ANIMATED_3D_RENDERER</span>&quot;, 
+	&quot;version&quot;: &quot;1.0&quot;,
+	&quot;endpoints&quot;: { 
+	     &quot;1.0&quot; : { &quot;description&quot;:&quot;http://localhost:5000/vrml_face_synthesizer/1-0/description.js&quot;, 
+        &quot;uri&quot;: &quot;http://localhost:5000/vrml_face_synthesizer/1-0/&quot; } },
 
-	"modalities":{
-		"cognitive":["PROCESSOR"] }
+	&quot;modalities&quot;:{
+		&quot;<span class="semComm">visual</span>&quot;:[&quot;<span class="semComm">REALTIME_SINTHESIZER</span>&quot;] }
 	},
-	"functions":{
-		"cognitive":["API"]
+	&quot;functions&quot;:{
+		&quot;visual&quot;:[&quot;<span class="semComm">VR_GRAPHICS</span>&quot;]
 	},
-	"operations": {
-		"POST_brands": {
-		   "method":"POST",
-			"endpoint":"/brands",
-			"documentation":
-			 	"Operation to load item data in our servers from feeds using the xml, json or csv format. ",
-			"input": {
-				"event":  {
-				   "position": 0,
-					"metadata": { "Content-Type":{ "cognitive":["ExtensionNotification","StartRequest"] } },
-					"documentation": "If the event type is extension, the service returns just true or fail. If the event type is start, the service returns the processed data."
+	&quot;operations&quot;: {
+		&quot;smile&quot;: {
+		    &quot;method&quot;:&quot;POST&quot;,
+			&quot;endpoint&quot;:&quot;http://localhost:5000/vrml_face_synthesizer/1-0&quot;,
+			&quot;documentation&quot;: &quot;Operation to change the expression to a smiling face. &quot;,
+
+			&quot;input&quot;: {
+				&quot;event&quot;:  {
+				   &quot;position&quot;: 0,
+					&quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;ExtensionNotification&quot;,&quot;StartRequest&quot;] } },
+					&quot;documentation&quot;: &quot;If the event type is extension, the service returns just true or fail 
+                                     (for a steady smile, for example). If the event type is start request
+                                    (for a time-controlled smile), the service can receive the starting 
+                                    time and returns the acceleration info.&quot;
+					&quot;data&quot;: { 
+                         &quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;data/integer&quot;,&quot;data/time&quot;] } },
+				          &quot;documentation&quot;: &quot;If the event's data is a notification, the event will include 
+                               the easing integer value for the acceleration. If the event is a StartRequest
+                               the event can also include the start time in milliseconds for 
+                               the smile process.&quot;
+				     } 
 				}, 
-				"key": {
-				   "position": 2,
-					"metadata": { "Content-Type":{ "cognitive":["text/plain"] } },
-					"documentation": "The user key to acces this API"
-				},
-				"format": {
-				   "position": 1,
-					"metadata": { "Content-Type":{ "cognitive":["text/plain"] } },
-					"documentation": "The data format for inputs and output (xml, json or csv format)"
-				},
-			
-					"data": {
-				   "position": 3,
-					"metadata": { "Content-Type":{ "cognitive":
-					["application/javascript","application/xml","text/csv"] } },
-					"documentation": "A list of item names or an url pointing to a file containing a list of item names."
-				} 
+				&quot;key&quot;: {
+				   &quot;position&quot;: 1,
+					&quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;text/plain&quot;] } },
+					&quot;documentation&quot;: &quot;The user key to acces this API&quot;
+				}
 			},
-			"output": {
-				"event":  {
-				   	"position": 0,
-					"metadata": { "Content-Type":{ "cognitive":["ExtensionNotification","StartResponse"] } },
-					"documentation": "The type of response event."
-				},
-				"success": {
-					"position": 1,
-					"metadata": { "Content-Type":{"cognitive":["data/boolean"] } },
-					"documentation": "True if the process was executed sucessfully or false in case of fail"
-				}, 
-				"data": {
-					"position": 2,
-					"metadata": { "Content-Type":{ "cognitive": ["application/javascript","application/xml","text/csv"] } },
-					"documentation": "The list of the items added and their ids or a fail message."
-				} },
-			"preconditions": {"documentation": "No precondition is needed other than the availability of the item's data."},
-			"effects": {&quot;documentation&quot;: &quot;No other effect than the output.&quot;}
-		} }
-}
-</pre>
-  <p class="caption">Code 1: MC Annotation example </p>
+
+			&quot;output&quot;: {
+				&quot;event&quot;:  {
+				   	&quot;position&quot;: 0,
+					&quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;StartResponse&quot;] } },
+					&quot;documentation&quot;: &quot;The type of response event.&quot;,
+					&quot;data&quot;: { 
+                         &quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;data/integer&quot; } },
+				          &quot;documentation&quot;: &quot;In the case of a startRequest, a confirmation of the 
+                                           starting time of the animation.&quot; }
+				 }
+			},
+
+			&quot;preconditions&quot;: {&quot;documentation&quot;: &quot;No precondition is needed other 
+                                               than the loading of the face visual data.&quot;},
+
+			&quot;effects&quot;: {&quot;documentation&quot;: &quot;Asynchronous modality. It will not block the rest 
+                                         of the application rendering.&quot;}
+		}
+
+	}
+}</pre>
+</div>
+<p class="caption">Code 1: MC Annotation example </p>
+<p class="caption">&nbsp;</p>
+  <p>This description can be parsed before the execution of the service, in a discovery process. To execute the service and render a smiling face, the POST request to the  endpoint will be:  </p>
+  <div class="exampleInner">
+  <pre>POST /vrml_face_synthesizer/1-0 HTTP/1.1<br />Host: localhost:5000<br />Content-Type: text/xml<br />&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;smile&gt;<br />&lt;input&gt;<br />&lt;event&gt; <br />&lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;<br />  &lt;mmi:startRequest source=&quot;client_1&quot; context=&quot;context_1&quot; requestID=&quot;request_1&quot;&gt;<br />    &lt;mmi:data&gt;<br />      &lt;ease value=&quot;0.5&quot;/&gt;<br />      &lt;starting_time value=&quot;300&quot;/&gt;<br />    &lt;/mmi:data&gt;<br />  &lt;/mmi:startRequest&gt;<br />&lt;/mmi:mmi&gt;<br />&lt;/event&gt;<br />&lt;key&gt;1234&lt;/key&gt;<br />&lt;/input&gt;<br />&lt;/smile&gt;</pre>
+</div>
+<p class="caption">Code 2: Post request to the multimodal service </p>
+
+
+  <p>The POST response of the service will be:  </p>
+  <div class="exampleInner">
+    <pre>&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;smile&gt;<br />&lt;output&gt;<br />&lt;event&gt; <br />  &lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;
+    &lt;mmi:startResponse source=&quot;smile_endpoint&quot; context=&quot;context_1&quot; requestID=&quot;request_1&quot; status=&quot;success&quot;&gt; 
+    	&lt;mmi:data&gt;<br />      		&lt;starting_time value=&quot;300&quot;/&gt;<br />    	&lt;/mmi:data&gt;
+	&lt;/mmi:startResponse&gt;
+  &lt;/mmi:mmi&gt;<br />&lt;/event&gt;<br />&lt;key&gt;1234&lt;/key&gt;<br />&lt;/output&gt;<br />&lt;/smile&gt;</pre></div>
+<p class="caption">Code 3:  Post response from the multimodal service </p>
 
 
 
 
-<h2 id="references"><span class="secno">A.</span> References</h2>
+  <p>The possible GET request to the REST endpoint for the same service could be:  </p>
+  <div class="exampleInner">
+  <pre>GET /vrml_face_synthesizer/1-0 HTTP/1.1<br />Host: localhost:5000<br />/event/startRequest/context_1/client_1/request_1/smile?data[ease]=0.5&amp;data[starting_time]=300&amp;key=1234<br /></pre>
+</div>
+<p class="caption">Code 4: Possible REST request for the multimodal service following the MMI architecture semantics</p>
+
+  <p>The possible Json response to the REST request:  </p>
+  <div class="exampleInner">
+  <pre>{ &quot;output&quot;: {<br />	   &quot;event&quot;: {<br />  		   &quot;mmi&quot;: &quot;startResponse&quot;,<br />		   &quot;context&quot;: &quot;context_1&quot;,
+          &quot;source&quot;: &quot;smile_endpoint&quot;,<br />		   &quot;requestID&quot;: &quot;request_1&quot;,<br />		   &quot;status&quot;: &quot;success&quot;,<br />		   &quot;data&quot;: {&quot;starting_time&quot;=300}<br />      }, <br />	   &quot;key&quot;: &quot;1234&quot;<br />   }<br />}<br /></pre>
+</div>
+<p class="caption">Code 4: Possible REST request for the multimodal service following the MMI architecture semantics</p>
+
+
+<h2 id="references">&nbsp;</h2>
+<h2><span class="secno">A.</span> References</h2>
 
 <h3 id="key-references"><span class="secno">A.1</span> Key References</h3>
-<dt id="bib-INTENT">[OWL-S]</dt>
-<dd>http://www.w3.org/Submission/OWL-S/</dd>
-
+<dl>
+  <dt id="bib-MMI-ARCH">[MMI-ARCH]</dt>
+  <dd>Jim Barnett (Ed). <a href="http://www.w3.org/TR/mmi-arch/"><cite>Multimodal Architecture and
+    Interfaces.</cite></a> 25 October 2012 W3C Recommendation. URL: <a href="http://www.w3.org/TR/mmi-arch/">http://www.w3.org/TR/mmi-arch/.</a></dd>
+</dl>
+<dl>
+  <dt id="bib-MMI-ARCH2">[OWL-S]</dt>
+  <dd>Recommendation. URL: <a href="http://www.w3.org/Submission/OWL-S/">http://www.w3.org/Submission/OWL-S/.</a></dd>
+</dl>
+<p>&nbsp;</p>
 <h3 id="other-references"><span class="secno">A.2</span> Other References</h3>
 <dt id="bib-INTENT">[ADJIE-1999]</dt>
 <dd>ADJIE-WINOTO, W., SCHWARTZ,E.,  BALAKRISHNAN,H. and LILLEY,J. &quot;The Design and Implementation of an Intentional Naming System&quot;. Proc. 17th ACM SOSP, Kiawah Island, SC. Dec. 1999.</dd>
