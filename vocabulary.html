@@ -554,8 +554,7 @@ div.exampleInner1 {background-color: #d5dee3;
 </LI>
 <br/>
 <LI>The fourth term &quot;Functions&quot;
-is a list of the supported high-level functions classed by mode. It is inspired on the emma:function property, but it can support a list of generic communicative functions that the Modality Component can provide.
-</LI>
+is a list of the supported high-level functions classified by medium. It is inspired on the emma:function property, but it can support a list of generic communicative functions that the Modality Component API can provide. In the example below the only possible functions are visual graphics, because is a face sinthesizer, but in other cases it can be multiple functions in different media.</LI>
 <h4 id="RM_mvc"><span class="secno">1.2</span> Behavior Description Attributes</h4>
 <p>The functions are the technical entities  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
     A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service uses the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
@@ -588,7 +587,7 @@ is a list of the supported high-level functions classed by mode. It is inspired 
 		    &quot;method&quot;:&quot;POST&quot;,
 			&quot;endpoint&quot;:&quot;http://localhost:5000/vrml_face_synthesizer/1-0&quot;,
 			&quot;documentation&quot;: &quot;Operation to change the expression to a smiling face. &quot;,
-
+			&quot;metadata&quot;: {&quot;emotion&quot;:&quot;emotionML_uri&quot;,&quot;behavior&quot;:&quot;behaviorML_uri&quot;},
 			&quot;input&quot;: {
 				&quot;event&quot;:  {
 				   &quot;position&quot;: 0,
