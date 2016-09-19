@@ -555,10 +555,15 @@ div.exampleInner1 {background-color: #d5dee3;
 <br/>
 <LI>The fourth term &quot;Functions&quot;
 is a list of the supported high-level functions classified by medium. It is inspired on the emma:function property, but it can support a list of generic communicative functions that the Modality Component API can provide. In the example below the only possible functions are visual graphics, because is a face sinthesizer, but in other cases it can be multiple functions in different media.</LI>
-<h4 id="RM_mvc"><span class="secno">1.2</span> Behavior Description Attributes</h4>
+
 <p>The functions are the technical entities  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
     A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service uses the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
-  <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. IOPE means Inputs, Outputs, Preconditions and Effects of a service<a href="#bib-YU" class="internalDFN">[YU-2007]</a> <a href="#bib-YU" class="internalDFN">[OWL-S]</a>. The Input specifies the triggers and data (or the general notion of a parameter) needed to execute a the process and the output specifies the data transformation produced by the process. Input and output are used to transform the information, while preconditions and effects are related to the context of execution of a service, and the requirements and results in the &quot;world' in which the service is executed. Preconditions specify a state of the context that must be true in order for the system to execute a multimodal service. Effects are the resulting states (atomic, sequential or concurrent) after a successful execution of the service or even in a case of failure. Preconditions and effects can be expressed in any rule (or logical) language.</p>
+<h4 id="RM_mvc"><span class="secno">1.2</span> Behavior Description Attributes</h4>
+<p>Finally, the operations is the IOPE list of the Modality Component Capabilities. IOPE means Inputs, Outputs, Preconditions and Effects of a service<a href="#bib-YU" class="internalDFN">[YU-2007]</a> <a href="#bib-YU" class="internalDFN">[OWL-S]</a>.</p><li>The Input specifies the triggers and data (or the general notion of a parameter) needed to execute a the process and the output specifies the data transformation produced by the process.</li>
+<li>Input and output are used to transform the information, while preconditions and effects are related to the context of execution of a service, and the requirements and results in the &quot;world' in which the service is executed. 
+  </li>
+  <li>Preconditions specify a state of the context that must be true in order for the system to execute a multimodal service. </li>
+  <li>Effects are the resulting states (atomic, sequential or concurrent) after a successful execution of the service or even in a case of failure. Preconditions and effects can be expressed in any rule (or logical) language. </li>
 <h4 id="RM_mvc"><span class="secno">1.3</span> Multimodal description example</h4>
 
   <p>In Figure 2 &quot;myMCService&quot; acts in some mode that is perceived by a final user through a modality that is part of some functions, i.e. a face synthesis service acts in the visual mode that is perceived through a 3D mesh modality that is part of an avatar function. </p>
@@ -694,4 +699,4 @@ is a list of the supported high-level functions classified by medium. It is insp
 <dt id="bib-YU">[YU-2007]</dt>
 <dd>Yu, Liyang. Introduction to the Semantic Web and Semantic Web Services</dd>
 </body>
-</html
+</html>
