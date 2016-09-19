@@ -565,7 +565,9 @@ is a list of the supported high-level functions classified by medium. It is insp
 <li> The Output specifies the data transformation produced by the process. The description must list  the MMI events that will be sent to the Interaction Manager  as an output.<br/><br/>
   Input and output are used to transform the information, while preconditions and effects are related to the context of execution of a service, and the requirements and results in the &quot;world' in which the service is executed.  <br/> <br/></li>
   <li>Preconditions specify a state of the context that must be true in order for the system to execute a multimodal service. </li>
-  <li>Effects are the resulting states (atomic, sequential or concurrent) after a successful execution of the service or even in a case of failure. Preconditions and effects can be expressed in any rule (or logical) language. </li>
+  <li>Effects are the resulting states (atomic, sequential or concurrent) after a successful execution of the service or even in a case of failure. 
+  <br/><br/>
+  Preconditions and effects can be expressed in any rule (or logical) language. </li>
 </ul>
 
 <h4 id="RM_mvc"><span class="secno">1.3</span> Multimodal description example</h4>
@@ -647,7 +649,7 @@ is a list of the supported high-level functions classified by medium. It is insp
   <p>This description can be parsed before the execution of the service, in a discovery process. To execute the service and render a smiling face, the POST request to the  endpoint will be:  </p>
   <div class="exampleInner">
   <pre>POST /vrml_face_synthesizer/1-0 HTTP/1.1<br />Host: localhost:5000<br />Content-Type: text/xml<br />&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;smile&gt;<br />   &lt;input&gt;
-<br />      &lt;event&gt; <br />         &lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;<br />           &lt;mmi:startRequest source=&quot;client_1&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot;&gt;<br />             &lt;mmi:data&gt;<br />               &lt;ease value=&quot;0.5&quot;/&gt;<br />               &lt;starting_time value=&quot;300&quot;/&gt;<br />             &lt;/mmi:data&gt;<br />           &lt;/mmi:startRequest&gt;<br />         &lt;/mmi:mmi&gt;<br />      &lt;/event&gt;
+<br />      &lt;event&gt; <br />         &lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;<br />           &lt;mmi:startRequest source=&quot;IM_1&quot; target=&quot;smile_MC&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot;&gt;<br />             &lt;mmi:data&gt;<br />               &lt;ease value=&quot;0.5&quot;/&gt;<br />               &lt;starting_time value=&quot;300&quot;/&gt;<br />             &lt;/mmi:data&gt;<br />           &lt;/mmi:startRequest&gt;<br />         &lt;/mmi:mmi&gt;<br />      &lt;/event&gt;
 <br />      &lt;key&gt;1234&lt;/key&gt;
 <br />   &lt;/input&gt;<br />&lt;/smile&gt;</pre>
 </div>
@@ -658,9 +660,9 @@ is a list of the supported high-level functions classified by medium. It is insp
   <div class="exampleInner">
     <pre>&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;smile&gt;<br />   &lt;output&gt;
 <br />      &lt;event&gt; <br />         &lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;
-           &lt;mmi:startResponse source=&quot;smile_endpoint&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot; status=&quot;success&quot;&gt; 
+         &lt;mmi:startResponse source=&quot;smile_MC&quot; target=&quot;IM_1&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot; status=&quot;success&quot;&gt; 
     	      &lt;mmi:data&gt;<br />      		      &lt;starting_time value=&quot;300&quot;/&gt;<br />    	      &lt;/mmi:data&gt;
-           &lt;/mmi:startResponse&gt;
+         &lt;/mmi:startResponse&gt;
          &lt;/mmi:mmi&gt;<br />      &lt;/event&gt;
 <br />      &lt;key&gt;1234&lt;/key&gt;
 <br />   &lt;/output&gt;<br />&lt;/smile&gt;</pre></div>
@@ -671,14 +673,15 @@ is a list of the supported high-level functions classified by medium. It is insp
 
   <p>The possible GET request to the REST endpoint for the same service could be:  </p>
   <div class="exampleInner">
-  <pre>GET /vrml_face_synthesizer/1-0 HTTP/1.1<br />Host: localhost:5000<br />/event/startRequest/c_1/client_1/r_1/smile?data[ease]=0.5&amp;data[starting_time]=300&amp;key=1234<br /></pre>
+  <pre>GET /vrml_face_synthesizer/1-0 HTTP/1.1<br />Host: localhost:5000<br />/event/startRequest/c_1/IM_1/r_1/smile?data[ease]=0.5&amp;data[starting_time]=300&amp;key=1234<br /></pre>
 </div>
 <p class="caption">Code 4: Possible REST request for the multimodal service following the MMI architecture semantics</p>
 
   <p>The possible Json response to the REST request:  </p>
   <div class="exampleInner">
   <pre>{ &quot;output&quot;: {<br />	   &quot;event&quot;: {<br />  		   &quot;mmi&quot;: &quot;startResponse&quot;,<br />		   &quot;context&quot;: &quot;c_1&quot;,
-          &quot;source&quot;: &quot;smile_endpoint&quot;,<br />		   &quot;requestID&quot;: &quot;r_1&quot;,<br />		   &quot;status&quot;: &quot;success&quot;,<br />		   &quot;data&quot;: {&quot;starting_time&quot;=300}<br />      }, <br />	   &quot;key&quot;: &quot;1234&quot;<br />   }<br />}<br /></pre>
+          &quot;source&quot;: &quot;IM_1&quot;,
+          &quot;target&quot;: &quot;smile_MC&quot;,<br />		   &quot;requestID&quot;: &quot;r_1&quot;,<br />		   &quot;status&quot;: &quot;success&quot;,<br />		   &quot;data&quot;: {&quot;starting_time&quot;=300}<br />      }, <br />	   &quot;key&quot;: &quot;1234&quot;<br />   }<br />}<br /></pre>
 </div>
 <p class="caption">Code 5: Possible REST request for the multimodal service following the MMI architecture semantics</p>
 
