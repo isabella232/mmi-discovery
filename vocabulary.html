@@ -651,7 +651,7 @@ is a list of the supported high-level functions classified by medium. It is insp
 
 <h4 id="RM_mvc"><span class="secno">1.4</span> Multimodal service query examples</h4>
 
-<p>This description can be parsed before the execution of the service, in a discovery process. To execute the service and render a smiling face, the POST request to the  endpoint will be:  </p>
+<p>This description can be parsed before the execution of the service, in a discovery process. To call the service and to execute a smile operation, le service query with a POST method must be structures as follows:  </p>
   <div class="exampleInner">
   <pre>POST /vrml_face_synthesizer/1-0 HTTP/1.1<br />Host: localhost:5000<br />Content-Type: text/xml<br />&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;smile&gt;<br />	&lt;input&gt;<br />		&lt;event&gt; <br />			&lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;<br />			&lt;mmi:startRequest source=&quot;IM_1&quot; target=&quot;smile&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot;&gt;<br />				&lt;mmi:data&gt;<br />					&lt;ease value=&quot;0.5&quot;/&gt;<br />					&lt;starting_time value=&quot;300&quot;/&gt;<br />				&lt;/mmi:data&gt;<br />			&lt;/mmi:startRequest&gt;<br />			&lt;/mmi:mmi&gt;<br />		&lt;/event&gt;<br />	&lt;/input&gt;
@@ -660,6 +660,7 @@ is a list of the supported high-level functions classified by medium. It is insp
 <p class="caption">Code 2: Post request to the multimodal service </p>
 
 
+  <p>The smile tag represents the operation that has been requested, the input tag express that this is a request, the event tag contains the MMI Lifecycle event to control the operation. There can be multiple MMI events inside the input and output elements to support concurrential or parallel  commands to the interface. The MMI Lifecycle event sent to the operation provided by the Modality Component can be any of the events defined to handle inputs  on the MMI specification.</p>
   <p>The POST response of the service will be:  </p>
   <div class="exampleInner">
     <pre>&lt;?xml version=&quot;1.0&quot;?&gt;
@@ -684,9 +685,9 @@ is a list of the supported high-level functions classified by medium. It is insp
 
   <p>The possible Json response to the REST request:  </p>
   <div class="exampleInner">
-  <pre>{ &quot;output&quot;: {<br />	   &quot;event&quot;: {<br />  		   &quot;mmi&quot;: &quot;startResponse&quot;,<br />		   &quot;context&quot;: &quot;c_1&quot;,
+  <pre>{ &quot;output&quot;: {<br />	   &quot;event&quot;: [{<br />  		   &quot;mmi&quot;: &quot;startResponse&quot;,<br />		   &quot;context&quot;: &quot;c_1&quot;,
           &quot;source&quot;: &quot;IM_1&quot;,
-          &quot;target&quot;: &quot;smile_MC&quot;,<br />		   &quot;requestID&quot;: &quot;r_1&quot;,<br />		   &quot;status&quot;: &quot;success&quot;,<br />		   &quot;data&quot;: {&quot;starting_time&quot;=300}<br />      }, <br />	   &quot;key&quot;: &quot;1234&quot;<br />   }<br />}<br /></pre>
+          &quot;target&quot;: &quot;smile&quot;,<br />		   &quot;requestID&quot;: &quot;r_1&quot;,<br />		   &quot;status&quot;: &quot;success&quot;,<br />		   &quot;data&quot;: {&quot;starting_time&quot;=300}<br />      }]<br />   }<br />}<br /></pre>
 </div>
 <p class="caption">Code 5: Possible REST request for the multimodal service following the MMI architecture semantics</p>
 
