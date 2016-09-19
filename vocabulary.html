@@ -561,9 +561,9 @@ is a list of the supported high-level functions classified by medium. It is insp
 <h4 id="RM_mvc"><span class="secno">1.2</span> Behavior Description Attributes</h4>
 <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. IOPE means Inputs, Outputs, Preconditions and Effects of a service<a href="#bib-YU" class="internalDFN">[YU-2007]</a> <a href="#bib-YU" class="internalDFN">[OWL-S]</a></p>
 <ul>
-<li>The Input specifies the triggers and data (or the general notion of a parameter) needed to execute a the process and the output specifies the data transformation produced by the process.</li>
-<li>Input and output are used to transform the information, while preconditions and effects are related to the context of execution of a service, and the requirements and results in the &quot;world' in which the service is executed. 
-  </li>
+<li>The Input specifies the triggers and data (or the general notion of a parameter) needed to execute the process. The description must list  the MMI events that must be sent by the Interaction Manager  as an input.</li>
+<li> The Output specifies the data transformation produced by the process. The description must list  the MMI events that will be sent to the Interaction Manager  as an output.<br/><br/>
+  Input and output are used to transform the information, while preconditions and effects are related to the context of execution of a service, and the requirements and results in the &quot;world' in which the service is executed.  <br/> <br/></li>
   <li>Preconditions specify a state of the context that must be true in order for the system to execute a multimodal service. </li>
   <li>Effects are the resulting states (atomic, sequential or concurrent) after a successful execution of the service or even in a case of failure. Preconditions and effects can be expressed in any rule (or logical) language. </li>
 </ul>
