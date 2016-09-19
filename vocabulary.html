@@ -600,6 +600,12 @@ is a list of the supported high-level functions classified by medium. It is insp
 			&quot;documentation&quot;: &quot;Operation to change the expression to a smiling face. &quot;,
 			&quot;metadata&quot;: {&quot;emotion&quot;:&quot;emotionML_uri&quot;,&quot;behavior&quot;:&quot;behaviorML_uri&quot;},
 			&quot;input&quot;: {
+				&quot;key&quot;: {
+				   &quot;position&quot;: 1,
+					&quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;text/plain&quot;] } },
+					&quot;documentation&quot;: &quot;The user key to acces this API&quot;
+				},
+
 				&quot;event&quot;:  {
 				   &quot;position&quot;: 0,
 					&quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;ExtensionNotification&quot;,&quot;StartRequest&quot;] } },
@@ -614,12 +620,8 @@ is a list of the supported high-level functions classified by medium. It is insp
                                the event can also include the start time in milliseconds for 
                                the smile process.&quot;
 				     } 
-				}, 
-				&quot;key&quot;: {
-				   &quot;position&quot;: 1,
-					&quot;metadata&quot;: { &quot;Content-Type&quot;:{ &quot;cognitive&quot;:[&quot;text/plain&quot;] } },
-					&quot;documentation&quot;: &quot;The user key to acces this API&quot;
-				}
+				} 
+				
 			},
 
 			&quot;output&quot;: {
@@ -646,11 +648,15 @@ is a list of the supported high-level functions classified by medium. It is insp
 </div>
 <p class="caption">Code 1: MC Annotation example </p>
 <p class="caption">&nbsp;</p>
+
+<h4 id="RM_mvc"><span class="secno">1.4</span> Multimodal service query examples</h4>
+
   <p>This description can be parsed before the execution of the service, in a discovery process. To execute the service and render a smiling face, the POST request to the  endpoint will be:  </p>
   <div class="exampleInner">
   <pre>POST /vrml_face_synthesizer/1-0 HTTP/1.1<br />Host: localhost:5000<br />Content-Type: text/xml<br />&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;smile&gt;<br />   &lt;input&gt;
+
+      &lt;key&gt;1234&lt;/key&gt;
 <br />      &lt;event&gt; <br />         &lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;<br />           &lt;mmi:startRequest source=&quot;IM_1&quot; target=&quot;smile_MC&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot;&gt;<br />             &lt;mmi:data&gt;<br />               &lt;ease value=&quot;0.5&quot;/&gt;<br />               &lt;starting_time value=&quot;300&quot;/&gt;<br />             &lt;/mmi:data&gt;<br />           &lt;/mmi:startRequest&gt;<br />         &lt;/mmi:mmi&gt;<br />      &lt;/event&gt;
-<br />      &lt;key&gt;1234&lt;/key&gt;
 <br />   &lt;/input&gt;<br />&lt;/smile&gt;</pre>
 </div>
 <p class="caption">Code 2: Post request to the multimodal service </p>
@@ -659,12 +665,11 @@ is a list of the supported high-level functions classified by medium. It is insp
   <p>The POST response of the service will be:  </p>
   <div class="exampleInner">
     <pre>&lt;?xml version=&quot;1.0&quot;?&gt;<br />&lt;smile&gt;<br />   &lt;output&gt;
-<br />      &lt;event&gt; <br />         &lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;
+<br />     &lt;event&gt; <br />       &lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;
          &lt;mmi:startResponse source=&quot;smile_MC&quot; target=&quot;IM_1&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot; status=&quot;success&quot;&gt; 
     	      &lt;mmi:data&gt;<br />      		      &lt;starting_time value=&quot;300&quot;/&gt;<br />    	      &lt;/mmi:data&gt;
          &lt;/mmi:startResponse&gt;
-         &lt;/mmi:mmi&gt;<br />      &lt;/event&gt;
-<br />      &lt;key&gt;1234&lt;/key&gt;
+      &lt;/mmi:mmi&gt;<br />     &lt;/event&gt;
 <br />   &lt;/output&gt;<br />&lt;/smile&gt;</pre></div>
 <p class="caption">Code 3:  Post response from the multimodal service </p>
 
