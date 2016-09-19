@@ -666,9 +666,7 @@ is a list of the supported high-level functions classified by medium. It is insp
     <pre>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;smile&gt;<br />	&lt;output&gt;
 		&lt;event&gt; <br />			&lt;mmi xmlns=&quot;http://www.w3.org/2008/04/mmi-arch&quot; version=&quot;1.0&quot;&gt;
-			&lt;mmi:startResponse source=&quot;smile&quot; target=&quot;IM_1&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot; status=&quot;success&quot;&gt; 
-				&lt;mmi:data&gt;<br />					&lt;starting_time value=&quot;300&quot;/&gt;<br />				&lt;/mmi:data&gt;
-			&lt;/mmi:startResponse&gt;
+			&lt;mmi:startResponse source=&quot;smile&quot; target=&quot;IM_1&quot; context=&quot;c_1&quot; requestID=&quot;r_1&quot; status=&quot;success&quot; /&gt;
 			&lt;/mmi:mmi&gt;<br />		&lt;/event&gt;<br />	&lt;/output&gt;
 &lt;/smile&gt;</pre>
   </div>
@@ -687,7 +685,7 @@ is a list of the supported high-level functions classified by medium. It is insp
   <div class="exampleInner">
   <pre>{ &quot;output&quot;: {<br />	   &quot;event&quot;: [{<br />  		   &quot;mmi&quot;: &quot;startResponse&quot;,<br />		   &quot;context&quot;: &quot;c_1&quot;,
           &quot;source&quot;: &quot;IM_1&quot;,
-          &quot;target&quot;: &quot;smile&quot;,<br />		   &quot;requestID&quot;: &quot;r_1&quot;,<br />		   &quot;status&quot;: &quot;success&quot;,<br />		   &quot;data&quot;: {&quot;starting_time&quot;=300}<br />      }]<br />   }<br />}<br /></pre>
+          &quot;target&quot;: &quot;smile&quot;,<br />		   &quot;requestID&quot;: &quot;r_1&quot;,<br />		   &quot;status&quot;: &quot;success&quot;,<br />		   &quot;data&quot;: {}<br />      }]<br />   }<br />}<br /></pre>
 </div>
 <p class="caption">Code 5: Possible REST request for the multimodal service following the MMI architecture semantics</p>
 
