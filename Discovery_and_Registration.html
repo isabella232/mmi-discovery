@@ -1224,18 +1224,25 @@ requests.</dd>
 <dt><dfn id="dfn-push">Push notifications</dfn></dt>
 
 <dd>In this document we assume that push techniques allow the
-server to send new events or data to the client through progressive
-download or long-polling HTTP request from the client. They enable
-client applications to subscribe to particular events,
-notifications or data streams and provide the server a callback
-address or a client-side service to which they are delivered. In
-consequence, to implement a push technique, the server must know
-the client's address in order to deliver the data, and some
-registry of registered subscribers must be created. The server
-determines when things change, and simply sends down the new data.
-In this way, new HTTP connections don't have to be opened all the
-time.</dd>
+  server to send new events or data to the client through progressive
+  download or long-polling HTTP request from the client. They enable
+  client applications to subscribe to particular events,
+  notifications or data streams and provide the server a callback
+  address or a client-side service to which they are delivered. In
+  consequence, to implement a push technique, the server must know
+  the client's address in order to deliver the data, and some
+  registry of registered subscribers must be created. The server
+  determines when things change, and simply sends down the new data.
+  In this way, new HTTP connections don't have to be opened all the
+  time.</dd>
 </dl>
+<dl>
+  <dt><dfn id="dfn-multimodal-session">Multimodal Session</dfn></dt>
+  <dd>For the purposes of this document, a <a
+href="#dfn-multimodal-session" class="internalDFN">Multimodal
+    Session</a> is a system's state in which is allowed or prepared the user interaction. It covers: the loading of components and ressources, its registration and its availability to allow an interaction cycle.</dd>
+</dl>
+<p>&nbsp;</p>
 
 <!--
 <p>&nbsp;</p>
@@ -1399,10 +1406,10 @@ onclick=" window.open('images/Fig2.png','Resource Manager');"
 longdesc="descriptions/Fig2_desc.txt" /></p>
 
 <p class="caption">Figure 2: The Multimodal System's state
-handling: a Resources Manager</p>
+handling: a Resources Manager (RM)</p>
 
 <br />
-The Resources Manager keeps the control of the global state and the
+The Resources Manager keeps the control of the multimodal session state (the state of the system to allow a series of user interactions) and the
 resources of the system in a unified layer with the control of the
 user interaction (<a
 href="http://www.w3.org/TR/mmi-arch/#d3e386">Interaction
@@ -1443,19 +1450,17 @@ pattern</p>
 
 <p><br />
 <br />
-The Resources Manager proposed in the current document, allows the
+The Resources Manager described in the current document, allows the
 management of the states of the Modality Component (which
 represents the MVC view in the MMI Architecture) putting this
 function in the control layer (dark gray in Figure 4).</p>
 
 <p>The Resources Manager translates the user's actions into method
-calls on the Data Component, as the MVC pattern proposes. But also,
-the Modality Component's communication and request of state
-information is restricted to exchanges with the Control layer as
-the <a href="http://www.w3.org/TR/mmi-arch/#Interfaces">MMI
-Recommendation</a> defines.</p>
-
-<p>The Model broadcasts a notification to the Resources Manager
+calls on the Data Component, as the MVC pattern proposes. WHile the INteraction Manager handles the user interaction, the Ressources Manager will take care of the state of the system, the type and avalaibility of the Modality Components and the state of the multimodal session. </p>
+<p>The Modality Component's communication and request of state
+  information is restricted to exchanges with the Control layer as
+  the <a href="http://www.w3.org/TR/mmi-arch/#Interfaces">MMI
+    Recommendation</a> defines. The Model broadcasts a notification to the Resources Manager
 (Figure 4), and then, the Resources Manager informs the Modality
 Component that the state has changed using a flow of messages
 through an UpdateNotification or a CheckUpdateResponse. Upon
@@ -1513,7 +1518,7 @@ in the Data Component:</p>
 
 <ul>
 <li><em><strong>The image of the current state</strong></em>,
-represented by the current situation and its state metadata.<br />
+represented by the current situation and its state metadata. This image represents the current multimodal system configuration.<br />
 <br />
  For example, to setup a context of interaction the application
 needs to check the resources currently available. In this case, the
@@ -1584,8 +1589,8 @@ Addressed</h4>
 <td class="sublineReqsTable"><a
 href="http://www.w3.org/TR/mmi-discovery/#distribution"
 target="_blank">Distribution</a> </td>
-<td class="sublineReqsTable">The State Manager supports the
-coordination between distributed agents, and their communication
+<td class="sublineReqsTable">The Resources Manager supports the
+coordination between distributed components, and their communication
 through the control layer. This enables it to synchronize the input
 constraints across modalities <a
 href="http://www.w3.org/TR/mmi-reqs/#Coordinatedconstraintsandinterpretations"
@@ -1599,7 +1604,7 @@ href="http://www.w3.org/TR/mmi-reqs/#Coordinatedconstraintsandinterpretations"
 <td class="sublineReqsTable"><a
 href="http://www.w3.org/TR/mmi-discovery/#advertisement"
 target="_blank">Advertisement</a> </td>
-<td class="sublineReqsTable">The State Manager is the starting
+<td class="sublineReqsTable">The Resources Manager is the starting
 point to declare and process the advertised announcements and to
 keep them up to date.</td>
 </tr>
@@ -1608,7 +1613,7 @@ keep them up to date.</td>
 <td class="sublineReqsTable"><a
 href="http://www.w3.org/TR/mmi-discovery/#discovery"
 target="_blank">Discovery</a> </td>
-<td class="sublineReqsTable">The State Manager is also the core
+<td class="sublineReqsTable">The Resources Manager is also the core
 support for <a
 href="http://www.w3.org/TR/2012/NOTE-mmi-discovery-20120705/#discovery">
 mediated</a> and <a
@@ -1623,7 +1628,7 @@ the tasks on fixed discovery.</td>
 <td class="sublineReqsTable"><a
 href="http://www.w3.org/TR/mmi-discovery/#registration"
 target="_blank">Registration</a> </td>
-<td class="sublineReqsTable">The State Manager is also the
+<td class="sublineReqsTable">The Resources Manager is also the
 interface that can be requested to register the Modality
 Component's information. It handles all the communication between
 the Modality Components and the registry handled by the Data
@@ -1635,7 +1640,7 @@ state of the interaction cycle.</td>
 <tr>
 <td><a href="http://www.w3.org/TR/mmi-discovery/#query"
 target="_blank">Querying</a> </td>
-<td>The flow of queries transit through the State Manager who
+<td>The flow of queries transit through the Resources Manager who
 dispatches the requests to the Data Component and notifies the
 Interaction Manager if needed. Some of these queries must be
 produced using the state handling events proposed on this
@@ -1651,7 +1656,7 @@ messages</h2>
 <p>According to the current MMI life-cycle events protocol, the
 command of Modality Components is initiated by the Interaction
 Manager, which means that if there is an HTTP client-server
-implementation, it must be designed following a push notification
+implementation, it can be designed following a push notification
 technique.</p>
 
 <p>In the communication protocol designed for the <a
@@ -1663,7 +1668,7 @@ control events, even if the specific communication mechanism is not
 currently described in detail in the normative section and it is,
 for the moment, implementation dependent.</p>
 
-<p>Our proposal aims to cover a the flow of messages in both
+<p>This document describes the flow of messages in both
 directions, which are needed for the Discovery &amp; Registration
 of Modality Components. With this proposal, the MMI architecture
 will respond more accurately to architectural requirements like
@@ -1841,8 +1846,7 @@ continuous stream of all the data that they gather to the
 Interaction Manager. However, for many types of applications where
 only a small subset of the collected information is likely to be
 useful, updated or pertinent, this simple approach can become very
-inefficient. For this reason, our tunable communication strategy
-offers significant advantages for optimizing querying.<br />
+inefficient. For this reason, a tunable communication strategy offers significant advantages for optimizing querying.<br />
  </td>
 </tr>
 </tbody>
@@ -1878,12 +1882,12 @@ which can be always exchanged between components and, in the case
 of a dynamic environment, can be updated from time to time.</p>
 
 <p>For this reason, a registration renewal mechanism is needed. We
-propose a renewal mechanism based on the use of the timeout
-attribute and two new events: the checkUpdate Event and the
+define a renewal mechanism based on the use of the timeout
+attribute and two new events: the CheckUpdate Event and the
 UpdateNotification, used in conjunction with an automatic process
 that ensures periodical requests.</p>
 
-The checkUpdate Event is provided :<br />
+The checkUpdate Event provides a mechanism :<br />
 <ul>
 <li>to verify if there are any changes in the system side</li>
 
@@ -1901,7 +1905,7 @@ true</li>
 <!--
 <li style="list-style: none">
 -->
-<p>On the other hand, the UpdateNotification is proposed:</p>
+<p>On the other hand, the UpdateNotification provides a mechanism:</p>
 
 <ul>
 <li>to periodically inform the Resource Manager about the state of
@@ -1917,7 +1921,7 @@ handler (in the server side, for example)<br />
 <h4 id="EV_time"><span class="secno">6.1</span> The timeout
 attribute for state handling and registration renewal</h4>
 
-<p>We propose a dedicated data structure for registration: the
+<p>A dedicated data structure is defined for registration: the
 timeout attribute. A timeout is an ordered list of three
 elements:<br />
 <br />
@@ -1964,7 +1968,7 @@ in the current conditions. This value is exchanged on each request,
 which means that it can be changed at any moment in the multimodal
 session.</p>
 
-<p>With our proposal, the communication intervals will be
+<p>The communication intervals will be
 synchronized, because the Modality Component knows the exact
 publish interval beforehand according to a time pattern. In this
 way, data coherence is ensured and network performance maintained.
@@ -1987,9 +1991,7 @@ and CheckUpdateResponse</h4>
 
 <p>This section is Normative.</p>
 
-<p>The CheckUpdate events are the request/response pair,
-CheckUpdateRequest and CheckUpdateResponse. CheckUpdateRequest and
-CheckUpdateResponse are used to check to see if there are any
+<p>The CheckUpdate events are the request/response pair, CheckUpdateRequest and CheckUpdateResponse. CheckUpdateRequest and CheckUpdateResponse are used to check if there	are any
 changes in the system. They share the <a
 href="http://www.w3.org/TR/mmi-arch/#ContextField">Context</a>, <a
 href="http://www.w3.org/TR/mmi-arch/#SourceField">Source</a>, <a
@@ -2012,7 +2014,7 @@ Components.</p>
 
 <p>An attribute that MUST indicate the type of check to be
 performed. Some values can be: Handshake, Monitoring, Reporting,
-DataCheck, Resuming, Leaving.</p>
+DataCheck, Resuming, Leaving. This values are application specific.</p>
 
 <h4 id="check-state">6.2.2 State</h4>
 
@@ -2505,7 +2507,7 @@ Components as in the Data Component.</td>
 <p class="caption">Figure 1: Basic Vocabulary for MC annotation </p>
   
   
-<h4 id="RM_mvc"><span class="secno">1.1</span> Subsumption Description Attributes</h4>
+<h4 id="RM_mvc"><span class="secno">7.1</span> Subsumption Description Attributes</h4>
   <p>Subsumption concerns the attributes classifiying the Modality Components. It is structured with metadata classifying the Modality Component according to its membership or association with a Multimodal class in conformance to the modes handled by the System. This first description allows discovery filtering for a precise target mode. There are four properties:
 <UL>
   </p>
@@ -2524,7 +2526,7 @@ is a list of the supported high-level functions classified by medium. It is insp
 
 <p>The functions are the technical entities  supporting a limited number of modalities according to the semantics of the message and the capabilities of the support itself. 
     A Modality Component acts as a complex set of functions. Each function uses one or more modalities that realizes some mode. For example, in Figure 2 the Avatar uses a 3D mesh modality through a visual mode. The functions  term defines a list of functions using in the service, ordered by importance and by mode. For example, a gesture recognizer service uses the sign language function, using the single hand gesture modality that is executed in the haptic mode and is perceived in the visual mode.</p>
-<h4 id="RM_mvc"><span class="secno">1.2</span> Behavior Description Attributes</h4>
+<h4 id="RM_mvc"><span class="secno">7.2</span> Behavior Description Attributes</h4>
 <p>Finally, the operations is the IOPE list of the Modality Component Capabilities. IOPE means Inputs, Outputs, Preconditions and Effects of a service<a href="#bib-YU" class="internalDFN">[YU-2007]</a> <a href="#bib-YU" class="internalDFN">[OWL-S]</a></p>
 <ul>
 <li>The Input specifies the triggers and data (or the general notion of a parameter) needed to execute the process. The description must list  the MMI events that must be sent by the Interaction Manager  as an input.</li>
@@ -2536,7 +2538,7 @@ is a list of the supported high-level functions classified by medium. It is insp
   Preconditions and effects can be expressed in any rule (or logical) language. The language choice is application specific.</li>
 </ul>
 
-<h4 id="RM_mvc"><span class="secno">1.3</span> Multimodal description example</h4>
+<h4 id="RM_mvc"><span class="secno">7.3</span> Multimodal description example</h4>
 
   <p>In Figure 2 the &quot;Face Synthesizer Service&quot; acts in some mode that is perceived by a final user through a modality that is part of some functions, i.e. a face synthesis service acts in the visual mode that is perceived through a 3D mesh modality that is part of an avatar function. </p>
 
@@ -2615,7 +2617,7 @@ is a list of the supported high-level functions classified by medium. It is insp
 <p class="caption">Code 1: MC Annotation example </p>
 <p class="caption">&nbsp;</p>
 
-<h4 id="RM_mvc"><span class="secno">1.4</span> Multimodal service query examples</h4>
+<h4 id="RM_mvc"><span class="secno">7.4</span> Multimodal service query examples</h4>
 
 <p>This description can be parsed before the execution of the service, in a discovery process. To call the service and to execute a smile operation, le service query with a POST method must be structures as follows:  </p>
   <div class="exampleInner">
