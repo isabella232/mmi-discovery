@@ -53,7 +53,7 @@
         .sublineReqsTable { border-bottom:  1px solid #DDD; padding-top:5px;padding-bottom:5px; }
         .IntroTable { border-left: 1px solid #CFE1FF; border-right:  1px solid #CFE1FF;width:95%; border-bottom:  1px solid #CFE1FF;
              font-size: 13px; margin-left:1%;}
-        .headIntroTable { font: bold 103% sans-serif; text-align:center; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; width:15%; }
+        .headIntroTable { font: bold 103% sans-serif; text-align:center; border-top:  1px solid #CFE1FF; border-bottom:  1px solid #CFE1FF; background: #EEE; width:15%;padding-top:10px; }
         
         
         .semTable { border-top: 1px solid #CFE1FF; border-left: 1px solid #CFE1FF; border-right:  1px solid #CFE1FF;width:60%; border-bottom:  1px solid #CFE1FF;
@@ -815,15 +815,15 @@ use</a> rules apply.</p>
 
 <h2 id="abstract">Abstract</h2>
 
-<p>This document is addressed to people who want either to develop
+<p>This document is addressed to people who want to develop
 Modality Components for Multimodal <a href="#dfn-application"
 class="internalDFN">Applications</a> distributed over a local
 network or "in the cloud". With this goal, in a multimodal system
 implemented according to the <a
 href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
-Architecture Specification</a>, the system must discover and
-register its Modality Components in order to preserve the overall
-state of the distributed elements. In this way, Modality Components
+Architecture Specification</a>, over a network, to configure the technical conditions needed for the interaction, the system must discover and
+register its Modality Components in order to monitor and preserve the overall
+state of the distributed elements. Therefore, Modality Components
 can be composed with automation mechanisms in order to adapt the
 Application to the state of the surrounding environment.</p>
 
@@ -847,7 +847,7 @@ State Handling".</p>
 <p>This draft was modified to enhance the contrast in graphics to
 meet WCAG requirements for color contrast. Fonts in Graphics were
 increased in size, a longdesc was added and the support for
-keyboard interaction. We modify the<br />
+keyboard interaction. We modify the
  state diagram, update the normative part about states, edit the
 code examples and remove some informative text.</p>
 
@@ -990,52 +990,52 @@ W3C Process Document</a>.</p>
 
 <p>To the best of our knowledge, there is no standardized way to
 build a web <a href="#dfn-application"
-class="internalDFN">Application</a> that can dynamically combine,
-and control discovered components by querying a registry build
-based on modality states. This document covers three needs on
+class="internalDFN">Application</a> that can dynamically combine and control discovered components by querying a registry build
+based on <strong>the multimodal types of the modalities and their states.</strong> This document covers three needs on
 Discovery &amp; Registration for this kind of web <a
 href="#dfn-application" class="internalDFN">Application</a>
 implemented following the <a
 href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
 Architecture Specification</a>.</p>
 
-<p>First, we propose to define a new component responsible for the
+<p>First, we define a new component responsible for the
 management of the state of a <a href="#dfn-multimodal-system"
 class="internalDFN">Multimodal System</a>, extending the control
 layer already defined in the <a
 href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">Multimodal
-Architecture Specification</a>. This component will be responsible
+Architecture Specification</a> (Table 1 col. 1). This component will be responsible
 for handling the messages exchanged in order to declare the
 presence (or absence) of the <strong><a
 href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
-Components</a></strong> of the system.</p>
+Components</a></strong> of the system .</p>
 
 <p>Second, this document presents an adaptive push/pull mechanism,
 needed to inform the system about the changes in the state of the
 <strong><a
 href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
-Components</a></strong>. These changes are not necessarily related
-to the interaction context itself, but they can affect it, for
+Components</a></strong>. (Table 1 col. 2) These changes are not necessarily related
+to the interaction functional context itself, but they can affect it, for
 example, in the case of the unavailability of a given <strong><a
 href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
-Component</a></strong>.</p>
+Component</a></strong></p>
 
 <p>And finally, to allow the advertisement of the state of the
 <strong><a
 href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
 Components</a></strong> by using the adaptive mechanism, two new
-events are needed. The semantics of these new events is not
-directly related to the interaction context; for this reason a new
+events are needed.(Table 1 col. 3) The semantics of these new events is not
+directly related to the interaction context but it is related with the system's configuration; for this reason a new
 component responsible for the management of the state of the <a
 href="#dfn-multimodal-system" class="internalDFN">Multimodal
 System</a> is needed.</p>
+<p>&nbsp;</p>
 
 <table class="IntroTable">
 <tbody>
 <tr>
-<td class="headIntroTable">Resources Handling</td>
-<td class="headIntroTable">A new direction of messages flow</td>
-<td class="headIntroTable">Events for System's updates</td>
+<td width="31%" class="headIntroTable">Resources Handling</td>
+<td width="36%" class="headIntroTable">A new direction in the  messages flow</td>
+<td width="33%" class="headIntroTable">Events for System's updates</td>
 </tr>
 
 <tr>
@@ -1052,19 +1052,19 @@ Modality Component's availability.</td>
 </tr>
 </tbody>
 </table>
-
+<p class="caption">Table 1: Requerements  for discovery in a multimodal Architecture based on the MMI specification</p>
 <h2 id="vocabulary"><span class="secno">2.</span> Domain
 Vocabulary</h2>
 
 <dl>
 <dt><dfn id="dfn-context">Interaction Context</dfn></dt>
 
-<dd>For the purposes of this document an Interaction Context
+<dd>According with the MMI Architecture "a context represents a single extended interaction with zero or more users across one or more modality components. (...) In general, the 'context' should cover the longest period of interaction over which it would make sense for components to store information."
+<br/><br/>
+Following the definition above and for the purposes of this document, an Interaction Context
 represents a single exchange between a system and one or multiple
-users across one or multiple interaction modes. It covers the
-longest period of communication over which it would make sense for
-components to keep the information available. It can be as simple
-as a single period of audiovisual content (e.g. a program), a phone
+users across one or multiple interaction modes.  It can be as simple
+as a single period of displaying an audiovisual content (e.g. a program), a phone
 call or a web session.</dd>
 
 <dt>&nbsp;</dt>
@@ -1085,9 +1085,8 @@ in the MMI architecture]</dd>
 
 <dd>For the purposes of this document, a <a
 href="#dfn-multimodal-system" class="internalDFN">Multimodal
-System</a> is any system communicating with the user through
-different modalities such as voice, gesture, or handwriting in the
-same interaction cycle identified by a unique <a
+System</a> is any system communicating with one or multiple users through
+different modalities such as voice, gesture, or handwriting in one or multiple interaction cycles, each one identified by an unique <a
 href="#dfn-context" class="internalDFN">context</a>. In a <a
 href="#dfn-multimodal-system" class="internalDFN">Multimodal
 System</a> the <a href="#dfn-application"
@@ -1121,7 +1120,7 @@ href="http://www.w3.org/TR/mmi-arch/#ModalityComponents">Modality
 Component</a></strong> is a logical entity that handles the input
 or output of different hardware 
 <!--a href="#dfn-device" class="internalDFN"-->Devices<!--/a-->
-(e.g. camera, microphone, graphic tablet, keyboard) or software <a
+(e.g. camera, microphone, graphic tablet, keyboard, sensors) or software <a
 href="#dfn-service" class="internalDFN">Services</a> (e.g. motion
 detection, image recognition) associated with the <a
 href="#dfn-multimodal-system" class="internalDFN">Multimodal
@@ -1184,7 +1183,7 @@ Specification</a> to provide sensory, cognitive and emotional
 information [See : <a
 href="http://www.w3.org/2005/Incubator/emotion/XGR-emotion/#AppendixUseCases">
 Emotion Use Cases</a>] through a rich multimodal user experience.
-For example, a multimodal <a href="#dfn-application"
+ The Application is a collection of interaction cycles designed to achieve one or mutliple tasks. For example, a multimodal <a href="#dfn-application"
 class="internalDFN">Application</a> can be implemented for use in
 an integrated way, mobile 
 <!--a href="#dfn-device" class="internalDFN"-->Devices<!--/a-->
@@ -1225,7 +1224,7 @@ requests.</dd>
 
 <dd>In this document we assume that push techniques allow the
   server to send new events or data to the client through progressive
-  download or long-polling HTTP request from the client. They enable
+  download or long-polling requests from the client. They enable
   client applications to subscribe to particular events,
   notifications or data streams and provide the server a callback
   address or a client-side service to which they are delivered. In
@@ -1233,14 +1232,19 @@ requests.</dd>
   the client's address in order to deliver the data, and some
   registry of registered subscribers must be created. The server
   determines when things change, and simply sends down the new data.
-  In this way, new HTTP connections don't have to be opened all the
+  In this way, new connections don't have to be opened all the
   time.</dd>
+</dl>
+<dl>
+  <dt><dfn id="dfn-push2">Pull notifications</dfn></dt>
+  <dd>In this document we assume that pull techniques allow the
+    client to send new events or data to the server through events or long-polling requests from the client.</dd>
 </dl>
 <dl>
   <dt><dfn id="dfn-multimodal-session">Multimodal Session</dfn></dt>
   <dd>For the purposes of this document, a <a
 href="#dfn-multimodal-session" class="internalDFN">Multimodal
-    Session</a> is a system's state in which is allowed or prepared the user interaction. It covers: the loading of components and ressources, its registration and its availability to allow an interaction cycle.</dd>
+    Session</a> is a system's state in which is allowed or prepared the user interaction. It covers: the loading of components and ressources, its registration and its availability and the interaction cycle itself.</dd>
 </dl>
 <p>&nbsp;</p>
 
@@ -1278,13 +1282,15 @@ Components independently. Nevertheless, to start an interaction the
 class="internalDFN">Modality Component</a></strong> needs to be
 already part of the system a to be registered, given that a context
 represents a single extended interaction with one or more Modality
-Components. The semantics of the <a
+Components.</p>
+<p>This means that the Multimodal System has two complementary phases: the runtime phase (defined by the execution of one or multiple interaction cycles), and the system configuration phase (defined by the loading of components and their  monitoring and adaptation in real-time).</p>
+<p> The semantics of the <a
 href="http://www.w3.org/TR/mmi-arch/#d3e646">NewContextRequest</a>
-event is different and mostly oriented to the interaction phase,
-while the registering process is part of a previous phase, when
-even the presence of the user is not mandatory. This phase is
-designed for a system that will handle one or more interaction
-processes at the same time.</p>
+  event is different and mostly oriented to the interaction phase,
+  while the registering process is part of a previous phase, when
+  even the presence of the user is not mandatory. This phase is
+  designed for a system that will handle one or more interaction
+  processes at the same time.</p>
 
 <p>&nbsp;</p>
 
@@ -1307,17 +1313,16 @@ interaction cycle also currently implies the setting up of a
 stage of the <a
 href="http://www.w3.org/TR/2012/CR-mmi-arch-20120112/">specification</a>.</p>
 
-<p>On the other hand, the <a
+<p>The <a
 href="http://www.w3.org/TR/mmi-arch/#d3e1410">Extension</a> and <a
 href="http://www.w3.org/TR/mmi-arch/#d3e1565">Status</a>
 notifications are dedicated to the exchange of interaction data,
-while the data exchange in a discovery process is mostly previous
-to any interaction between the user and the system. For example, at
-load-time, when the system prepares and registers the information
+while the data exchanged in a discovery process is mostly previous
+to any interaction between the user and the system. During the configuration phase (or reconfiguration according to a changement of the overall state),  the system prepares and registers the information
 about the Modality Components (availability, technical
 characteristics, cost). In this way, all this information might be
 used in the future, when the user-system interaction actually
-begins.</p>
+takes place.</p>
 
 <p>In other terms, the semantics of the two existing notifications
 differ from the features needed for discovery. The communication
@@ -1576,7 +1581,7 @@ the prediction and prevision of external factors.</li>
 </ul>
 
 <h4 id="RM_req"><span class="secno">4.4</span> Requirements
-Addressed</h4>
+Addressed by the Ressources Manager</h4>
 
 <table class="ReqsTable">
 <tbody>
@@ -1727,7 +1732,7 @@ periodic sleep state. This allows handling the requesting frequency
 to update the state data in the Modality Component.</p>
 
 <h4 id="pullRA"><span class="secno">5.1</span> Requirements
-Addressed</h4>
+Addressed by the new flow of messages</h4>
 
 <table class="ReqsTable">
 <tbody>
@@ -1905,7 +1910,7 @@ true</li>
 <!--
 <li style="list-style: none">
 -->
-<p>On the other hand, the UpdateNotification provides a mechanism:</p>
+<p>The UpdateNotification provides a mechanism:</p>
 
 <ul>
 <li>to periodically inform the Resource Manager about the state of
@@ -2019,7 +2024,7 @@ DataCheck, Resuming, Leaving. This values are application specific.</p>
 <h4 id="check-state">6.2.2 State</h4>
 
 <p>An attribute that MUST indicate the state of the requesting
-component and its value. Some values can be: Alive, Loading,
+component and its value. Some values MUST be: Alive, Loading,
 Registering, Available, Idle, Busy Waiting, Processing,
 Unavailable, Unregistered. (See Figure 7)</p>
 
@@ -2069,7 +2074,7 @@ a system's response.</p>
 <p>A Modality Component MUST be in Processing state when it is
 already registered and processing some task. The process could be
 any multimodal or unimodal task like transferring, searching,
-recognizing or any other kind of process.</p>
+recognizing or any other kind of process. The processing state is related to a given multimodal session (the same Modality Component can handle multiple tasks in parallel from different users and sessions).</p>
 
 <h5 id="check-state-unregistered">6.2.2.8 UNREGISTERED</h5>
 
@@ -2086,7 +2091,9 @@ registration, or when it lacks of resources or must reload them. In
 short, when the Modality Component is no more able to correctly
 ensure its task.</p>
 
-<p>The following list shows the flow between these states:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The following list shows the flow between these nine states:</p>
 
 <p>The component MUST pass from the <strong>ALIVE</strong> state to
 Loading, Registering or Available state.</p>
@@ -2252,7 +2259,7 @@ IDLE state to wait for another user interaction.</td>
 Modality Component will be automatically updated by
 UpdateNotification events or whether the Modality Component will
 keep sending UpdateNotification events in the future without
-waiting for another CheckUpdateRequest event.</p>
+waiting for another CheckUpdateRequest event. If the Resources Manager is temporarily unavailable the Modality Component will continue to send messages according with the last interval defined by the last timeout information received.</p>
 
 <!--
 <h4>&nbsp;</h4>
@@ -2260,12 +2267,12 @@ waiting for another CheckUpdateRequest event.</p>
 <h4 id="check-metadata">6.2.4 Metadata</h4>
 
 <p>An element with an attribute to link with external complementary
-metadata and an info attribute for inline data.</p>
+metadata and an info attribute for inline data. The metadata non-functional information will be complementary to the data, which is a functional information type.</p>
 
 <h4 id="check-timeout">6.2.5 Timeout</h4>
 
 <p>An element used to temporize the exchanges between components.
-This element MUST include three attributes. It MUST include a
+The values of this element are defined by the Resources Manager. These values can be changed by a Modality Component  if the Modality Component arrives into a state that makes impossible to preserve the pace of communication (i.e. error, fail, unavailability). This element MUST include three attributes. It MUST include a
 <strong>sleep</strong> attribute to define the "communication sleep
 period", a <strong>validity</strong> attribute to represent the
 "communication validity period" in milliseconds and an
@@ -2414,7 +2421,7 @@ RM)</h5>
  
 
 <h4 id="req6"><span class="secno">6.4</span> Requirements
-Addressed</h4>
+Addressed by the discovery events</h4>
 
 <table class="ReqsTable">
 <tbody>
@@ -2684,8 +2691,7 @@ Capabilities will be addressed in a subsequent document.</p>
 <h2 id="acknowledgements">9. Acknowledgments</h2>
 
 <p>The authors wish to acknowledge the contributions by all the
-members of the Multimodal Interaction Working Group, in particular,
-Kazuyuki Ashimura, the W3C Team Contact for the Working Group.</p>
+members of the Multimodal Interaction Working Group.</p>
 
 <p>Finally, the authors would also like to acknowledge the people
 outside of the MMI Working Group who help with the process of
